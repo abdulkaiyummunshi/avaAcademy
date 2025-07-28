@@ -228,28 +228,28 @@
 
 
 .certification-process {
-    width: 100%;
-    max-width: 800px; // Adjust as needed
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-    display: flex; /* Added to create a container for the border */
+    border: 1px solid $gray2;
+    border-radius: 14px 14px 0 0;
+    width: 1400px;
+    // height: 90px;
 }
 
-.process-steps-container { /* New container for the steps to apply the border */
+.process-steps-container { 
+    border: 1px solid $gray2;
     width: 100%;
-    border-left: 2px solid $primary; /* The vertical border */
-    padding-left: 20px; /* Add some spacing between the border and the steps */
+    border-left: 2px solid $primary; 
+    padding-left: 20px; 
 }
 
 .process-step {
-    border-bottom: 1px solid red; /* Removed top border, kept bottom for separation */
-    border-radius: 0; /* Removed individual step border radius */
-    margin-bottom: 0; /* Adjusted margin */
+    border-bottom: 1px solid red;
+    border-radius: 0; 
+    margin-bottom: 0; 
     overflow: hidden;
     background-color: #fff;
 
     &:first-child {
-        border-top: 1px solid red; /* Add top border to the first step */
+        border-top: 1px solid red; 
     }
 
     &.active {
@@ -288,14 +288,14 @@
         }
 
         .arrow-icon {
-            font-size: 1em; // Adjust font size for Font Awesome icon
+            font-size: 1em;
             color: $primary;
-            // No transform needed here, jQuery will handle class change
+          
         }
     }
 
     .step-content {
-        display: none; // Hidden by default
+        display: none; 
         padding: 20px;
         background-color: green;
         border-top: 1px solid red;
@@ -303,26 +303,26 @@
         .content-box {
             display: flex;
             gap: 20px;
-            align-items: flex-start; // Align image and text at the top
+            align-items: flex-start; 
 
             @media (max-width: 600px) {
-                flex-direction: column; // Stack vertically on small screens
+                flex-direction: column; 
             }
 
             .image-placeholder {
-                flex-shrink: 0; // Prevent image from shrinking
-                width: 40%; // Adjust image width as needed
-                max-width: 250px; // Max width for the image container
+                flex-shrink: 0; 
+                width: 40%; 
+                max-width: 250px; 
 
                 img {
                     width: 100%;
                     height: auto;
-                    display: block; // Remove extra space below image
+                    display: block; 
                 }
 
                 @media (max-width: 600px) {
                     width: 100%;
-                    max-width: none; // Allow full width on small screens
+                    max-width: none; 
                     margin-bottom: 15px;
                 }
             }
@@ -354,11 +354,10 @@
         }
     }
 
-    // Active state styling for content
     &.active .step-content {
-        display: block; // Show content for active step
+        display: block; 
     }
 
-    // No need for arrow icon rotation in SCSS, jQuery will change the icon class
+  
 }
 /*---The Plan End---*/

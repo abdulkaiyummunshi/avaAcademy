@@ -22072,33 +22072,24 @@
 /*---Who We Are End---*/
 /*---The Plan Start---*/
 .certification-process {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-  display: flex;
-  /* Added to create a container for the border */ }
+  border: 1px solid #e8e8e8;
+  border-radius: 14px 14px 0 0;
+  width: 1400px; }
 
 .process-steps-container {
-  /* New container for the steps to apply the border */
+  border: 1px solid #e8e8e8;
   width: 100%;
   border-left: 2px solid #3561ff;
-  /* The vertical border */
-  padding-left: 20px;
-  /* Add some spacing between the border and the steps */ }
+  padding-left: 20px; }
 
 .process-step {
   border-bottom: 1px solid red;
-  /* Removed top border, kept bottom for separation */
   border-radius: 0;
-  /* Removed individual step border radius */
   margin-bottom: 0;
-  /* Adjusted margin */
   overflow: hidden;
   background-color: #fff; }
   .process-step:first-child {
-    border-top: 1px solid red;
-    /* Add top border to the first step */ }
+    border-top: 1px solid red; }
   .process-step.active .step-header {
     background-color: green; }
   .process-step .step-header {
