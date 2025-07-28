@@ -225,139 +225,477 @@
 /*---Who We Are End---*/
 
 /*---The Plan Start---*/
-
-
 .certification-process {
     border: 1px solid $gray2;
-    border-radius: 14px 14px 0 0;
-    width: 1400px;
-    // height: 90px;
-}
-
-.process-steps-container { 
-    border: 1px solid $gray2;
-    width: 100%;
-    border-left: 2px solid $primary; 
-    padding-left: 20px; 
-}
-
-.process-step {
-    border-bottom: 1px solid red;
-    border-radius: 0; 
-    margin-bottom: 0; 
-    overflow: hidden;
-    background-color: #fff;
-
-    &:first-child {
-        border-top: 1px solid red; 
-    }
-
-    &.active {
-        .step-header {
-            background-color: green;
+    @include border-radius(14px);
+    padding: 0px;
+    .process-steps-container { 
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 41px;
+            width: 1px;
+            height: 100%;
+            background-color: $gray2;
         }
     }
-
-    .step-header {
-        display: flex;
-        align-items: center;
-        padding: 15px 20px;
-        cursor: pointer;
+    
+    .process-step {
+        &.style_1{
+                @include border-radius(14px 14px 0px 0px);
+            }
+        &.style_2{
+                @include border-radius(14px 14px 0px 0px);
+            }
+        border-radius: 0; 
+        margin-bottom: 0; 
+        overflow: hidden;
         background-color: #fff;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: lighten(green, 2%);
+    
+        &.active {
+            .step-header {
+                background-color: $white;
+            }
         }
-
-        .step-number {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: $primary;
-            margin-right: 15px;
-            padding: 5px 10px;
-            background-color: rgba($primary, 0.1);
-            border-radius: 5px;
-        }
-
-        .step-title {
-            margin: 0;
-            flex-grow: 1;
-            font-size: 1.1em;
-            color: black;
-        }
-
-        .arrow-icon {
-            font-size: 1em;
-            color: $primary;
-          
-        }
-    }
-
-    .step-content {
-        display: none; 
-        padding: 20px;
-        background-color: green;
-        border-top: 1px solid red;
-
-        .content-box {
+    
+        .step-header {
+           
             display: flex;
-            gap: 20px;
-            align-items: flex-start; 
-
-            @media (max-width: 600px) {
-                flex-direction: column; 
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid $gray2;
+            cursor: pointer;
+            background-color: #fff;
+            transition: background-color 0.3s ease;
+    
+            .step-number {
+                font-weight: 700;
+                //  position: relative;/
+            z-index: 2;
+                font-size: 18px;
+                color: $gray8;
+                letter-spacing: 0.01em;
+                text-align: center;
+                width: 44px;
+                height: 44px;
+                line-height: 44px;
+                @include border-radius(50%);
+                border: 1px solid $gray2;
+                box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+                background: #f3f9ff;
             }
-
-            .image-placeholder {
-                flex-shrink: 0; 
-                width: 40%; 
-                max-width: 250px; 
-
-                img {
-                    width: 100%;
-                    height: auto;
-                    display: block; 
-                }
-
-                @media (max-width: 600px) {
-                    width: 100%;
-                    max-width: none; 
-                    margin-bottom: 15px;
-                }
-            }
-
-            .text-content {
+    
+            .step-title {
+                margin: 0;
                 flex-grow: 1;
-
-                .step-heading {
-                    color: $primary;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    font-size: 0.9em;
-                    margin-bottom: 5px;
+                font-weight: 500;
+                font-size: 24px;
+                text-transform: capitalize;
+                color: #141417;
+                margin-left: 16px;
+            }
+    
+            .arrow-icon {
+                font-size: 1em;
+                color: $primary;
+              
+            }
+        }
+    
+        .step-content {
+            display: none; 
+            padding: 42px 42px 42px 84px;
+            border-bottom: 1px solid $gray2;
+            .content-box {
+                padding: 60px 100px;
+                background-color: #f3f9ff;
+                border: 1px solid $gray2;
+                border-radius: 14px;
+                @include flex(row, flex-start, center);
+                gap: 125px;
+    
+                @media (max-width: 600px) {
+                    flex-direction: column; 
                 }
-
-                h4 {
-                    margin-top: 0;
-                    font-size: 1.3em;
-                    color: black;
-                    line-height: 1.4;
+    
+                .image-placeholder {
+                    flex-shrink: 0; 
+                    width: 40%; 
+                    max-width: 250px; 
+    
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block; 
+                    }
+    
+                    @media (max-width: 600px) {
+                        width: 100%;
+                        max-width: none; 
+                        margin-bottom: 15px;
+                    }
                 }
-
-                p {
-                    font-size: 0.95em;
-                    line-height: 1.6;
-                    color: #666;
+    
+                .text-content {
+                    flex-grow: 1;
+    
+                    .step-heading {
+                        font-weight: 500;
+                        font-size: 16px;
+                        letter-spacing: 0.01em;
+                        border: 1px solid $gray2;
+                        border-radius: 4px;
+                        padding: 4px 16px;
+                        box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+                        background: $white;
+                        color: $gray9;
+                        display: inline-block;
+                    }
+    
+                    h4 {
+                        font-weight: 500;
+                        font-size: 24px;
+                        color: #141417;
+                        margin-top: 18px;
+                    }
+    
+                    p {
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: $gray8;
+                        margin-top: 16px;
+                    }
                 }
             }
         }
+    
+        &.active .step-content {
+            display: block; 
+        }
+    
+      
     }
-
-    &.active .step-content {
-        display: block; 
-    }
-
-  
 }
 /*---The Plan End---*/
+
+/*---For Business Owners Start---*/
+.business_owners{
+    .business_card{
+        max-width: 610px;
+        border: 1px solid $gray2;
+        border-radius: 5px;
+        box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+        background:  $white;
+        padding: 55px 100px;
+        margin-left: 41px;
+        position: relative;
+        .icon{
+            position: absolute;
+            top: 50%;
+            @include transformY(-50%);
+            left: -41px;
+            span{
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                background: linear-gradient(90deg, #2981fa 0%, #18a7f7 100%);
+                @include border-radius(5px);
+                display: inline-block;
+            }
+        }
+        h4{
+            font-weight: 600;
+            font-size: 24px;
+            color: #141417;
+        }
+    }
+    .business_image{
+        position: relative;
+        @include flex(row, flex-start, flex-end);
+        .business_main_img{
+            position: relative;
+            width: 633px;
+            height: 699px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .border_line{
+        border: 2px solid $primary;
+        border-radius: 5px;
+        width: 579px;
+        height: 628px;
+        position: absolute;
+        top: -45px;
+        z-index: -1;
+        right: 0px;
+        .vector{
+            position: absolute;
+            top: -87px;
+            right: -75px;
+        }
+    }
+    .btn_area{
+        position: absolute;
+        bottom: 53px;
+        left: 30px;
+        a{
+            font-weight: 400;
+            font-size: 18px;
+            padding: 24px 31px;
+            color: $white;
+            @include border-radius(5px);
+            background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
+            span{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+/*---For Business Owners End---*/
+
+/*---Clients Reviews Start---*/
+.clients_reviews{
+    .left-arrow{
+        border-radius: 100px;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        box-shadow: 0 4px 20px 0 rgba(20, 20, 23, 0.2);
+        background: $white;
+        @include border-radius(50%);
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: -51px;
+        @include transformY(-50%);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    .right-arrow{
+        border-radius: 100px;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        box-shadow: 0 4px 20px 0 rgba(20, 20, 23, 0.2);
+        background: $white;
+        @include border-radius(50%);
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: -51px;
+        @include transformY(-50%);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    .review_dots{
+        @include flex(row, center, center);
+        gap: 5px;
+        z-index: 110;
+        position: absolute;
+        background: #3c3865;
+        border-radius: 40px;
+        width: 194px;
+        height: 50px;
+        bottom: -103px;
+        left: 50%;
+        @include transformX(-50%);
+        @include sm{
+            visibility: hidden;
+            opacity: 0;
+        }
+        li{
+            height: 100%;
+            @include flex(row, center, center);
+            margin: 0px 10px;
+            
+        }
+        button{
+            width: 6px;
+            height: 6px;
+            color: transparent;
+            border: none;
+            background-color: $white;
+            @include transition(0.5s);
+            @include border-radius(30px);
+        }
+        .slick-active{
+            // li{
+            //     padding: 10px;
+            // @include border-radius(50%);
+            // border: 1px solid $gray2;
+            // }
+            button{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    @include transform(-50%, -50%);
+                    width: 26px;
+                    height: 26px;
+                    @include border-radius(50%);
+                    border: 1px solid $gray2;
+                }
+            }
+        }
+    
+
+}
+    .slick-slide{
+        margin: 0px 10px;
+    }
+    position: relative;
+    svg{
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        @include transformY(-50%);
+        right: -50px;
+    }
+    position: relative;
+    height: 770px;
+    background-color: $gray9;
+    @include flex(row, center, center);
+    .vector_area{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        pointer-events: none;
+    }
+    .vector_two{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        pointer-events: none;
+    }
+    // .clients_review_wrapper{
+    //     @include flex(row, flex-end, center);
+    // }
+    .clients_review_wrapper{
+        position: relative;
+    }
+    .clients_review_slider{
+        max-width: 770px;
+        margin-left: 140px;
+
+    }
+    .review_card{
+        padding: 64px 40px 63px 54px;
+        border-radius: 40px;
+        width: 770px;
+        height: 410px;
+        background: #2e2b4f;
+        .star{
+            padding: 7px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 6px;
+            display: inline-block;
+            span{
+                color: #f7931a;
+            }
+        }
+    }
+    .user_meta_info{
+        @include flex(row, flex-start, center);
+        gap: 37px;
+        .profile{
+            width: 74px;
+            @include border-radius(50%);
+            height: 74px;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include border-radius(50%);
+            }
+        }
+        .profile_area{
+            position: relative;
+        }
+        .profile_icon{
+            position: absolute;
+            bottom: 10px;
+            width: 40px;
+            height: 40px;
+            left: 60px;
+            line-height: 40px;
+            @include flex(row, center, center);
+            text-align: center;
+            @include border-radius(50%);
+            border-left: 2px solid #2e2b4f;
+            background-color: $white;
+            img{
+              width: 20px;
+              height: 20px;
+               object-fit: contain;
+            }
+
+        }
+        h5{
+            font-weight: 500;
+            font-size: 22px;
+            color: $white;
+        }
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: $white;
+        }
+    }
+}
+/*---Clients Reviews End---*/
+
+/*---The Certification Start---*/
+.the_certification{
+    .list_certification{
+        ul{
+            @include flex(row, space-between, center);
+            flex-wrap: wrap;
+            gap: 26px;
+            margin: 0px;
+            padding: 0px;
+            li{
+                width: calc(50% - 15px);
+                font-weight: 500;
+                font-size: 16px;
+                letter-spacing: 0.01em;
+                color: $gray9;
+                span{
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 9px;
+                    line-height: 24px;
+                    text-align: center;
+                    background-color: #141417;
+                    @include border-radius(50%);
+                    color: $white;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+/*---The Certification End---*/
+
+

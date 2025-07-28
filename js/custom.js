@@ -83,24 +83,21 @@
         whoWe()
         
       
-        $('.movies_card_wrapper').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            // autoplay: true,
-            // autoplaySpeed: 4000,
-            arrows: true,
-            dots: false,
-            infinite: true,
-            prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
-            nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
-            // centerMode: true,
-            // centerPadding: "20px",
-            // initialSlide: 2,
-            responsive: [
-                { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-                { breakpoint: 767, settings: { slidesToShow: 1, slidesToScroll: 1 } }
-            ]
-        });
+        // $('.review_slider').slick({
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     // autoplay: true,
+        //     // autoplaySpeed: 4000,
+        //     arrows: true,
+        //     dots: false,
+        //     infinite: true,
+        //     prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
+        //     nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
+        //     // centerMode: true,
+        //     // centerPadding: "20px",
+        //     // initialSlide: 2,
+            
+        // });
         $('.movies_card_wrapper-2').slick({
             slidesToShow: 6,
             slidesToScroll: 1,
@@ -204,18 +201,18 @@
                 { breakpoint: 767, settings: { slidesToShow: 1, slidesToScroll: 1 } },
             ]
         });
-        $('.review_card_wrapper').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            arrows: true,
-            dots: true,
-            dotsClass: "review_dots",
-            infinite: true,
-            prevArrow: `<span class="left-arrow"><i class="fa fa-undo"></i></span>`,
-            nextArrow: `<span class="right-arrow"><i class="fa-solid fa-rotate-right"></i></span>`,
-        });
+        // $('.clients_review_slider').slick({
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     autoplay: true,
+        //     autoplaySpeed: 4000,
+        //     arrows: true,
+        //     dots: true,
+        //     dotsClass: "review_dots",
+        //     infinite: true,
+        //     prevArrow: `<span class="left-arrow"><i class="fa fa-undo"></i></span>`,
+        //     nextArrow: `<span class="right-arrow"><i class="fa-solid fa-rotate-right"></i></span>`,
+        // });
         $('.client_feedback_wrapper').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -593,3 +590,19 @@ function internetService(){
     
 }
 internetService()
+
+
+$(document).ready(function () {
+    $('.clients_review_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: true,
+        dots: true,
+        dotsClass: "review_dots",
+        infinite: true,
+        prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
+        nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
+    });
+});
