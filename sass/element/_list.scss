@@ -1,0 +1,36 @@
+.list_area{
+    ul{
+        padding: 0;
+        @include flex(column, center, flex-start);
+        gap: 22px;
+        li{
+            font-family: $--font-family;
+            font-weight: 500;
+            font-size: 18px;
+            color: #020626b3;
+            padding-left: 16px;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                width: 6px;
+                height: 6px;
+                margin-top: -4px;
+                background-color: $--primary;
+                transform:translateY(-50%);
+                -webkit-transform:translateY(-50%);
+                -moz-transform:translateY(-50%);
+                -ms-transform:translateY(-50%);
+                -o-transform:translateY(-50%);
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+
+}
+        }
+    }
+}
