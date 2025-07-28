@@ -53,30 +53,32 @@
 
         // Who we are
         function whoWe(){
+            jQuery(document).ready(function ($) {
                 $('.process-step .step-header').on('click', function () {
                     const $parentStep = $(this).closest('.process-step');
                     const $content = $parentStep.find('.step-content');
                     const $arrow = $parentStep.find('.arrow-icon');
 
-                    // Close all other open steps
+                    // Close all other open steps and reset their icons
                     $('.process-step').not($parentStep).removeClass('active').find('.step-content').slideUp();
-                    $('.process-step').not($parentStep).find('.arrow-icon').html('&#9660;'); // Reset arrows of others
+                    $('.process-step').not($parentStep).find('.arrow-icon').removeClass('fa-angle-up').addClass('fa-angle-down'); // Reset other icons
 
                     // Toggle the clicked step
                     $parentStep.toggleClass('active');
                     $content.slideToggle(300); // Smooth slide animation
 
-                    // Change arrow icon based on active state
-                    // if ($parentStep.hasClass('active')) {
-                    //     $arrow.html('f107;');
-                    // } else {
-                    //     $arrow.html('f107;'); 
-                    // }
+                    // Change Font Awesome icon based on active state
+                    if ($parentStep.hasClass('active')) {
+                        $arrow.removeClass('fa-angle-down').addClass('fa-angle-up'); // Change to angle-up
+                    } else {
+                        $arrow.removeClass('fa-angle-up').addClass('fa-angle-down'); // Change back to angle-down
+                    }
                 });
 
-                // Automatically open the step with the 'active' class on page load
+                // Automatically set the correct icon for the step with the 'active' class on page load
                 $('.process-step.active .step-content').slideDown();
-            
+                $('.process-step.active .step-header .arrow-icon').removeClass('fa-angle-down').addClass('fa-angle-up');
+            });
         }
         whoWe()
         

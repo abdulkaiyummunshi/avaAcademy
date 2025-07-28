@@ -225,38 +225,36 @@
 /*---Who We Are End---*/
 
 /*---The Plan Start---*/
-$primary-color: #5a4fcf; 
-$text-color: #333;
-$border-color: #ddd;
-$background-light: #f9f9f9;
+
 
 .certification-process {
     width: 100%;
+    max-width: 800px; // Adjust as needed
     margin: 20px auto;
     font-family: Arial, sans-serif;
-    display: flex;
+    display: flex; /* Added to create a container for the border */
 }
 
 .process-steps-container { /* New container for the steps to apply the border */
     width: 100%;
-    border-left: 2px solid $primary-color; /* The vertical border */
+    border-left: 2px solid $primary; /* The vertical border */
     padding-left: 20px; /* Add some spacing between the border and the steps */
 }
 
 .process-step {
-    border-bottom: 1px solid $border-color; /* Removed top border, kept bottom for separation */
+    border-bottom: 1px solid red; /* Removed top border, kept bottom for separation */
     border-radius: 0; /* Removed individual step border radius */
     margin-bottom: 0; /* Adjusted margin */
     overflow: hidden;
     background-color: #fff;
 
     &:first-child {
-        border-top: 1px solid $border-color; /* Add top border to the first step */
+        border-top: 1px solid red; /* Add top border to the first step */
     }
 
     &.active {
         .step-header {
-            background-color: $background-light;
+            background-color: green;
         }
     }
 
@@ -269,16 +267,16 @@ $background-light: #f9f9f9;
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: lighten($background-light, 2%);
+            background-color: lighten(green, 2%);
         }
 
         .step-number {
             font-size: 1.2em;
             font-weight: bold;
-            color: $primary-color;
+            color: $primary;
             margin-right: 15px;
             padding: 5px 10px;
-            background-color: rgba($primary-color, 0.1);
+            background-color: rgba($primary, 0.1);
             border-radius: 5px;
         }
 
@@ -286,21 +284,21 @@ $background-light: #f9f9f9;
             margin: 0;
             flex-grow: 1;
             font-size: 1.1em;
-            color: $text-color;
+            color: black;
         }
 
         .arrow-icon {
-            font-size: 0.8em;
-            color: $primary-color;
-            transition: transform 0.3s ease;
+            font-size: 1em; // Adjust font size for Font Awesome icon
+            color: $primary;
+            // No transform needed here, jQuery will handle class change
         }
     }
 
     .step-content {
         display: none; // Hidden by default
         padding: 20px;
-        background-color: $background-light;
-        border-top: 1px solid $border-color;
+        background-color: green;
+        border-top: 1px solid red;
 
         .content-box {
             display: flex;
@@ -333,7 +331,7 @@ $background-light: #f9f9f9;
                 flex-grow: 1;
 
                 .step-heading {
-                    color: $primary-color;
+                    color: $primary;
                     font-weight: bold;
                     text-transform: uppercase;
                     font-size: 0.9em;
@@ -343,7 +341,7 @@ $background-light: #f9f9f9;
                 h4 {
                     margin-top: 0;
                     font-size: 1.3em;
-                    color: $text-color;
+                    color: black;
                     line-height: 1.4;
                 }
 
@@ -361,9 +359,6 @@ $background-light: #f9f9f9;
         display: block; // Show content for active step
     }
 
-    // Arrow icon rotation for active state
-    &.active .step-header .arrow-icon {
-        transform: rotate(180deg); // Rotate arrow up for active
-    }
+    // No need for arrow icon rotation in SCSS, jQuery will change the icon class
 }
 /*---The Plan End---*/

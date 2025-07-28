@@ -22073,6 +22073,7 @@
 /*---The Plan Start---*/
 .certification-process {
   width: 100%;
+  max-width: 800px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
   display: flex;
@@ -22081,13 +22082,13 @@
 .process-steps-container {
   /* New container for the steps to apply the border */
   width: 100%;
-  border-left: 2px solid #5a4fcf;
+  border-left: 2px solid #3561ff;
   /* The vertical border */
   padding-left: 20px;
   /* Add some spacing between the border and the steps */ }
 
 .process-step {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid red;
   /* Removed top border, kept bottom for separation */
   border-radius: 0;
   /* Removed individual step border radius */
@@ -22096,10 +22097,10 @@
   overflow: hidden;
   background-color: #fff; }
   .process-step:first-child {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid red;
     /* Add top border to the first step */ }
   .process-step.active .step-header {
-    background-color: #f9f9f9; }
+    background-color: green; }
   .process-step .step-header {
     display: flex;
     align-items: center;
@@ -22108,29 +22109,28 @@
     background-color: #fff;
     transition: background-color 0.3s ease; }
     .process-step .step-header:hover {
-      background-color: #fefefe; }
+      background-color: #008a00; }
     .process-step .step-header .step-number {
       font-size: 1.2em;
       font-weight: bold;
-      color: #5a4fcf;
+      color: #3561ff;
       margin-right: 15px;
       padding: 5px 10px;
-      background-color: rgba(90, 79, 207, 0.1);
+      background-color: rgba(53, 97, 255, 0.1);
       border-radius: 5px; }
     .process-step .step-header .step-title {
       margin: 0;
       flex-grow: 1;
       font-size: 1.1em;
-      color: #333; }
+      color: black; }
     .process-step .step-header .arrow-icon {
-      font-size: 0.8em;
-      color: #5a4fcf;
-      transition: transform 0.3s ease; }
+      font-size: 1em;
+      color: #3561ff; }
   .process-step .step-content {
     display: none;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd; }
+    background-color: green;
+    border-top: 1px solid red; }
     .process-step .step-content .content-box {
       display: flex;
       gap: 20px;
@@ -22154,7 +22154,7 @@
       .process-step .step-content .content-box .text-content {
         flex-grow: 1; }
         .process-step .step-content .content-box .text-content .step-heading {
-          color: #5a4fcf;
+          color: #3561ff;
           font-weight: bold;
           text-transform: uppercase;
           font-size: 0.9em;
@@ -22162,7 +22162,7 @@
         .process-step .step-content .content-box .text-content h4 {
           margin-top: 0;
           font-size: 1.3em;
-          color: #333;
+          color: black;
           line-height: 1.4; }
         .process-step .step-content .content-box .text-content p {
           font-size: 0.95em;
@@ -22170,8 +22170,6 @@
           color: #666; }
   .process-step.active .step-content {
     display: block; }
-  .process-step.active .step-header .arrow-icon {
-    transform: rotate(180deg); }
 
 /*---The Plan End---*/
 .header_area .sub_heading h4 {
