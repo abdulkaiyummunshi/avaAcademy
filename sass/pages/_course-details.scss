@@ -222,3 +222,52 @@
         }
     }
 }
+
+.course-skill {
+    margin-top: 50px;
+    &-card {
+        border-radius: 20px;
+        background: var(--Gray-100, #F9FBFE);
+        padding: 30px;
+        &__header {
+            padding: 35px 30px;
+            border-radius: 20px;
+            background: var(--Primary-2, linear-gradient(90deg, #2981FA 0%, #18A7F7 100%));
+            box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+            color: var(--White, #FFF);
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 34px; /* 141.667% */
+            margin-bottom: 30px;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 30px;
+            border-radius: 5px;
+            border: 1px solid rgba(193, 193, 193, 0.20);
+            background: var(--White, #FFF);
+            box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            &__name {
+               color: #000;
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px; /* 144.444% */ 
+            }
+            &__time {
+                color: #000;
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px; /* 144.444% */
+            }
+        }
+    }
+}
