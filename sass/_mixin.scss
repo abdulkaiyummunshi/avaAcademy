@@ -5,6 +5,7 @@
   align-items: $align;
 }
 
+
 @mixin transition($time) {
   transition: all $time ease;
 }
@@ -48,19 +49,7 @@
   -o-transform: translate($translateX, $translateY);
 }
 
-// $spacing-values: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 100, 150, 200, 500, 1000, 5000);
 
-// @each $value in $spacing-values {
-//   .pt-#{$value} {
-//     padding-top: #{$value}px;
-//   }
-
-//   .mt-#{$value} {
-//     margin-top: #{$value}px;
-//   }
-// }
-
-// for responsive
 
 // Small devices
 @mixin xs {
@@ -111,62 +100,7 @@
 
 
 
-@mixin three13 {
-  @media only screen and (min-width: 0px) and (max-width: 1310px){
-      @content;
-  }
-}
-@mixin tow12min {
-  @media only screen and (min-width: 1200px){
-      @content;
-  }
-}
-@mixin tow12 {
-  @media only screen and (min-width: 1024px) and (max-width: 1250px){
-      @content;
-  }
-}
-@mixin navbtn {
-  @media only screen and (min-width: 0px) and (max-width: 1000px){
-      @content;
-  }
-}
-@mixin navmenu {
-  @media only screen and (min-width: 0px) and (max-width: 998px){
-      @content;
-  }
-}
-// @mixin navmenu {
-//   @media only screen and (min-width: 0px) and (max-width: 998px){
-//       @content;
-//   }
-// }
-// @for $i from 1 through 1000 {
-//   .mt-#{$i} {
-//     margin-top: #{$i}px;
-//   }
-//   .mb-#{$i} {
-//     margin-bottom: #{$i}px;
-//   }
-//   .ml-#{$i} {
-//     margin-left: #{$i}px;
-//   }
-//   .mr-#{$i} {
-//     margin-right: #{$i}px;
-//   }
-//   .pt-#{$i} {
-//     padding-top: #{$i}px;
-//   }
-//   .pb-#{$i} {
-//     padding-bottom: #{$i}px;
-//   }
-//   .pl-#{$i} {
-//     padding-left: #{$i}px;
-//   }
-//   .pr-#{$i} {
-//     padding-right: #{$i}px;
-//   }
-// }
+
 
 
 @for $i from 1 through 300{
@@ -195,33 +129,7 @@
     padding-right: #{$i}px;
   }
 
-  // Mobile Devices (max-width: 480px)
-  // @media (max-width: 480px) {
-  //   .mt-#{$i} {
-  //     margin-top: #{$i / 4}px;
-  //   }
-  //   .mb-#{$i} {
-  //     margin-bottom: #{$i / 4}px;
-  //   }
-  //   .ml-#{$i} {
-  //     margin-left: #{$i / 4}px;
-  //   }
-  //   .mr-#{$i} {
-  //     margin-right: #{$i / 4}px;
-  //   }
-  //   .pt-#{$i} {
-  //     padding-top: #{$i / 4}px;
-  //   }
-  //   .pb-#{$i} {
-  //     padding-bottom: #{$i / 4}px;
-  //   }
-  //   .pl-#{$i} {
-  //     padding-left: #{$i / 4}px;
-  //   }
-  //   .pr-#{$i} {
-  //     padding-right: #{$i / 4}px;
-  //   }
-  // }
+
 
   // Small Tablets (max-width: 768px)
   @media (max-width: 768px) {

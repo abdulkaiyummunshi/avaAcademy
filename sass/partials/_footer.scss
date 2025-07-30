@@ -1,6 +1,85 @@
 .footer{
-    background: #020626;
+    background: $gray9;
     padding: 0px 20px;
+    @include flex(column, flex-end, center);
+    height: 553px;
+    position: relative;
+    .container-xl{
+        position: relative;
+
+    }
+    .vector1{
+        position: absolute;
+        bottom: 83px;
+        left: 0px;
+        pointer-events: none;
+    }
+    .vector2{
+        position: absolute;
+        bottom: 66px;
+        right: 0px;
+        pointer-events: none;
+    }
+    .ovely_content{
+        position: absolute;
+        top: -455px;
+        width: 100%;
+        left: 50%;
+        @include transformX(-50%);
+        border-radius: 20px;
+        background: linear-gradient(to bottom, #007bff, #00c6ff);
+        padding: 64px 50px 91px 100px;
+        overflow: none;
+        .shape1{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            pointer-events: none;
+        }
+        .shape2{
+            position: absolute;
+            top: 0px;
+            right: 24%;
+            @include transformX(-40%);
+            pointer-events: none;
+        }
+        .shape4{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+        }
+        .shape3{
+            position: absolute;
+            bottom: 2px;
+            left: 1px;
+            pointer-events: none;
+        }
+    }
+    .category{
+        ul{
+            @include flex(row, flex-start, center);
+            gap: 17px;
+            padding: 13px 15px;
+            border: 1px solid rgba(193, 193, 193, 0.6);
+            border-radius: 5px;
+            max-width: 647px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            li{
+                a{
+                    font-weight: 600;
+                    font-size: 16px;
+                    letter-spacing: 0.01em;
+                    color: $white;
+                    @include transition(0.4s);
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
     @include sm{
         padding: 0px 10px;
     }
@@ -14,9 +93,6 @@
                 gap: 40px 0px;
             }
             @include nesthub{
-                gap: 40px 0px;
-            }
-            @include tow12{
                 gap: 40px 0px;
             }
              .footer_logo{
@@ -35,68 +111,83 @@
                         }
                             }
                         }
-                        p{
-                            font-family: $--font-family;
-                            font-weight: 500;
-                            font-size: 18px;
-                            color: $--white;
-                            opacity: 0.7;
+                        .describtion{
+                            p{
+                                font-weight: 400;
+                                font-size: 18px;
+                                color: $white;
+                                opacity: 0.8;
+                            }
                         }
-            .iteam_content{
-                p{
-                    font-family: $--font-family;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 162%;
-                    color: $--text2;
-                }
-            }
             
             .quicklink{
-                @include flex(column, flex-start, flex-start);
                 height: 100%;
+                .header-wrap{
+                    @include flex(row, flex-end, center);
+                    @include sm{
+                        justify-content: center;
+                    }
+                }
             ul{
                 margin: 0px;
                 padding: 0px;
-                @include flex(column, flex-start, flex-start);
-                margin-top: 20px;
-                margin-left: 20px;
+                gap: 20px;
                 li{
-                    list-style-type: disc;
-                    color: $--white !important;
-                    opacity: 0.7;
                     a{
-                        font-family: $--font-family;
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 275%;
-                        color: $--text2;
-                        // opacity: 0.7;
+                        font-weight: 400;
+                        font-size: 18px;
+                        letter-spacing: -0.01em;
+                        padding: 10px 7px;
+                        text-transform: capitalize;
+                        color: $white;
+                        @include transition(0.4s);
                     }
                     &:hover a{
-                        @include transition(.3s);
-                        color: $--primary;
+                        color: $primary;
+                    }
+                    &.menu-item-has-children{
+                        &::after{
+                            color: $white !important;
+                        }
+                        &:hover{
+                            &::after{
+                                color: $primary !important;
+                            }
+
+                        }
+                        a{
+                            padding-right: 22px;
+                        }
+                        ul{
+                            li{
+                                a{
+                                    &:hover{
+                                        color: $white !important;
+                                    }
+                                }
+                            }
+                        }
                     }
                     
                 }
             }
             
                 h3{
-                    font-family: $--font-family;
+                    
                     font-weight: 600;
                     font-size: 20px;
                     letter-spacing: -0.02em;
-                    color: $--white;
+                    color: $white;
                     text-align: left;
                     
                 }
                 p{
-                    font-family: $--font-family;
+                    
                     font-weight: 500;
                     font-size: 16px;
                     // line-height: 275%;
                     margin-top: 21px;
-                    color: $--text2;
+                    color: $gray9;
                 }
                 form{
                    border: 1px solid #ffffff24;
@@ -110,9 +201,9 @@
                      border: none;
                      outline: none;
                      background-color: transparent;
-                     color: $--white;
+                     color: $white;
                      &::placeholder{
-                        color: $--white;
+                        color: $white;
                         font-weight:100;
                      }
                      
@@ -120,13 +211,13 @@
                 button{
                     width: 124px;
                     height: 40px;
-                    background-color: $--primary;
+                    background-color: $primary;
                     text-align: center;
                     line-height: 40px;
                     border: none;
-                    color: $--white;
+                    color: $white;
                     margin-right: 5px;
-                    font-family: $--font-family;
+                    
                     font-weight: 500;
                     font-size: 15px;
                     &:hover{
@@ -147,15 +238,15 @@
                        width:40px;
                        height: 40px;
                        border: 1px solid #ffffff24;
-                       color: $--white;
+                       color: $white;
                        display: block;
                        text-align: center;
                        line-height: 40px;
                        @include transition(0.4s);
                        &:hover{
-                           background-color: $--primary;
+                           background-color: $primary;
                            border: 1px solid transparent;
-                           color: $--white;
+                           color: $white;
                        }
                    }
                         }
@@ -165,11 +256,36 @@
             }
             
         }
+        .social_area{
+            ul{
+                @include flex(row, flex-start, center);
+                gap: 12px;
+                li{
+                    a{
+                        display: inline-block;
+                        width:36px;
+                        height: 36px;
+                        line-height: 36px;
+                        @include border-radius(50%);
+                        text-align: center;
+                        border: 1px solid #47425f;
+                        color:  $primary;
+                        @include transition(0.4s);
+
+                        &:hover{
+                            background-color: $primary;
+                            color: $white;
+                            border: 1px solid transparent;
+                        }
+                    }
+                }
+            }
+        }
 
         .footer_last{
             &.style_1{
                 p{
-                    color: $--white;
+                    color: $white;
                     opacity: 1 !important;
                 }
                 a{
@@ -177,11 +293,11 @@
                 }
             }
             p{
-                font-family: $--font-family;
-                font-size: 16px;
-                line-height: 150%;
+                
+                opacity: 0.8;
                 font-weight: 400;
-                color: #ffffffb3;
+                font-size: 18px;
+                color: $white;
             }
             @include nesthub{ 
                 margin-top: -17px;
@@ -209,16 +325,15 @@
             border-top: 1px solid #ffffff1a;
             width: 100%;
             a{
-                font-family: $--font-family;
-                font-weight: 200;
-                font-size: 16px;
-                line-height: 150%;
-                color: $--white;
-                opacity: 0.7;
+                
+                font-weight: 400;
+                font-size: 18px;
+                color: $white;
+                opacity: 0.8;
                 @include transition(0.4s);
                 &:hover{
-                    color: $--primary;
-                    margin-bottom: 5px;
+                    color: $primary !important;
+                    opacity: 1;
                 }
             }
             .footer_last_menu{
@@ -246,24 +361,27 @@
                         }
                         padding: 0px 20px;
                         &:nth-child(1){
-                            border-right: 1px solid $--border;
+                            border-right: 1px solid $gray2;
                         }
                         width: fit-content !important;
                         a{
-                            font-family: $--font-family;
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 162%;
-                            color: $--white;
-                            opacity: 0.7;
-                            
-                        }
+                
+                font-weight: 400;
+                font-size: 18px;
+                color: $white;
+                opacity: 0.8;
+                @include transition(0.4s);
+                &:hover{
+                    color: $primary !important;
+                    opacity: 1;
+                }
+            }
                     }
                 }
             }
         }
         .footer_last_area{
-            background-color: $--primary;
+            background-color: $primary;
         }
     
 }

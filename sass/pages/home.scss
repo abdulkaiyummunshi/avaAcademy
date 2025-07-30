@@ -202,6 +202,24 @@
     }
     .who_we_images{
         @include flex(row, flex-end, flex-end);
+        &.style_1{
+            justify-content: center;
+            position: relative;
+            .who_main_image{
+                height: 539px !important;
+                width: 516px !important;
+            }
+            .objects{
+                border: 1px solid rgba(193, 193, 193, 0.2);
+                border-radius: 20px;
+                padding: 30px;
+                background: #f9faff;
+                position: absolute;
+                top: 50%;
+                @include transformY(-50%);
+                right: 0px;
+            }
+        }
         position: relative;
         .who_main_image{
             width: 407px;
@@ -695,7 +713,363 @@
             }
         }
     }
+    .certificate_image{
+        width: 100%;
+
+    }
+    .certification_image{
+        width: 560px;
+        height: 446px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 /*---The Certification End---*/
+
+/*---verified_talent Start---*/
+.verified_talent{
+    .talent_image{
+        max-width: 675px;
+        width: 100%;
+        height: 579px;
+        @include border-radius(20px);
+        img{
+            width: 100%;
+            height: 100%;
+            @include border-radius(20px);
+            object-fit: cover;
+        }
+        @include sm{
+            border-radius: 5px;
+            @include border-radius(5px);
+            max-width: 342px;
+            width: 100%;
+            height: 293px;
+            img{
+                @include border-radius(5px);
+
+            }
+        }
+    }
+.accordion-container {
+    width: 100%;
+    background-color: #f3f9ff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.accordion-item {
+    border-radius: 14px;
+    width: 100%;
+    border: 1px solid $gray2;
+    overflow: hidden;
+    &.style_1{
+        border-bottom: 1px solid $gray2;
+        .accordion-header{
+            padding: 24px 40px 24px 40px;
+        }
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+    &.active {
+        .number {
+        color: $white;
+    }
+        .accordion-header {
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: #fff;
+            
+        }
+        .accordion-content {
+            max-height: 500px;
+            p{
+                background: linear-gradient(to right, #007bff, #00c6ff);
+            color: #fff;
+            }
+        }
+    }
+}
+.accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 24px 40px 8px 40px;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: $gray9;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    .number {
+        margin-right: 15px;
+        transition: color 0.3s ease;
+        font-weight: 600;
+        font-size: 44px;
+        text-transform: capitalize;
+        color: #a9bdd0;
+    }
+    .arrow-icon {
+        border-radius: 100%;
+        background-color: $white;
+        border: 1px solid $gray2;
+        box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+        margin-left: auto;
+        color: #141417;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        line-height: 40px;
+        
+        text-align: center;
+        font-size: 0.8em;
+        transition: transform 0.3s ease;
+    }
+    .accordion-item.active & {
+        .number {
+            color: #fff;
+        }
+    }
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        p{
+        padding: 0 58px 38px 44px; 
+        font-weight: 400;
+        font-size: 16px;
+        color: $gray9;
+        letter-spacing: 0.01em;
+    }
+}
+}
+/*---verified_talent End---*/
+
+/*---Text Slider Start---*/
+.text_slider{
+
+.scroll-container {
+
+    width: 100%;
+    overflow: hidden; 
+    background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
+    white-space: nowrap; 
+    padding: 30px 20px;
+}
+
+.scroll-content {
+    display: inline-block; 
+    animation: scroll-left 20s linear infinite; 
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 0px 20px;
+    &.style_1{
+        font-weight: 700;
+        font-size: 45px;
+        color: $white;
+    }
+    &.style_2{
+        font-weight: 700;
+        font-size: 45px;
+        color: transparent;
+        -webkit-text-stroke: 1px white; 
+        // text-stroke: 1px white; 
+        letter-spacing: 2px
+
+    }
+    transition: background-color 0.3s ease;
+
+    // &:hover {
+    //     background-color: rgba(255, 255, 255, 0.2);
+    // }
+
+    .icon {
+        margin-right: 8px;
+    }
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+}
+/*---Text Slider End---*/
+
+/*---FAQ Start---*/
+.faq_area{
+    .faq_image_area{
+        height: 589px;
+        @include flex(row, flex-start, flex-end)
+    }
+    .faq_image{
+        width: 481px;
+        height: 481px;
+        @include border-radius(50%);
+         background-color: rgba($primary, 0.2);
+         position: relative;
+        .image{
+             img{
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            @include transformX(-50%);
+            z-index: 10;
+         }
+        }
+         &::after{
+            content: "";
+            border: 1px solid $primary;
+            @include border-radius(50%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -30px;
+            left: 0px;
+            
+         }
+        .vector1{
+            position: absolute;
+            top: -35px;
+            right: 0px;
+        }
+        .vector3{
+            position: absolute;
+            bottom: 40px;
+            left: -35px;
+        }
+        .vector2{
+            position: absolute;
+            top: 40px;
+            left: -9px;
+        }
+        .box1{
+            width: 40px;
+            height: 40px;
+            @include border-radius(50%);
+            background-color: $primary;
+            position: absolute;
+            left: -63px;
+            top: 170px;
+        }
+        .box2{
+            width: 15px;
+            height: 15px;
+            @include border-radius(50%);
+            background-color: $primary;
+            position: absolute;
+            left: -51px;
+            bottom: 176px;
+        }
+        .box3{
+            width: 4px;
+            height: 4px;
+            @include border-radius(50%);
+            background-color: $primary;
+            position: absolute;
+            left: -21px;
+            bottom: 143px;
+        }
+        .box4{
+            width: 26px;
+            height: 26px;
+            @include border-radius(50%);
+            background-color: $primary;
+            position: absolute;
+            top: 97px;
+            right: -13px;
+        }
+    }
+.faq-section {
+    width: 100%;
+}
+.accordion {
+    width: 100%;
+    .accordion-item {
+        border: 1px solid rgba(20, 20, 23, 0.1);
+        border-radius: 6px;
+        margin-bottom: 12px;
+        overflow: hidden; 
+        &.active {
+            .accordion-header {
+                background: linear-gradient(180deg, #0ebef6 0%, #3171fb 100%);
+                h3{
+                    color: $white;
+                }
+                
+
+                .icon {
+                    transform: rotate(180deg); 
+                    background-color: $white;
+                }
+            }
+            .accordion-content {
+                max-height: 200px; 
+                opacity: 1;
+                visibility: visible;
+                transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.3s ease-out;
+            }
+        }
+    }
+
+    .accordion-header {
+        @include flex(row, space-between, center);
+        padding: 10px 30px;
+        cursor: pointer;
+        h3{
+            font-weight: 600;
+            font-size: 18px;
+            color: #181818;
+        }
+
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+
+        .icon {
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            @include border-radius(50%);
+            border: 1px solid $gray2;
+            background-color: #f3f9ff;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    .accordion-content {
+        max-height: 0; 
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.3s ease-in, padding 0.3s ease-in, opacity 0.3s ease-in;
+
+        p {
+            padding: 21px 30px 20px 30px;
+            margin: 0; 
+            font-weight: 400;
+            font-size: 18px;
+            color: $gray8;
+        }
+    }
+}
+}
+/*---FAQ End---*/
+
+
+
+
 
 

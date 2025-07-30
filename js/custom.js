@@ -81,8 +81,43 @@
             });
         }
         whoWe()
-        
-      
+        // Verified Talent
+        function verifiedTalent(){
+                $('.accordion-header').on('click', function () {
+                    var $parentItem = $(this).closest('.accordion-item');
+                    var $arrow = $(this).find('.arrow-icon');
+                    var isCurrentlyActive = $parentItem.hasClass('active');
+
+                    $('.accordion-item').not($parentItem).each(function () {
+                        $(this).removeClass('active');
+                        $(this).find('.accordion-header .arrow-icon').html('<i class="fa-solid fa-angle-down"></i>'); 
+                    });
+
+                    // Toggle the clicked item
+                    if (isCurrentlyActive) {
+                        // If it was active, remove 'active' and set arrow down
+                        $parentItem.removeClass('active');
+                        $arrow.html('<i class="fa-solid fa-angle-down"></i>');
+                    } else {
+                        // If it was not active, add 'active' and set arrow up
+                        $parentItem.addClass('active');
+                        $arrow.html('<i class="fa-solid fa-angle-up"></i>');
+                    }
+                });
+        }
+        verifiedTalent()
+
+        // Text Slider
+        function textSlider(){
+            $(document).ready(function () {
+                $('.scroll-container').hover(function () {
+                    $('.scroll-content').css('animation-play-state', 'paused');
+                }, function () {
+                    $('.scroll-content').css('animation-play-state', 'running');
+                });
+            });
+        }
+        textSlider()
         // $('.review_slider').slick({
         //     slidesToShow: 1,
         //     slidesToScroll: 1,
@@ -523,73 +558,73 @@
 })(jQuery);
 
 
-function pricingContains (){
+// function pricingContains (){
     
-    const channelCards = document.querySelectorAll(".channel_card");
-    const channelContents = document.querySelectorAll(".price_channel");
+//     const channelCards = document.querySelectorAll(".channel_card");
+//     const channelContents = document.querySelectorAll(".price_channel");
 
-    channelCards.forEach((card, index) => {
-        const button = card.querySelector("button");
+//     channelCards.forEach((card, index) => {
+//         const button = card.querySelector("button");
 
-        button.addEventListener("click", function () {
-            document.querySelectorAll(".channel_card button").forEach(btn => btn.classList.remove("btn_active"));
-            channelContents.forEach(content => content.classList.remove("active"));
-            this.classList.add("btn_active");
-            channelContents[index].classList.add("active");
-        });
-    });
+//         button.addEventListener("click", function () {
+//             document.querySelectorAll(".channel_card button").forEach(btn => btn.classList.remove("btn_active"));
+//             channelContents.forEach(content => content.classList.remove("active"));
+//             this.classList.add("btn_active");
+//             channelContents[index].classList.add("active");
+//         });
+//     });
     
 
 
-}
-pricingContains()
+// }
+// pricingContains()
 
-function internetSpeed(){
-    const timerCards = document.querySelectorAll(".timer_card");
-    const contentAreas = document.querySelectorAll(".content_area");
+// function internetSpeed(){
+//     const timerCards = document.querySelectorAll(".timer_card");
+//     const contentAreas = document.querySelectorAll(".content_area");
 
-    timerCards.forEach((card, index) => {
-        card.addEventListener("click", function () {
-            timerCards.forEach(c => c.classList.remove("btn_active"));
-            contentAreas.forEach(content => content.classList.remove("active"));
-            this.classList.add("btn_active");
-            contentAreas[index].classList.add("active");
-        });
-    });
+//     timerCards.forEach((card, index) => {
+//         card.addEventListener("click", function () {
+//             timerCards.forEach(c => c.classList.remove("btn_active"));
+//             contentAreas.forEach(content => content.classList.remove("active"));
+//             this.classList.add("btn_active");
+//             contentAreas[index].classList.add("active");
+//         });
+//     });
     
-}
-internetSpeed()
-function priceContent(){
-    const timerCards = document.querySelectorAll(".price_card");
-    const contentAreas = document.querySelectorAll(".price_content");
+// }
+// internetSpeed()
+// function priceContent(){
+//     const timerCards = document.querySelectorAll(".price_card");
+//     const contentAreas = document.querySelectorAll(".price_content");
 
-    timerCards.forEach((card, index) => {
-        card.addEventListener("click", function () {
-            timerCards.forEach(c => c.classList.remove("btn_active"));
-            contentAreas.forEach(content => content.classList.remove("active"));
-            this.classList.add("btn_active");
-            contentAreas[index].classList.add("active");
-        });
-    });
+//     timerCards.forEach((card, index) => {
+//         card.addEventListener("click", function () {
+//             timerCards.forEach(c => c.classList.remove("btn_active"));
+//             contentAreas.forEach(content => content.classList.remove("active"));
+//             this.classList.add("btn_active");
+//             contentAreas[index].classList.add("active");
+//         });
+//     });
     
-}
-priceContent()
+// }
+// priceContent()
 
-function internetService(){
-    const timerCards = document.querySelectorAll(".my_card");
-    const contentAreas = document.querySelectorAll(".package_pricign");
+// function internetService(){
+//     const timerCards = document.querySelectorAll(".my_card");
+//     const contentAreas = document.querySelectorAll(".package_pricign");
 
-    timerCards.forEach((card, index) => {
-        card.addEventListener("click", function () {
-            timerCards.forEach(c => c.classList.remove("btn_active"));
-            contentAreas.forEach(content => content.classList.remove("active"));
-            this.classList.add("btn_active");
-            contentAreas[index].classList.add("active");
-        });
-    });
+//     timerCards.forEach((card, index) => {
+//         card.addEventListener("click", function () {
+//             timerCards.forEach(c => c.classList.remove("btn_active"));
+//             contentAreas.forEach(content => content.classList.remove("active"));
+//             this.classList.add("btn_active");
+//             contentAreas[index].classList.add("active");
+//         });
+//     });
     
-}
-internetService()
+// }
+// internetService()
 
 
 $(document).ready(function () {
