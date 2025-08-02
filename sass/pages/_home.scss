@@ -4,12 +4,56 @@
     background-color: $gray9;
     height: 90vh;
     @include flex(row, center, center);
+    
+    @include sm{
+        padding: 76px 10px 10px 10px;
+        // height: 610px !important;
+    }
+    @include nesthubmax{
+        .describtion{
+            p{
+                padding-right: 109px;
+            }
+        }
+        .header_area{
+            h1{
+                padding-right: 100px;
+            }
+        }
+    }
+    @include nesthub{
+        .describtion{
+            padding-right: 50px;
+        }
+    }
     .trusted_wrapper{
+        @include nesthub{
+        margin-top: 30px;
+    }
         height: 640px;
         position: relative;
         background: #2e2b4f;
         padding: 102px 0px 110px 97px;
         @include border-radius(10px);
+        @include nesthubmax{
+            border-radius: 0 0 10px 0;
+            width: 100%;
+            margin-top: -8px;
+            padding: 70px 15px 60px 15px;
+        }
+        @include nesthub{
+            border-radius: 0 0 10px 0;
+            width: 100%;
+            height: 500px;
+            margin-top: 30px;
+            padding: 80px 15px 30px 15px;
+        }
+        @include md{
+            border-radius: 0 0 10px 0;
+            width: 100%;
+            height: 610px;
+            padding: 15px;
+        }
         @include sm{
             border-radius: 0 0 10px 0;
             width: 100%;
@@ -28,11 +72,27 @@
         height: 579px;
         bottom: 0px;
         right: 0px;
-        @include sm{
-            width: 100%;
-            height: 265px;
+        @include nesthub{
+            width: 500px;
+            height: fit-content;
             bottom: 0px;
-            left: -33px !important;
+            img{
+                max-width: 100%;
+                width: 100%;
+                height: fit-content;
+                object-fit: cover !important;
+            }
+        }
+        @include sm{
+            width: 367px;
+            height: fit-content;
+            img{
+                max-width: 100%;
+                width: 100%;
+                height: fit-content;
+                object-fit: cover !important;
+            }
+            bottom: 33px;
         }
         img{
             width: 100%;
@@ -42,14 +102,18 @@
         }
     }
     .bg_gradient{
+        // display: none;
         background:linear-gradient(134deg, #12b4f6 0%, #3074fb 100%);;
         filter: blur(133px);
         width: 259px;
         height: 373px;
         margin-top: 50px;
         @include sm{
+            margin-left: 100px;
             width: 163px;
             height: 133px;
+            background: linear-gradient(134deg, #12b4f6 0%, #3074fb 100%);
+            filter: blur(59.547706604003906px);
         }
     }
     .social_area{
@@ -64,11 +128,28 @@
         @include flex(row, center, center);
         flex-wrap: wrap;
         gap: 14px;
+        @include sm{
+            max-width: 90px;
+            padding: 10px;
+            gap: 7px;
+            top: 64%;
+            right: 18%;
+        }
         span{
             width: 34px;
             display: block;
             height: 34px;
             line-height: 34px;
+            @include sm{
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                img{
+                    width: 10px;
+                    height: 10px;
+
+                }
+            }
             text-align: center;
             @include border-radius(5px);
             background-color: $white;
@@ -80,15 +161,55 @@
 
 /*---The Problem Start---*/
 .the_problem{
+    @include sm{
+        margin-top: 40px !important;
+    }
     .problem_images{
         position: relative;
+        // @include nesthub{
+        //     background-color: green;
+
+        // }
+        @include md{
+            margin-top: 100px;
+        }
+        @include sm{
+            margin-top: 50px;
+            @include flex(row, center, center);
+        }
         width: 100%;
         .problem_main_img{
             width: 664px;
             height: 476px;
-            @include sm{
+            position: relative;
+            @media (min-width:120px) and (max-width:1400px){
+                max-width: 100%;
                 width: 100%;
-                height: fit-content
+                height: 391px;
+
+            }
+            @include nesthubmax{
+                max-width: 100%;
+                width: 100%;
+                height: 391px;
+
+            }
+            @include nesthub{
+                max-width: 100%;
+                width: 100%;
+                height: 345px;
+
+            }
+            @include md{
+                // max-width: 342px;
+                width: 100%;
+                height: 245px;
+
+            }
+            @include sm{
+                max-width: 342px;
+                width: 100%;
+                height: 245px;
 
             }
             @include border-radius(20px);
@@ -102,7 +223,11 @@
         .problem_child_img{
             position: absolute;
             top: -57px;
-            right: 14px;
+            right: 0px;
+            @include sm{
+                top: -28px;
+                right: 0px;
+            }
             border-radius: 20px;
             width: 210px;
             height: 182px;
@@ -112,6 +237,18 @@
                 object-fit: cover;
                 @include border-radius(20px);
             }
+            @include nesthubmax{
+                width: 169px;
+                height: 165px;
+            }
+            @include nesthub{
+                width: 169px;
+                height: 165px;
+            }
+            @include sm{
+                width: 108px;
+                height: 93px;
+}
         }
         .graduatesplaced{
             max-width: 300px;
@@ -121,6 +258,11 @@
             background: $white;
             position: absolute;
             top: -57px;
+            @include sm{
+                padding: 10px 15px;
+                margin-top: -6px;
+                top: -23px;
+            }
             
             left: 0px;
             span{
@@ -129,16 +271,33 @@
                 width: 40px;
                 height: 40px;
                 display: inline-block;
+                @include sm{
+                    width: 20px;
+                    height: 20px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
             }
             h4{
                 font-weight: 400;
                 font-size: 18px;
                 color: $gray8;
+                @include sm{
+                    font-size: 9px;
+                }
                 span{
                     font-weight: 700;
                     font-size: 24px;
-                    color: $primary;
                     margin-right: 20px;
+                    @include sm{
+                        font-size: 12px;
+                        margin-right: 20px;
+                    }
+                    color: $primary;
                 }
             }
         }
@@ -148,35 +307,65 @@
                 &:nth-child(2){
                     position: absolute;
                     left: 28px;
+                    @include sm{
+                        left: 15px;
+                    }
                 }
                 &:nth-child(3){
                     position: absolute;
                     left: 58px;
+                    @include sm{
+                        left: 30px;
+                    }
                 }
                 &:nth-child(4){
                     position: absolute;
                     left: 88px;
+                    @include sm{
+                        left: 45px;
+                    }
                 }
                 &:nth-child(5){
                     position: absolute;
                     left: 118px;
+                    @include sm{
+                        left: 60px;
+                    }
                 }
                 &:nth-child(6){
                     position: absolute;
                     left: 148px;
+                    @include sm{
+                        left: 76px;
+                    }
                 }
                     
             }
         }
     }
+    // .header_area{
+    //     @include md{
+    //         margin-top: 34px;
+    //     }
+    //     @include sm{
+    //         margin-top: 24px;
+            
+    //     }
+    // }
     .describtion_highlight{
         padding: 20px 30px;
         @include border-radius(10px);
         border: 1px solid #ececec;
         background-color: $gray1;
+        @include sm{
+            padding: 10px 20px;
+        }
         p{
             font-weight: 400;
             font-size: 18px;
+            @include sm{
+                font-size: 10px;
+            }
             color: $gray9;
             padding-left: 20px;
             border-left: 2px solid $primary;
@@ -190,17 +379,39 @@
     .about_list{
         ul{
             li{
-                font-weight: 600;
-                font-size: 18px;
-                color:  $gray9;
-                margin-bottom: 17px;
-                span{
-                    margin-right: 16px;
+                @include flex(row, flex-start, flex-start);
+                gap: 10px;
+                p{
+                    font-weight: 600;
+                    font-size: 18px;
+                    color:  $gray9;
+              
+
+                @include sm{
+                    font-size: 14px;
                 }
+                @include md{
+                    font-size: 14px;
+                }
+                @include nesthub{
+                    font-size: 14px;
+                }
+                @include nesthubmax{
+                    font-size: 16px;
+                }
+                }
+                margin-bottom: 17px;
+                @include sm{
+                    margin-bottom: 5px;
+                }
+                
             }
         }
     }
     .who_we_images{
+        @include sm{
+            margin-top: 14px;
+        }
         @include flex(row, flex-end, flex-end);
         &.style_1{
             justify-content: center;
@@ -233,6 +444,9 @@
             }
         }
         .child_image{
+            @include sm{
+                display: none;
+            }
             position: absolute;
             bottom: 0px;
             left: 0px;
@@ -254,6 +468,9 @@
             position: absolute;
             top: 0px;
             left: 41px;
+            @include sm{
+                left: 15px;
+            }
             width: 1px;
             height: 100%;
             background-color: $gray2;
@@ -283,6 +500,9 @@
             display: flex;
             align-items: center;
             padding: 15px 20px;
+            @include sm{
+                padding: 15px;
+            }
             border-bottom: 1px solid $gray2;
             cursor: pointer;
             background-color: #fff;
@@ -299,6 +519,12 @@
                 width: 44px;
                 height: 44px;
                 line-height: 44px;
+                @include sm{
+                    font-size: 12px;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                }
                 @include border-radius(50%);
                 border: 1px solid $gray2;
                 box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
@@ -313,6 +539,9 @@
                 text-transform: capitalize;
                 color: #141417;
                 margin-left: 16px;
+                @include sm{
+                    font-size: 16px;
+                }
             }
     
             .arrow-icon {
@@ -325,6 +554,9 @@
         .step-content {
             display: none; 
             padding: 42px 42px 42px 84px;
+            @include sm{
+                padding:20px 20px 20px 37px;
+            }
             border-bottom: 1px solid $gray2;
             .content-box {
                 padding: 60px 100px;
@@ -333,12 +565,44 @@
                 border-radius: 14px;
                 @include flex(row, flex-start, center);
                 gap: 125px;
-    
+                @include nesthub{
+                    padding: 30px !important;
+                    gap: 60px !important;
+                }
+                @include nesthub{
+                    padding: 20px !important;
+                    gap: 30px !important;
+                }
+                @include md{
+                    padding: 30px;
+                    gap: 14px;
+                    flex-direction: column;
+                }
+                @include sm{
+                    padding: 0px;
+                    gap: 14px;
+                    background-color:transparent ;
+                    border: 1px solid transparent;
+                }
+                
                 @media (max-width: 600px) {
                     flex-direction: column; 
                 }
-    
+                
                 .image-placeholder {
+                    @include md{
+                        width: 100%;
+                        max-width: 370px;
+
+                    }
+                    @include sm{
+                        padding: 30px;
+                        background-color: #f3f9ff;
+                        @include border-radius(20px);
+                        border: 1px solid $gray2;
+
+                    }
+                    
                     flex-shrink: 0; 
                     width: 40%; 
                     max-width: 250px; 
@@ -352,7 +616,6 @@
                     @media (max-width: 600px) {
                         width: 100%;
                         max-width: none; 
-                        margin-bottom: 15px;
                     }
                 }
     
@@ -369,12 +632,19 @@
                         box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
                         background: $white;
                         color: $gray9;
+                        @include sm{
+                            margin-top: 3px;
+                            font-size: 10px;
+                        }
                         display: inline-block;
                     }
     
                     h4 {
                         font-weight: 500;
                         font-size: 24px;
+                        @include sm{
+                            font-size: 16px;
+                        }
                         color: #141417;
                         margin-top: 18px;
                     }
@@ -384,6 +654,9 @@
                         font-size: 18px;
                         color: $gray8;
                         margin-top: 16px;
+                        @include sm{
+                            font-size: 10px;
+                        }
                     }
                 }
             }
@@ -400,6 +673,13 @@
 
 /*---For Business Owners Start---*/
 .business_owners{
+    // .row{
+    //     @include nesthub{
+    //         &.style_1{
+    //             align-items: center;
+    //         }
+    //     }
+    // }
     .business_card{
         max-width: 610px;
         border: 1px solid $gray2;
@@ -409,11 +689,33 @@
         padding: 55px 100px;
         margin-left: 41px;
         position: relative;
+        @include nesthubmax{
+            padding: 40px 0px 40px 63px;
+            margin-left: 40px;
+            max-width: 100%;
+        }
+        @include nesthub{
+            padding: 40px 0px 40px 63px;
+            margin-left: 40px;
+            max-width: 100%;
+        }
+        @include md{
+            padding: 40px 20px 40px 53px;
+            margin-left: 40px;
+            max-width: 550px;
+        }
+        @include sm{
+            padding: 20px 13px 20px 43px;
+            margin-left: 20px;
+        }
         .icon{
             position: absolute;
             top: 50%;
             @include transformY(-50%);
             left: -41px;
+            @include sm{
+                margin-left: 20px;
+            }
             span{
                 width: 100px;
                 height: 100px;
@@ -422,41 +724,170 @@
                 background: linear-gradient(90deg, #2981fa 0%, #18a7f7 100%);
                 @include border-radius(5px);
                 display: inline-block;
+                @include nesthubmax{
+                    width: 70px;
+                    height: 70px;
+                    line-height: 70px;
+                    img{
+                        width: 40px;
+                        height: 40px;
+
+                    }
+                }
+                @include nesthub{
+                    width: 70px;
+                    height: 70px;
+                    line-height: 70px;
+                    img{
+                        width: 40px;
+                        height: 40px;
+
+                    }
+                }
+                @include md{
+                    width: 78px;
+                    height: 78px;
+                    line-height: 78px;
+                    img{
+                        width: 60px;
+                        height: 60px;
+
+                    }
+                }
+                @include sm{
+                    width: 48px;
+                    height: 48px;
+                    line-height: 48px;
+                    img{
+                        width: 30px;
+                        height: 30px;
+
+                    }
+                }
             }
         }
         h4{
             font-weight: 600;
             font-size: 24px;
+            @include nesthub{
+                font-size: 18px;
+            }
+            @include md{
+                font-size: 18px;
+            }
+            @include sm{
+                font-size: 14px;
+            }
             color: #141417;
         }
     }
     .business_image{
+        @include md{
+            margin-top:120px;
+        }
+        @include sm{
+            margin-top:71px ;
+        }
         position: relative;
         @include flex(row, flex-start, flex-end);
         .business_main_img{
             position: relative;
             width: 633px;
+            @include border-radius(5px);
             height: 699px;
+            &::after{
+                content: "";
+                @include border-radius(5px);
+                width: 100%;
+                height: 100%;
+                border: 1px solid $primary;
+                position: absolute;
+                top: -45px;
+                right: -48px;
+                z-index: -1;
+                @include nesthubmax{
+                    top: -30px;
+                    right: -30px;
+                }
+                @include nesthub{
+                    top: -30px;
+                    right: -30px;
+                }
+                @include md{
+                    top: -30px;
+                    right: -30px;
+                }
+                @include sm{
+                    top: -20px;
+                    right: -20px;
+                }
+            }
+            .vector{
+                width: 95px;
+                height: 103px;
+                position: absolute;
+                top: -115px;
+                right: -109px;
+                @include nesthubmax{
+                   width: 75px;
+                    height: 83px;
+                    top: -90px;
+                    right: -82px;
+
+                }
+                @include nesthub{
+                   width: 75px;
+                    height: 83px;
+                    top: -90px;
+                    right: -82px;
+
+                }
+                @include md{
+                   width: 75px;
+                    height: 83px;
+                    top: -90px;
+                    right: -82px;
+
+                }
+                @include sm{
+                    width: 43px;
+                    height: 46px;
+                    top: -52px;
+                    right: -49px;
+
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            @include nesthubmax{
+                border-radius: 2px;
+                width: 85%;
+                height: 459px;
+            }
+            @include nesthub{
+                border-radius: 2px;
+                width: 85%;
+                height: 459px;
+            }
+            @include md{
+                border-radius: 2px;
+                width: 533px;
+                height: 599px;
+            }
+            @include sm{
+                border-radius: 2px;
+                width: 288px;
+                height: 318px;
+            }
             img{
                 width: 100%;
+                @include border-radius(5px);
                 height: 100%;
                 object-fit: cover;
             }
-        }
-    }
-    .border_line{
-        border: 2px solid $primary;
-        border-radius: 5px;
-        width: 579px;
-        height: 628px;
-        position: absolute;
-        top: -45px;
-        z-index: -1;
-        right: 0px;
-        .vector{
-            position: absolute;
-            top: -87px;
-            right: -75px;
         }
     }
     .btn_area{
@@ -467,6 +898,14 @@
             font-weight: 400;
             font-size: 18px;
             padding: 24px 31px;
+            @include md{
+                padding: 12px;
+                font-size: 12px;
+            }
+            @include sm{
+                padding: 12px;
+                font-size: 12px;
+            }
             color: $white;
             @include border-radius(5px);
             background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
@@ -480,6 +919,7 @@
 
 /*---Clients Reviews Start---*/
 .clients_reviews{
+    overflow: hidden;
     .left-arrow{
         border-radius: 100px;
         width: 44px;
@@ -493,9 +933,17 @@
         position: absolute;
         top: 50%;
         left: -51px;
+        z-index: 10;
         @include transformY(-50%);
         cursor: pointer;
         @include transition(0.4s);
+        @include sm{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            left: 10px;
+            font-size: 14px;
+        }
         &:hover{
             background-color: $primary;
             color: $white;
@@ -510,6 +958,13 @@
         box-shadow: 0 4px 20px 0 rgba(20, 20, 23, 0.2);
         background: $white;
         @include border-radius(50%);
+        @include sm{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            right: 0px;
+            font-size: 14px;
+        }
         display: inline-block;
         position: absolute;
         top: 50%;
@@ -580,23 +1035,52 @@
     .slick-slide{
         margin: 0px 10px;
     }
+    .heading{
+        h2{
+            padding-right: 30px;
+        }
+    }
     position: relative;
     svg{
         overflow: hidden;
-        position: absolute;
-        top: 50%;
-        @include transformY(-50%);
-        right: -50px;
+        // position: absolute;
+        // top: 50%;
+        // @include transformY(-50%);
+        // right: -50px;
+        @include md{
+            width: 542px;
+            height: 307px;
+            // right: 0px;
+
+        }
+        @include sm{
+            width: 342px;
+            height: 161px;
+            // right: 0px;
+            
+        }
+        // @media (min-width: 375px) and (max-width: 1200px){
+        //     top: 0px;
+        //     right: 50%;
+        //     @include transformX(50%);
+        // }
     }
     position: relative;
     height: 770px;
     background-color: $gray9;
+    @include sm{
+        height: 392px;
+        background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
+    }
     @include flex(row, center, center);
     .vector_area{
         position: absolute;
         bottom: 0px;
         left: 0px;
         pointer-events: none;
+        @include sm{
+            display: none;
+        }
     }
     .vector_two{
         position: absolute;
@@ -604,22 +1088,53 @@
         right: 0px;
         pointer-events: none;
     }
-    // .clients_review_wrapper{
-    //     @include flex(row, flex-end, center);
-    // }
     .clients_review_wrapper{
         position: relative;
+        margin-top: 21px;
+        // background-color: red;
+        @include flex(row, center, center);
     }
     .clients_review_slider{
+        position: absolute;
+        left: 50%;
+        @include transformX(-50%);
         max-width: 770px;
-        margin-left: 140px;
+        @include md{
+            margin-left: 0px !important;
+        }
+        @include sm{
+            max-width: 100% !important;
+        }
 
     }
     .review_card{
         padding: 64px 40px 63px 54px;
         border-radius: 40px;
-        width: 770px;
+        width: 760px;
         height: 410px;
+        @include sm{
+            border-radius: 16px;
+            padding: 16px 20px !important;
+            width: 300px !important;
+            height: 159px;
+            margin-left: 14px;
+        }
+        @media (min-width: 376px) and (max-width: 414px){
+            margin-left: 35px !important; 
+        }
+        @media (min-width: 390px) and (max-width: 414px){
+            margin-left: 25px !important; 
+        }
+        @media (min-width: 414px) and (max-width: 768px){
+            width: 100% !important;
+        }
+        @include xs{
+                border-radius: 16px;
+                padding: 16px 20px !important;
+            width: 300px !important;
+            height: 159px;
+            margin-left: 14px;
+        }
         background: #2e2b4f;
         .star{
             padding: 7px 14px;
@@ -629,11 +1144,55 @@
             span{
                 color: #f7931a;
             }
+            // @include md{
+            //     padding: 2px 5px !important;
+            //     line-height: 11px !important;
+            //     span{
+            //         font-size: 6px;
+            //         margin-top: -5px;
+            //     }
+            // }
+            @include sm{
+                padding: 2px 5px !important;
+                line-height: 11px !important;
+                span{
+                    font-size: 6px;
+                    margin-top: -5px;
+                }
+            }
+        }
+        .describtion{
+        //    @include md{
+        //      margin-top: 5px !important;
+        //     p{
+        //         font-weight: 400;
+        //         font-size: 8px;
+        //         color: $white;
+        //         opacity: 0.8;
+        //     }
+        //    }
+           @include sm{
+             margin-top: 5px !important;
+            p{
+                font-weight: 400;
+                font-size: 8px;
+                color: $white;
+                opacity: 0.8;
+            }
+           }
         }
     }
     .user_meta_info{
         @include flex(row, flex-start, center);
         gap: 37px;
+        @include md{
+            gap: 13px;
+            margin-top: 29px;
+        }
+        @include sm{
+            gap: 13px;
+            margin-top: 29px;
+        }
         .profile{
             width: 74px;
             @include border-radius(50%);
@@ -644,6 +1203,16 @@
                 height: 100%;
                 object-fit: cover;
                 @include border-radius(50%);
+            }
+            @include md{
+                border-radius: 20px;
+                width: 29px;
+                height: 29px;
+            }
+            @include sm{
+                border-radius: 20px;
+                width: 29px;
+                height: 29px;
             }
         }
         .profile_area{
@@ -661,10 +1230,33 @@
             @include border-radius(50%);
             border-left: 2px solid #2e2b4f;
             background-color: $white;
+
             img{
               width: 20px;
               height: 20px;
                object-fit: contain;
+            }
+            @include md{
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                left: 20px;
+                bottom: 0px;
+                img{
+                    width: 7px;
+                    height: 7px;
+                }
+            }
+            @include sm{
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                left: 20px;
+                bottom: 0px;
+                img{
+                    width: 7px;
+                    height: 7px;
+                }
             }
 
         }
@@ -672,12 +1264,24 @@
             font-weight: 500;
             font-size: 22px;
             color: $white;
+            @include md{
+                font-size: 8px;
+            }
+            @include sm{
+                font-size: 8px;
+            }
         }
         p{
             font-weight: 500;
             font-size: 16px;
             text-transform: capitalize;
             color: $white;
+            @include md{
+                font-size: 6px;
+            }
+            @include sm{
+                font-size: 6px;
+            }
         }
     }
 }
@@ -850,6 +1454,7 @@
 
 /*---Text Slider Start---*/
 .text_slider{
+    background-color: $gray9;
 
 .scroll-container {
 
@@ -918,6 +1523,7 @@
          background-color: rgba($primary, 0.2);
          position: relative;
         .image{
+            margin-top: -30px;
              img{
             position: absolute;
             bottom: 0px;
@@ -925,6 +1531,7 @@
             @include transformX(-50%);
             z-index: 10;
          }
+         
         }
          &::after{
             content: "";
@@ -946,6 +1553,11 @@
             position: absolute;
             bottom: 40px;
             left: -35px;
+        }
+        .vector4{
+            position: absolute;
+            bottom: 0px;
+            right: 63px;
         }
         .vector2{
             position: absolute;

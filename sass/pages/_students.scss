@@ -1,0 +1,573 @@
+/*---Hero area Start*/
+.inner_hero_area{
+    position: relative;
+    .overly{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(41, 129, 250, 0.88) 0%, rgba(24, 167, 247, 0) 100%);
+        position: absolute;
+        bottom: 0px;
+    }
+    .image_area{
+        width: 100%;
+        height: 370px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .hero_menu_item{
+        position: absolute;
+        bottom: 0px;
+
+        @include flex(row, center, flex-end);
+        ul{
+            @include flex(row, flex-start, center);
+            gap: 10px;
+            border-radius: 5px 5px 0 0;
+            padding: 14px 23px;
+            width: fit-content;
+            background: linear-gradient(90deg, #2981fa 0%, #18a7f7 100%);
+            li{
+                a{
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: $white;
+                    span{
+                        margin-right: 12px;
+                    }
+                }
+                &:nth-child(2){
+                    position: relative;
+                    padding-left: 15px;
+                    &::after{
+                        content: "";
+                        width: 5px;
+                        height: 5px;
+                        @include border-radius(50%);
+                        background-color: $white;
+                        position: absolute;
+                        top: 50%;
+                        @include transformY(-50%);
+                        left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*---Hero area End*/
+
+/*---Who We Are Start*/
+.who_this{
+    @include sm{
+        .header_area{
+            margin-top: 44px;
+        }
+    }
+    .who_this_image{
+        .who_image{
+                width: 525px;
+            @include border-radius(350px);
+            height: 713px;
+            position: relative;
+            .vector{
+                position: absolute;
+                top: 50%;
+                @include transformY(-50%);
+                right: -124px;
+            }
+            &::after{
+                content: "";
+                border: 2px solid $primary;
+                @include border-radius(350px);
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+            &.style{
+                .who_image{
+                    &::after{
+                        position: absolute;
+                bottom: -19px;
+                left: -35px;
+                    }
+                }
+            }
+            img{
+                width: 100%;
+                @include border-radius(350px);
+                height: 100%;
+                object-fit: cover;
+            }
+            
+        }
+    }
+    .about_list{
+        ul{
+
+            li{
+                margin-bottom: 16px;
+                span{
+                    color: $primary;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+    &.style_1{
+        svg{
+            position: absolute;
+            bottom: -12px;
+            left: -15px;
+            z-index: -1;
+            @include sm{
+                width: 120px;
+                height: 123px;
+                left: -8px;
+                bottom: -8px;
+            }
+        }
+.about_list{
+    ul{
+        li{
+            margin-bottom: 18px;
+        }
+    }
+}
+        .who_image{
+            border-radius: 20px;
+            max-width: 585px;
+            width: 100%;
+            height: 663px;
+            @include sm{
+                border-radius: 11px;
+                width: 310px;
+                height: 352px;
+            }
+            @include border-radius(20px);
+            img{
+                @include border-radius(20px);
+
+            }
+             &::after{
+                content: "";
+                position: absolute;
+                top: -38px;
+                right: -44px !important;
+                @include sm{
+                    top: -20px;
+                right: -23px !important;
+                }
+                border: 2px solid $primary;
+                @include border-radius(20px);
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+            .vector{
+                top: 51px;
+                z-index: -1;
+                right: -22px;
+            }
+        }
+    }
+}
+/*---Who We Are End*/
+
+/*---The Student Journey Start*/
+.student_journey{
+    background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
+    .student_card{
+        border: 1px solid $gray2;
+        border-radius: 10px;
+        max-width: 373px;
+        padding: 30px 30px 40px 30px;
+        span{
+            border-radius: 5px;
+            padding: 4px 10px;
+            background-color: $white;
+            font-weight: 600;
+            font-size: 18px;
+            color: $gray9;
+        }
+        h4{
+            font-weight: 700;
+            margin-top: 20px;
+            font-size: 24px;
+            color: $white;
+        }
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            color: $white;
+            margin-top: 15px;
+        }
+    }
+    &.style_1{
+        position: relative;
+        .vector1{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            pointer-events: none;
+        }
+        .student_card{
+            border: 1px solid $gray2;
+            border-radius: 20px;
+            max-width: 440px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            h4{
+                margin-top: 0px !important;
+            }
+        }
+
+    }
+}
+/*---The Student Journey End*/
+.what_learn{
+    height: 674px;
+    width: 100%;
+    position: relative;
+    .overly{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #242145 50%, rgba(89, 82, 171, 0) 100%);
+        z-index: 120;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        @include flex(row, flex-start, center);
+    }
+    .image{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        img{
+            width: fit-content;
+            height: 100%;
+            z-index: -20;
+            object-fit: cover;
+            float: right;
+        }
+
+    }
+    .sub_heading{
+        h4{
+            img{
+                float: left !important;
+            }
+        }
+    }
+    .list_area{
+        border-top: 1px solid $white;
+        padding-top: 50px;
+        ul{
+            @include flex(row, space-between, center);
+            flex-wrap: wrap;
+            li{
+                width: calc(50% - 10px);
+                font-weight: 500;
+                font-size: 16px;
+                letter-spacing: 0.01em;
+                color: $white;
+                margin-bottom: 30px;
+                span{
+                    color: $white;
+                    margin-right: 15px;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    background: linear-gradient(90deg, #2981fa 0%, #18a7f7 100%);
+                    @include border-radius(50%);
+                    display: inline-block;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+
+}
+/*---The Student Journey End*/
+
+/*---Student Success Stories Start*/
+.student_success_stories{
+    .image_area{
+        width: 100%;
+        height: 803px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .success_stories{
+        .stories_card{
+            box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+            background: $white;
+            border-radius: 5px;
+            max-width: 645px;
+            padding: 30px 30px 30px 30px;
+            h4{
+                font-weight: 500;
+                font-size: 18px;
+                color: $gray9;
+                line-height: 24px;
+            }
+            p{
+                font-weight: 400;
+                margin-top: 14px;
+                font-size: 14px;
+                color: $gray8;
+            }
+        }
+    }
+}
+/*---Student Success Stories End*/
+
+/*---What you receive Start---*/
+.what_you_receive{
+    .receive_image{
+        border-radius: 20px;
+        max-width: 600px;
+        width: 100%;
+        height: 512px;
+        position: relative;
+    }
+    .graduatesplaced{
+            max-width: 300px;
+            @include border-radius(10px);
+            padding: 20px 20px 20px 30px;
+            box-shadow: 0 20px 40px 0 rgba(23, 22, 28, 0.2);
+            background: $white;
+            position: absolute;
+            bottom: 43px;
+            @include sm{
+                padding: 10px 15px;
+                margin-top: -6px;
+                top: -23px;
+            }
+            
+            right: -60px;
+            span{
+                border: 2px solid $white;
+                border-radius: 38px;
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                @include sm{
+                    width: 20px;
+                    height: 20px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+            h4{
+                font-weight: 400;
+                font-size: 18px;
+                color: $gray8;
+                @include sm{
+                    font-size: 9px;
+                }
+                span{
+                    font-weight: 700;
+                    font-size: 24px;
+                    margin-right: 20px;
+                    @include sm{
+                        font-size: 12px;
+                        margin-right: 20px;
+                    }
+                    color: $primary;
+                }
+            }
+            .graduate_profile{
+                position: relative;
+                span{
+                    &:nth-child(2){
+                        position: absolute;
+                        left: 28px;
+                        @include sm{
+                            left: 15px;
+                        }
+                    }
+                    &:nth-child(3){
+                        position: absolute;
+                        left: 58px;
+                        @include sm{
+                            left: 30px;
+                        }
+                    }
+                    &:nth-child(4){
+                        position: absolute;
+                        left: 88px;
+                        @include sm{
+                            left: 45px;
+                        }
+                    }
+                    &:nth-child(5){
+                        position: absolute;
+                        left: 118px;
+                        @include sm{
+                            left: 60px;
+                        }
+                    }
+                    &:nth-child(6){
+                        position: absolute;
+                        left: 148px;
+                        @include sm{
+                            left: 76px;
+                        }
+                    }
+                        
+                }
+            }
+        }
+}
+/*---What you receive End---*/
+
+/*---Submit Your Business Start---*/
+.submit_your_business{
+
+.submit_business{
+    background-color: $gray1;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    background-color: #e0f2f7; // Light blue background
+    color: #2196f3; // Blue icon color
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-weight: bold;
+
+    i {
+        margin-right: 8px;
+        font-size: 16px;
+    }
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 35px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        border-color: #2196f3;
+        outline: none;
+    }
+
+    &::placeholder {
+        color: #999;
+    }
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+
+    .half-width {
+        width: calc(50% - 10px); // Adjust for gap
+    }
+}
+
+.submit-button {
+    background: linear-gradient(to right, #4CAF50, #8BC34A); // Green gradient, adjust as needed
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background: linear-gradient(to right, #45a049, #7cb342);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .form-row {
+        flex-direction: column;
+
+        .half-width {
+            width: 100%;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+}
+/*---Submit Your Business End---*/
+
+
+

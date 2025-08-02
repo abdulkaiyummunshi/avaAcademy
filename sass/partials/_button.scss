@@ -9,7 +9,7 @@
 					padding: 12px 30px;
 					@include transition(0.4s);
                     span{
-						margin-left: 5px;
+                        margin-left: 5px;
                         display: inline-block;
                         width: 24px ;
                         height: 24px;
@@ -19,21 +19,31 @@
                         background-color: $white;
                         color: #141417;
                         @include border-radius(50%);
-
-
+                        
+                        
                         i{
-                           @include transition(0.4s);
-                        transform: rotate(-45deg);
-                        -webkit-transform: rotate(-45deg);
-                        -moz-transform: rotate(-45deg);
-                        -ms-transform: rotate(-45deg);
-                        -o-transform: rotate(-45deg);
-}
+                            @include transition(0.4s);
+                            transform: rotate(-45deg);
+                            -webkit-transform: rotate(-45deg);
+                            -moz-transform: rotate(-45deg);
+                            -ms-transform: rotate(-45deg);
+                            -o-transform: rotate(-45deg);
+                        }
+                    }
+                    @include sm{
+                        font-size: 12px;
+                        padding: 10px 13px;
+                        span{
+                            width: 14px;
+                            height: 14px;
+                            font-size:6px;
+                            line-height: 14px;
+                        }
                     }
 }
-				@media (max-width:1272px){
-                display: none;
-                }
+				// @media (max-width:1272px){
+                // display: none;
+                // }
                 &:hover{
                     a{
                         background-color: $primary;

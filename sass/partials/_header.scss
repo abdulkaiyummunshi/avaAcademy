@@ -201,26 +201,23 @@
 	height: 90px;
 	border-bottom: 1px solid #02062624;
 	&.style_1{
-		background: #eff2f8;
+		border: 1px solid $gray2;
 	}
-
 	@include nesthub{
 		height: 80px;
 	}
 	@include md{
-		height: 70px;
+		height: 90px;
 	}
-	@include sm{
-		height: 60px;
-	}
-	@include breakpoint(max-xl){
-		padding: 0 40px;
-	}
-	@include breakpoint(max-lg){
-		padding: 0 30px;
-	}
+	// @include breakpoint(max-xl){
+	// 	padding: 0 40px;
+	// }
+	// @include breakpoint(max-lg){
+	// 	padding: 0 30px;
+	// }
 	@include sm{
 		padding: 0px 5px;
+		height: 87px;
 	}
 	.header-wrap{
 		height: 90px;
@@ -228,10 +225,10 @@
 			height: 80px;
 		}
 		@include md{
-			height: 70px;
+			height: 90px;
 		}
 		@include sm{
-			height: 60px;
+			height: 87px;
 		}
 		
 
