@@ -1,0 +1,92 @@
+// Blog section
+.blog1 {
+    position: relative;
+    &-card {
+        position: relative;
+        &-thumb {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            &-badge {
+                position: absolute;
+                bottom: -5%;
+                right: 0%;
+                display: inline-flex;
+                padding: 5px 10px;
+                align-items: center;
+                gap: 10px;
+                border-radius: 5px 0 0 5px;
+                background: var(--Primary-2, linear-gradient(90deg, #2981FA 0%, #18A7F7 100%));
+                color: var(--White, #FFF);
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px; /* 144.444% */
+                &__icon {
+                    border-radius: 499.5px;
+                    border: 1px solid var(--Gray-100, #F9FBFE);
+                    display: flex;
+                    width: 30px;
+                    height: 30px;
+                    padding: 10px 2.5px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
+        }
+        &-content {
+            padding: 45px 44px 40px;
+            border-radius: 0 0 20px 20px;
+            background: var(--White, #FFF);
+            box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+            &__title {
+                color: #1D2027;
+                font-family: Poppins;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 34px; 
+                padding-bottom: 22px;
+            }
+            &-meta {
+                color: var(--Gray-800, #757575);
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px;
+                padding-bottom: 18px;
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding-bottom: 10px;
+                    &__icon {
+                        display: inline-flex;
+                        width: 30px;
+                        height: 30px;
+                        padding: 10px 2.5px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        flex-shrink: 0;
+                        border-radius: 499.5px;
+                        border: 1px solid rgba(193, 193, 193, 0.20);
+                    }
+                }
+            }
+            &__link {
+                color: var(--Gray-900, #242145);
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px; 
+                letter-spacing: 0.16px;
+            }
+        }
+    }
+}
