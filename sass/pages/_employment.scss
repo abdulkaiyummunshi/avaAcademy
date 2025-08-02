@@ -24,6 +24,11 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 26px; /* 144.444% */
+                @include breakpoint (max-xxsmall){
+                    bottom: -4%;
+                    font-size: 10px;
+                    line-height: 18px; 
+                }
                 &__icon {
                     border-radius: 499.5px;
                     border: 1px solid var(--Gray-100, #F9FBFE);
@@ -34,6 +39,16 @@
                     justify-content: center;
                     align-items: center;
                     gap: 5px;
+                    @include breakpoint (max-xxsmall){
+                        width: 16px;
+                        height: 16px;
+                        padding: 5px 1.333px;
+                        gap: 2px;
+                        img {
+                            width: 8px;
+                            height: 8px;
+                        }
+                    }
                 }
             }
         }
@@ -42,6 +57,12 @@
             border-radius: 0 0 20px 20px;
             background: var(--White, #FFF);
             box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+            @include breakpoint (max-xl){
+                padding: 35px 30px 30px;
+            }
+            @include breakpoint (max-xxsmall){
+                padding: 30px 24px 30px;
+            }
             &__title {
                 color: #1D2027;
                 font-family: Poppins;
@@ -50,6 +71,10 @@
                 font-weight: 700;
                 line-height: 34px; 
                 padding-bottom: 22px;
+                @include breakpoint (max-xxsmall) {
+                    font-size: 18px;
+                    line-height: 26px; 
+                }
             }
             &-meta {
                 color: var(--Gray-800, #757575);
@@ -59,6 +84,10 @@
                 font-weight: 400;
                 line-height: 26px;
                 padding-bottom: 18px;
+                @include breakpoint (max-xxsmall){
+                    font-size: 10px;
+                    line-height: 18px; 
+                }
                 &__item {
                     display: flex;
                     align-items: center;
@@ -75,6 +104,17 @@
                         flex-shrink: 0;
                         border-radius: 499.5px;
                         border: 1px solid rgba(193, 193, 193, 0.20);
+                        @include breakpoint (max-xxsmall){
+                            width: 18px;
+                            height: 18px;
+                            padding: 6px 1.5px;
+                            gap: 3px;
+                            img {
+                                width: 9px;
+                                height: 9px;
+                                flex-shrink: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -89,6 +129,16 @@
                 &:hover {
                     color: $primary;
                 }
+                @include breakpoint (max-xxsmall){
+                    font-size: 12px;
+                    line-height: 18px; 
+                    img {
+                        width: 8px;
+                        height: 8px;
+                        flex-shrink: 0;
+                        aspect-ratio: 1/1;
+                    }
+                }
             }
         }
     }
@@ -100,6 +150,16 @@
         background: var(--White, #FFF);
         box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05); 
         padding: 100px 158px;
+        @include breakpoint (max-lg){
+            padding: 60px 40px;
+        }
+        @include breakpoint (max-sm){
+            padding: 60px 15px;
+        }
+        @include breakpoint (max-xxsmall){
+            padding: 35px 15px;
+            
+        }
         &-info {
             display: flex;
             gap: 30px;
@@ -109,8 +169,23 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 50px;
+                @include breakpoint (max-md) {
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+                }
+                @include breakpoint (max-xxsmall) {
+                    justify-content: start;
+                }
                 &__item {
+                    margin-right: 50px;
+                    &.mr-20 {
+                        margin-right: 20px;
+                    }
+                    @include breakpoint (max-xl) {
+                        margin-right: 20px;
+                    }
+
+
                     .form-group {
                         width: fit-content;
                         .form__select {
@@ -124,6 +199,14 @@
                             border: 1px solid rgba(193, 193, 193, 0.20);
                             outline: none;   
                             appearance: none; 
+                            @include breakpoint (max-lg){
+                                height: 50px;
+                                padding: 20px 35px 20px 20px;
+                            }
+                            @include breakpoint (max-xxsmall){
+                                padding: 15px 35px 15px 15px;
+                                height: 40px;
+                            }
 
                         }
                         .current {
@@ -141,6 +224,9 @@
                             option[disabled] {
                             opacity: 0.6;
                             }
+                            @include breakpoint (max-xxsmall){
+                                font-size: 10px;
+                            }
                         }
 
                         .input-icon {
@@ -157,27 +243,38 @@
                     }
                 }
 
-            }
-            &__search {
-                &__icon {
-                    .search-btn {
-                        display: flex;
-                        width: 60px;
-                        height: 60px;
-                        padding: 20px 5px;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 10px;
-                        flex-shrink: 0;
-                        border-radius: 999px;
-                        background: var(--Primary-2, linear-gradient(90deg, #2981FA 0%, #18A7F7 100%));
-                        border: none;
-                        cursor: pointer;
-                    }
-
-                    .search-btn i {
-                        color: $white;
-                        font-size: 18px;
+                &__search {
+                    &__icon {
+                        .search-btn {
+                            display: flex;
+                            width: 60px;
+                            height: 60px;
+                            padding: 20px 5px;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            flex-shrink: 0;
+                            border-radius: 999px;
+                            background: var(--Primary-2, linear-gradient(90deg, #2981FA 0%, #18A7F7 100%));
+                            border: none;
+                            cursor: pointer;
+                            @include breakpoint (max-lg){
+                                height: 50px;
+                                width: 50px;
+                            }
+                            @include breakpoint (max-xxsmall){
+                                height: 40px;
+                                width: 40px;
+                            }
+                        }
+    
+                        .search-btn i {
+                            color: $white;
+                            font-size: 18px;
+                            @include breakpoint (max-xxsmall){
+                                font-size: 14px;
+                            }
+                        }
                     }
                 }
             }
@@ -217,6 +314,11 @@
                         height: 50px;
                         font-size: 14px;
                     }
+                    @media (max-width: 450px) {
+                        width: 30px;
+                        height: 30px;
+                        font-size: 10.8px;
+                    }
     
                     i {
                         color: var(--900, #000);
@@ -226,6 +328,9 @@
                         font-weight: 400;
                         line-height: 30px; 
                         letter-spacing: 0.16px;
+                        @media (max-width: 450px) {
+                            font-size: 14px;
+                        }
                     }
     
                     &:hover {
