@@ -33778,16 +33778,24 @@
     font-size: 10px;
   }
 }
-.filter1-card-info-selectArea__item .form-group .input-icon {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 24px;
-  pointer-events: none;
+.filter1-card-info-selectArea__item .form-group .nice-select:after {
+  width: 10px;
+  height: 10px;
+  right: 27px;
+}
+@media (max-width: 991px) {
+  .filter1-card-info-selectArea__item .form-group .nice-select:after {
+    width: 8px;
+    height: 8px;
+    right: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .filter1-card-info-selectArea__item .form-group .nice-select:after {
+    width: 7px;
+    height: 7px;
+    right: 16px;
+  }
 }
 .filter1-card-info-selectArea__search__icon .search-btn {
   display: flex;
@@ -33863,17 +33871,21 @@
   }
 }
 .pagination__page .page-nav-wrap ul li .page-numbers i {
+  background: var(--P1, linear-gradient(270deg, #9708CC -54.69%, #43CBFF 99.85%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: var(--900, #000);
-  font-family: Lato;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-family: Font Awosome 6 Free;
+  font-weight: 900;
   line-height: 30px;
   letter-spacing: 0.16px;
 }
 @media (max-width: 450px) {
   .pagination__page .page-nav-wrap ul li .page-numbers i {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 .pagination__page .page-nav-wrap ul li .page-numbers:hover {
@@ -33882,6 +33894,8 @@
 }
 .pagination__page .page-nav-wrap ul li .page-numbers:hover i {
   color: #fff;
+  background: none;
+  -webkit-text-fill-color: white;
 }
 
 /*---Hero area Start*/
