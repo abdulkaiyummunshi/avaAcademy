@@ -119,6 +119,31 @@
             });
         }
         textSlider()
+
+        $('.clients_review_slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // autoplay: true,
+            autoplaySpeed: 4000,
+            arrows: true,
+            dots: true,
+            dotsClass: "review_dots",
+            infinite: true,
+            prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
+            nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
+        });
+        $('.vision_content').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            speed: 3000,
+            dots: false,
+            infinite: true,
+            prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
+            nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
+        });
         
       
 
@@ -193,25 +218,7 @@
             }
         });
     
-        $(document).ready(function () {
-            $('.search_icon').on('click', function () {
-                $('#search').addClass('search-active');
-                $('.search-body').addClass('from-active');
-            });
-            $('.search-cross').on('click', function () {
-                $('#search').removeClass('search-active');
-                $('.search-body').removeClass('from-active');
-            });
-            $(document).on('click', function (e) {
-                if ($(e.target).hasClass('search-active') || $(e.target).hasClass('hide-active')) {
-                    $('#search').removeClass('search-active');
-                    $('.search-body').removeClass('from-active');
-                }
-            });
-        });
         $('select').niceSelect();
-
-        
         
     });
 
@@ -295,30 +302,3 @@
 // }
 // internetService()
 
-
-$(document).ready(function () {
-    $('.clients_review_slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // autoplay: true,
-        autoplaySpeed: 4000,
-        arrows: true,
-        dots: true,
-        dotsClass: "review_dots",
-        infinite: true,
-        prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
-        nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
-    });
-    $('.vision_content').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 3000,
-        dots: false,
-        infinite: true,
-        prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
-        nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
-    });
-});
