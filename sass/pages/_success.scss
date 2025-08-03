@@ -1,0 +1,145 @@
+.success_owners {
+    .receive_image{
+        border-radius: 20px;
+        max-width: 600px;
+        width: 100%;
+        height: 512px;
+        position: relative;
+    }
+    .graduatesplaced{
+        max-width: 300px;
+        @include border-radius(10px);
+        padding: 20px 20px 20px 30px;
+        box-shadow: 0 20px 40px 0 rgba(23, 22, 28, 0.2);
+        background: $white;
+        position: absolute;
+        top: 80px;
+        right: -86px;
+        @include sm{
+            padding: 10px 15px;
+            margin-top: -6px;
+            top: -23px;
+        }
+        
+        span{
+            border: 2px solid $white;
+            border-radius: 38px;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            @include sm{
+                width: 20px;
+                height: 20px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+        h4{
+            font-weight: 400;
+            font-size: 18px;
+            color: $gray8;
+            @include sm{
+                font-size: 9px;
+            }
+            span{
+                font-weight: 700;
+                font-size: 24px;
+                margin-right: 20px;
+                @include sm{
+                    font-size: 12px;
+                    margin-right: 20px;
+                }
+                color: $primary;
+            }
+        }
+        .graduate_profile{
+            position: relative;
+            span{
+                &:nth-child(2){
+                    position: absolute;
+                    left: 28px;
+                    @include sm{
+                        left: 15px;
+                    }
+                }
+                &:nth-child(3){
+                    position: absolute;
+                    left: 58px;
+                    @include sm{
+                        left: 30px;
+                    }
+                }
+                &:nth-child(4){
+                    position: absolute;
+                    left: 88px;
+                    @include sm{
+                        left: 45px;
+                    }
+                }
+                &:nth-child(5){
+                    position: absolute;
+                    left: 118px;
+                    @include sm{
+                        left: 60px;
+                    }
+                }
+                &:nth-child(6){
+                    position: absolute;
+                    left: 148px;
+                    @include sm{
+                        left: 76px;
+                    }
+                }
+                    
+            }
+        }
+    }
+    .success_card{
+        border-radius: 10px;
+        border: 1px solid var(--Gray-200, #E8E8E8);
+        background: var(--Gray-100, #F9FBFE);
+        padding: 21px 56px;
+        margin-left: 48px;
+        position: relative;
+        @include nesthubmax{
+            padding: 40px 0px 40px 63px;
+            margin-left: 40px;
+            max-width: 100%;
+        }
+        @include nesthub{
+            padding: 40px 0px 40px 63px;
+            margin-left: 40px;
+            max-width: 100%;
+        }
+        @include md{
+            padding: 40px 20px 40px 53px;
+            margin-left: 40px;
+            max-width: 550px;
+        }
+        @include sm{
+            padding: 20px 13px 20px 43px;
+            margin-left: 20px;
+        }
+        .thumb{
+            position: absolute;
+            top: 50%;
+            @include transformY(-50%);
+            left: -28px;
+            @include sm{
+                margin-left: 20px;
+            }
+        }
+        p {
+            color: #000;
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}

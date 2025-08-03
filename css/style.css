@@ -33898,6 +33898,181 @@
   -webkit-text-fill-color: white;
 }
 
+.success_owners .receive_image {
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  height: 512px;
+  position: relative;
+}
+.success_owners .graduatesplaced {
+  max-width: 300px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px 20px 20px 30px;
+  box-shadow: 0 20px 40px 0 rgba(23, 22, 28, 0.2);
+  background: #fff;
+  position: absolute;
+  top: 80px;
+  right: -86px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced {
+    padding: 10px 15px;
+    margin-top: -6px;
+    top: -23px;
+  }
+}
+.success_owners .graduatesplaced span {
+  border: 2px solid #fff;
+  border-radius: 38px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced span {
+    width: 20px;
+    height: 20px;
+  }
+}
+.success_owners .graduatesplaced span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.success_owners .graduatesplaced h4 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #434345;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced h4 {
+    font-size: 9px;
+  }
+}
+.success_owners .graduatesplaced h4 span {
+  font-weight: 700;
+  font-size: 24px;
+  margin-right: 20px;
+  color: #3561ff;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced h4 span {
+    font-size: 12px;
+    margin-right: 20px;
+  }
+}
+.success_owners .graduatesplaced .graduate_profile {
+  position: relative;
+}
+.success_owners .graduatesplaced .graduate_profile span:nth-child(2) {
+  position: absolute;
+  left: 28px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced .graduate_profile span:nth-child(2) {
+    left: 15px;
+  }
+}
+.success_owners .graduatesplaced .graduate_profile span:nth-child(3) {
+  position: absolute;
+  left: 58px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced .graduate_profile span:nth-child(3) {
+    left: 30px;
+  }
+}
+.success_owners .graduatesplaced .graduate_profile span:nth-child(4) {
+  position: absolute;
+  left: 88px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced .graduate_profile span:nth-child(4) {
+    left: 45px;
+  }
+}
+.success_owners .graduatesplaced .graduate_profile span:nth-child(5) {
+  position: absolute;
+  left: 118px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced .graduate_profile span:nth-child(5) {
+    left: 60px;
+  }
+}
+.success_owners .graduatesplaced .graduate_profile span:nth-child(6) {
+  position: absolute;
+  left: 148px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .graduatesplaced .graduate_profile span:nth-child(6) {
+    left: 76px;
+  }
+}
+.success_owners .success_card {
+  border-radius: 10px;
+  border: 1px solid var(--Gray-200, #E8E8E8);
+  background: var(--Gray-100, #F9FBFE);
+  padding: 21px 56px;
+  margin-left: 48px;
+  position: relative;
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .success_owners .success_card {
+    padding: 40px 0px 40px 63px;
+    margin-left: 40px;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .success_owners .success_card {
+    padding: 40px 0px 40px 63px;
+    margin-left: 40px;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .success_owners .success_card {
+    padding: 40px 20px 40px 53px;
+    margin-left: 40px;
+    max-width: 550px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .success_card {
+    padding: 20px 13px 20px 43px;
+    margin-left: 20px;
+  }
+}
+.success_owners .success_card .thumb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: -28px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .success_owners .success_card .thumb {
+    margin-left: 20px;
+  }
+}
+.success_owners .success_card p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 /*---Hero area Start*/
 .inner_hero_area {
   position: relative;
