@@ -35225,8 +35225,37 @@
   border-radius: 20px;
   max-width: 600px;
   width: 100%;
-  height: 512px;
   position: relative;
+}
+@media (max-width: 991px) {
+  .success_owners .receive_image img {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .success_owners .receive_image {
+    max-width: 480px;
+  }
+}
+@media (max-width: 575px) {
+  .success_owners .receive_image {
+    max-width: 405px;
+  }
+}
+@media (max-width: 470px) {
+  .success_owners .receive_image {
+    max-width: 365px;
+  }
+}
+@media (max-width: 450px) {
+  .success_owners .receive_image {
+    max-width: 293px;
+  }
+}
+@media (max-width: 375px) {
+  .success_owners .receive_image {
+    max-width: 246px;
+  }
 }
 .success_owners .graduatesplaced {
   max-width: 300px;
@@ -35242,11 +35271,21 @@
   top: 80px;
   right: -86px;
 }
-@media only screen and (min-width: 0px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .success_owners .graduatesplaced {
-    padding: 10px 15px;
-    margin-top: -6px;
-    top: -23px;
+    right: -72px;
+  }
+}
+@media (max-width: 575px) {
+  .success_owners .graduatesplaced {
+    right: -65px;
+  }
+}
+@media (max-width: 450px) {
+  .success_owners .graduatesplaced {
+    top: 27px;
+    right: -52px;
+    padding: 13px 15px 13px 13px;
   }
 }
 .success_owners .graduatesplaced span {
@@ -35345,34 +35384,26 @@
   margin-left: 48px;
   position: relative;
 }
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media (max-width: 1399px) {
   .success_owners .success_card {
-    padding: 40px 0px 40px 63px;
-    margin-left: 40px;
-    max-width: 100%;
+    padding: 21px 45px;
+    margin-left: 110px;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1024px) {
+@media (max-width: 1199px) {
   .success_owners .success_card {
-    padding: 40px 0px 40px 63px;
-    margin-left: 40px;
-    max-width: 100%;
+    padding: 21px 56px;
+    margin-left: 30px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 450px) {
   .success_owners .success_card {
-    padding: 40px 20px 40px 53px;
-    margin-left: 40px;
-    max-width: 550px;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 767px) {
-  .success_owners .success_card {
-    padding: 20px 13px 20px 43px;
-    margin-left: 20px;
+    padding: 14px 35px;
+    margin-left: 21px;
   }
 }
 .success_owners .success_card .thumb {
+  text-align: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -35382,9 +35413,14 @@
   -o-transform: translateY(-50%);
   left: -28px;
 }
-@media only screen and (min-width: 0px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .success_owners .success_card .thumb {
-    margin-left: 20px;
+    margin-left: -2px;
+  }
+}
+@media (max-width: 450px) {
+  .success_owners .success_card .thumb img {
+    width: 70%;
   }
 }
 .success_owners .success_card p {
@@ -35394,6 +35430,28 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+@media (max-width: 450px) {
+  .success_owners .success_card p {
+    font-size: 8px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 1399px) {
+  .success_owners .success_card .desc.mb-30 {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 1199px) {
+  .success_owners .success_card .desc.mb-30 {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .success_owners .success_card .desc.mb-30 p {
+    font-size: 10px;
+    line-height: 18px;
+  }
 }
 
 /*---Hero area Start*/
