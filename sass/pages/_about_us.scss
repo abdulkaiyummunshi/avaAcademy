@@ -1,5 +1,6 @@
 /*--Inner hero Start--*/
 .inner_hero{
+    overflow: hidden;
     width: 100%;
     height: 370px;
     @include flex(row, center, flex-end);
@@ -52,6 +53,7 @@
 /*--Inner hero End--*/
 /*--Funder Story Start--*/
 .funder_story{
+    overflow: hidden;
     background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
     position: relative;
     .header_area{
