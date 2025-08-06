@@ -1,7 +1,7 @@
 /*---Hero area Start*/
 .inner_hero_area{
-    position: relative;
     overflow: hidden !important;
+    position: relative;
     @include nesthubmax{
         .container-fluid{
             padding: 0px !important;
@@ -25,13 +25,16 @@
     .overly{
         width: 100%;
         height: 100%;
+        @include border-radius(10px);
         background: linear-gradient(0deg, rgba(41, 129, 250, 0.88) 0%, rgba(24, 167, 247, 0) 100%);
         position: absolute;
         bottom: 0px;
     }
     .image_area{
+        position: relative;
         width: 100%;
         height: 370px;
+        @include border-radius(10px);
         @include nesthub{
             height: 208px;
         }
@@ -45,6 +48,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            @include border-radius(10px);
         }
     }
     .hero_menu_item{

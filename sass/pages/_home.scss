@@ -1011,6 +1011,16 @@
 
 /*---Clients Reviews Start---*/
 .clients_reviews{
+        padding-top: 100px;
+    padding-bottom: 238px;
+    @include nesthub{
+        padding-top: 70px;
+        padding-bottom:180px;
+    }
+    @include md{
+        padding-top: 70px;
+        padding-bottom:180px;
+    }
     @include sm{
         margin-top: 40px !important;
     }
@@ -1194,10 +1204,12 @@
         }
     }
     position: relative;
-    height: 770px !important;
+    // height: 770px !important;
     background-color: $gray9;
     @include sm{
-        height: 392px !important;
+        // height: 392px !important;
+        padding-top: 40px;
+        padding-bottom: 40px;
         background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
     }
     @include flex(row, center, center);
@@ -1899,6 +1911,9 @@
 
 /*---FAQ Start---*/
 .faq_area{
+    @include nesthub{
+        margin-top: 44px !important;
+    }
     @include sm{
         margin-top: 30px !important;
     }

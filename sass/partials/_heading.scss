@@ -102,19 +102,19 @@
         }
         h2{
             font-weight: 600;
-            font-size: 38px;
+            font-size: 38px !important;
             color: $gray9;
             @include nesthubmax{
-                font-size: 34px;
+                font-size: 34px !important;
             }
             @include nesthub{
-                font-size: 30px;
+                font-size: 30px !important;
             }
             @include md{
-                font-size: 26px;
+                font-size: 26px !important;
             }
             @include sm{
-                font-size: 22px;
+                font-size: 22px !important;
             }
         }
         &.style_1{

@@ -200,22 +200,13 @@
 	z-index: 999;
 	height: 90px;
 	animation: slideDown 2s ease forwards;
-	border-bottom: 1px solid #02062624;
-	&.style_1{
-		border: 1px solid $gray2;
-	}
+	
 	@include nesthub{
 		height: 80px;
 	}
 	@include md{
 		height: 90px;
 	}
-	// @include breakpoint(max-xl){
-	// 	padding: 0 40px;
-	// }
-	// @include breakpoint(max-lg){
-	// 	padding: 0 30px;
-	// }
 	@include sm{
 		padding: 0px 5px;
 		height: 87px;
@@ -232,7 +223,6 @@
 			height: 87px;
 		}
 		
-
 		.logo{
 			@include breakpoint(max-sm){
 				width: 30%;
