@@ -30278,17 +30278,38 @@
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     background-color: #f9fbfe; }
-    .contact_form_area .contact_form .contact_card_wrapper {
-      padding: 23px;
-      background-color: #f9fbfe;
-      border-radius: 10px;
-      -moz-border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -ms-border-radius: 10px;
-      -o-border-radius: 10px; }
+    @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+      .contact_form_area .contact_form {
+        padding: 40px; } }
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+      .contact_form_area .contact_form {
+        padding: 40px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .contact_form_area .contact_form {
+        padding: 0px 42px 0px 12px; }
+        .contact_form_area .contact_form .contact_card_wrapper {
+          padding: 30px;
+          background-color: #f9fbfe;
+          border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; } }
     @media only screen and (min-width: 0px) and (max-width: 767px) {
       .contact_form_area .contact_form {
-        padding: 0px 42px 0px 12px; } }
+        padding: 0px 42px 0px 12px; }
+        .contact_form_area .contact_form .contact_card_wrapper {
+          padding: 23px;
+          background-color: #f9fbfe;
+          border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px; } }
     @media only screen and (min-width: 0px) and (max-width: 767px) {
       .contact_form_area .contact_form {
         background-color: transparent; } }
@@ -30305,6 +30326,10 @@
       align-items: center;
       gap: 30px;
       padding: 40px 30px; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .contact_form_area .contact_form .contact_card {
+          gap: 20px;
+          padding: 23px 17px 18px 17px; } }
       @media only screen and (min-width: 0px) and (max-width: 767px) {
         .contact_form_area .contact_form .contact_card {
           gap: 10px;
@@ -30346,6 +30371,16 @@
             font-size: 10px; } }
         .contact_form_area .contact_form .contact_card a:hover {
           color: #3561ff; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact_form_area .send_message {
+      margin-top: 50px;
+      background-color: #f9fbfe;
+      padding: 23px;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px; } }
   @media only screen and (min-width: 0px) and (max-width: 767px) {
     .contact_form_area .send_message {
       margin-top: 30px;
@@ -30369,7 +30404,6 @@
   .contact_form_area .send_message input {
     border: 1px solid rgba(193, 193, 193, 0.2);
     border-radius: 5px;
-    max-width: 620px;
     width: 100%;
     padding: 14px;
     font-size: 18px;
@@ -30397,7 +30431,6 @@
   .contact_form_area .send_message textarea {
     border: 1px solid rgba(193, 193, 193, 0.2);
     border-radius: 5px;
-    max-width: 620px;
     min-height: 169px;
     width: 100%;
     background-color: #fff;
@@ -30413,7 +30446,6 @@
   .contact_form_area .send_message button {
     border-radius: 5px;
     padding: 20px;
-    max-width: 620px;
     width: 100%;
     padding: 14px;
     font-weight: 500;
