@@ -1,6 +1,27 @@
 /*---Hero area Start*/
 .inner_hero_area{
     position: relative;
+    overflow: hidden !important;
+    @include nesthubmax{
+        .container-fluid{
+            padding: 0px !important;
+        }
+    }
+    @include nesthub{
+        .container-fluid{
+            padding: 0px !important;
+        }
+    }
+    @include md{
+        .container-fluid{
+            padding: 0px !important;
+        }
+    }
+    @include sm{
+        .container-fluid{
+            padding: 0px !important;
+        }
+    }
     .overly{
         width: 100%;
         height: 100%;
@@ -11,6 +32,15 @@
     .image_area{
         width: 100%;
         height: 370px;
+        @include nesthub{
+            height: 208px;
+        }
+        @include md{
+            height: 234px;
+        }
+        @include sm{
+            height: 121px;
+        }
         img{
             width: 100%;
             height: 100%;
@@ -27,6 +57,9 @@
             gap: 10px;
             border-radius: 5px 5px 0 0;
             padding: 14px 23px;
+            @include sm{
+                padding: 7px 11px;
+            }
             width: fit-content;
             background: linear-gradient(90deg, #2981fa 0%, #18a7f7 100%);
             li{
@@ -36,6 +69,12 @@
                     color: $white;
                     span{
                         margin-right: 12px;
+                    }
+                    @include sm{
+                        span{
+                            margin-right: 6px;
+                        }
+                        font-size: 14px;
                     }
                 }
                 &:nth-child(2){
@@ -67,21 +106,99 @@
         }
     }
     .who_this_image{
+        @include nesthub{
+            width: 100%;
+            height: 100%;
+        }
+        @include sm{
+            width: 342px;
+            height: 366px;
+        }
         .who_image{
                 width: 525px;
             @include border-radius(350px);
             height: 713px;
             position: relative;
+            @include nesthubmax{
+                        width: 442px;
+                          height: 623px;
+}
+            @include nesthub{
+                @include border-radius(175px);
+                width: 365px;
+                height: 513px;
+                margin-left: 20px;
+}
+            @include md{
+                margin-left: 40px;
+            }
+            @include sm{
+                @include border-radius(175px);
+                width: 262px;
+                height: 356px;
+                margin-left: 20px;
+}
             .vector{
                 position: absolute;
                 top: 50%;
                 @include transformY(-50%);
                 right: -124px;
+                @include nesthubmax{
+                     right: -87px;
+                     height: 448px;
+                     width: 304px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                @include nesthub{
+                    right: -87px;
+                    width: 269px;
+                    height: 395px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                @include sm{
+                    right: -62px;
+                    width: 201px;
+                    height: 292px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
             }
             &::after{
                 content: "";
                 border: 2px solid $primary;
                 @include border-radius(350px);
+                position: absolute;
+                top: 50px;
+                left: -35px;
+                @include nesthubmax{
+                    top: 30px;
+                    left: -14px;
+                }
+                @include nesthub{
+                    @include border-radius(175px);
+                    top: 30px;
+                    left: -14px;
+                }
+                @include md{
+                    top: 30px;
+                    left: -14px;
+                }
+                @include sm{
+                    @include border-radius(175px);
+                    top: 30px;
+                    left: -14px;
+                }
                 width: 100%;
                 height: 100%;
                 z-index: -1;
@@ -98,17 +215,32 @@
             img{
                 width: 100%;
                 @include border-radius(350px);
+                @include sm{
+                    @include border-radius(175px);
+                }
                 height: 100%;
                 object-fit: cover;
             }
             
         }
     }
+    .header_area{
+        @include md{
+            margin-top: 40px;
+        }
+    }
     .about_list{
         ul{
 
             li{
+                font-weight: 400;
+                font-size: 14px;
+                color: $gray8;
                 margin-bottom: 16px;
+                @include sm{
+                    font-size: 10px;
+                    margin-bottom: 5px !important;
+                }
                 span{
                     color: $primary;
                     margin-right: 4px;
@@ -117,16 +249,35 @@
         }
     }
     &.style_1{
+        .header_area{
+            @include nesthub{
+                // padding-left: 76px;
+            }
+            @include sm{
+                margin-top: 20px !important;
+            }
+            @include md{
+                margin-top: 40px;
+            }
+        }
         svg{
             position: absolute;
             bottom: -12px;
             left: -15px;
             z-index: -1;
+            @include nesthub{
+                width: 120px;
+                height: 123px;
+                left: -8px;
+                bottom: -8px;
+                @include border-radius(16px);
+            }
             @include sm{
                 width: 120px;
                 height: 123px;
                 left: -8px;
                 bottom: -8px;
+                @include border-radius(16px);
             }
         }
 .about_list{
@@ -141,6 +292,17 @@
             max-width: 585px;
             width: 100%;
             height: 663px;
+            position: relative;
+            @include nesthubmax{
+                border-radius: 11px;
+                width: 402px;
+                height: 452px;
+            }
+            @include nesthub{
+                border-radius: 11px;
+                width: 402px;
+                height: 452px;
+            }
             @include sm{
                 border-radius: 11px;
                 width: 310px;
@@ -149,19 +311,39 @@
             @include border-radius(20px);
             img{
                 @include border-radius(20px);
+                @include nesthubmax{
+                    @include border-radius(8px);
+                }
+                @include nesthub{
+                    @include border-radius(8px);
+                }
+                @include sm{
+                    @include border-radius(11px);
+                }
 
             }
              &::after{
                 content: "";
                 position: absolute;
                 top: -38px;
-                right: -44px !important;
-                @include sm{
-                    top: -20px;
-                right: -23px !important;
-                }
-                border: 2px solid $primary;
+                left: 44px !important;
                 @include border-radius(20px);
+                @include nesthubmax{
+                    top: -28px;
+                    left: 34px !important;
+
+                }
+                @include nesthub{
+                    top: -28px;
+                    left: 34px !important;
+
+                }
+                @include sm{
+                    @include border-radius(11px);
+                    top: -20px;
+                left: 23px !important;
+                }
+                border: 2.31px solid rgba(193, 193, 193, 0.2);
                 width: 100%;
                 height: 100%;
                 z-index: -1;
@@ -170,48 +352,155 @@
                 top: 51px;
                 z-index: -1;
                 right: -22px;
+                img{
+                    @include border-radius(0px);
+                }
+                @include nesthubmax{
+                    width: 126px;
+                    height: 103px;
+                    top: 37px;
+                    right: -23px;
+    }
+                @include nesthub{
+                    width: 126px;
+                    height: 103px;
+                    top: 37px;
+                    right: -23px;
+    }
+                    img{
+                        @include border-radius(0px);
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                    @include sm{
+                        width: 87px;
+                        height: 76px;
+                        top: 27px;
+                        right: -12px;
+                        img{
+                            @include border-radius(0px);
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
             }
         }
     }
-}
+
+    @include sm{
+        .mt-150{
+            margin-top: 40px !important;
+        }
+    }
 /*---Who We Are End*/
 
 /*---The Student Journey Start*/
 .student_journey{
+    @include md{
+        .row{
+            .col-lg-4{
+                width: 50%;
+            }
+        }
+    }
+    @include sm{
+        padding: 40px 0px !important;
+        .row{
+            &.style_1{
+                margin-top: 0px !important;
+            }
+            &.style_01{
+                margin-top: 53px !important;
+            }
+            .col-lg-4{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
     background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
     .student_card{
+        @include md{
+            margin-bottom: 20px;
+            margin-top: 0px !important;
+        }
+        @include sm{
+            margin-bottom: 20px;
+            margin-top: 0px !important;
+        }
         border: 1px solid $gray2;
         border-radius: 10px;
         max-width: 373px;
         padding: 30px 30px 40px 30px;
+        @include sm{
+            padding: 30px;
+        }
         span{
             border-radius: 5px;
             padding: 4px 10px;
             background-color: $white;
             font-weight: 600;
             font-size: 18px;
+            @include sm{
+                font-size: 14px;
+            }
             color: $gray9;
         }
         h4{
             font-weight: 700;
             margin-top: 20px;
             font-size: 24px;
+            @include sm{
+                font-size: 22px !important;
+            }
             color: $white;
         }
         p{
             font-weight: 400;
             font-size: 18px;
+            @include sm{
+                font-size: 10px;
+            }
             color: $white;
             margin-top: 15px;
         }
     }
     &.style_1{
         position: relative;
+        .row{
+            &.style_1{
+                @include sm{
+                    margin-top: 0px !important;
+                }
+            }
+            .student_card{
+               @include sm{
+                 h4{
+                    font-size: 18px !important;
+                }
+                p{
+                    font-size: 13px ;
+                }
+               }
+            }
+        }
         .vector1{
             position: absolute;
             bottom: 0px;
             right: 0px;
             pointer-events: none;
+            @include sm{
+                width: 390px;
+                height: 358px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
         }
         .student_card{
             border: 1px solid $gray2;
@@ -231,10 +520,18 @@
     height: 674px;
     width: 100%;
     position: relative;
+    @include sm{
+       width: 100%;
+       height: 340px;
+    }
     .overly{
         width: 100%;
         height: 100%;
         background: linear-gradient(90deg, #242145 50%, rgba(89, 82, 171, 0) 100%);
+        @include sm{
+            background: linear-gradient(90deg, #242145 34%, rgba(89, 82, 171, 0) 100%);
+
+        }
         z-index: 120;
         position: absolute;
         top: 0px;
@@ -253,8 +550,25 @@
             z-index: -20;
             object-fit: cover;
             float: right;
+            @include nesthub{
+                width: 50%;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include md{
+                width: 50%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
-
+        @include sm{
+            img{
+                width: 247px;
+                height: 340px;
+                object-fit: cover !important;
+            }
+        }
+        
     }
     .sub_heading{
         h4{
@@ -266,9 +580,31 @@
     .list_area{
         border-top: 1px solid $white;
         padding-top: 50px;
+        @include nesthub{
+            padding-top: 0px !important;
+            border-top: none;
+        }
+        @include md{
+            padding-top: 0px !important;
+            border-top: none;
+        }
+        @include sm{
+            padding-top: 0px !important;
+            border-top: none;
+        }
         ul{
             @include flex(row, space-between, center);
             flex-wrap: wrap;
+            @include nesthub{
+                flex-direction: column;
+            }
+            @include md{
+                flex-direction: column;
+            }
+            @include sm{
+                flex-direction: column;
+
+            }
             li{
                 width: calc(50% - 10px);
                 font-weight: 500;
@@ -276,6 +612,27 @@
                 letter-spacing: 0.01em;
                 color: $white;
                 margin-bottom: 30px;
+                @include nesthubmax{
+                    font-size: 13px;
+                    span{
+                        margin-right: 5px !important;
+                    }
+                }
+                @include nesthub{
+                    font-size: 16px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                @include md{
+                    font-size: 16px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                @include sm{
+                    font-size: 10px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
                 span{
                     color: $white;
                     margin-right: 15px;
@@ -287,6 +644,12 @@
                     @include border-radius(50%);
                     display: inline-block;
                     font-size: 14px;
+                    @include sm{
+                        width: 16px;
+                        height: 16px;
+                        line-height: 16px;
+                        font-size: 8px;
+                    }
                 }
             }
         }
@@ -298,13 +661,33 @@
 
 /*---Student Success Stories Start*/
 .student_success_stories{
+    @include sm{
+        margin-top: 40px !important;
+    }
     .image_area{
         width: 100%;
         height: 803px;
+        @include nesthubmax{
+            height: 786px;
+        }
+        @include nesthub{
+            height: 684px;
+        }
+        @include md{
+            margin-top: 40px;
+        }
+        @include sm{
+            width: 342px;
+            margin-top: 8px !important;
+            height: 473px;
+        }
         img{
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @include nesthub{
+                object-fit: cover;
+            }
         }
     }
     .success_stories{
@@ -314,16 +697,30 @@
             border-radius: 5px;
             max-width: 645px;
             padding: 30px 30px 30px 30px;
-            h4{
+            @include sm{
+                padding: 15px 17px;
+            }
+            h5{
                 font-weight: 500;
                 font-size: 18px;
                 color: $gray9;
                 line-height: 24px;
+                @include nesthub{
+                    font-size: 14px;
+                }
+                @include sm{
+                    line-height: 14px;
+                    font-size: 10px;
+                }
             }
             p{
                 font-weight: 400;
                 margin-top: 14px;
                 font-size: 14px;
+                @include sm{
+                    font-size: 8px;
+                    margin-top: 10px;
+                }
                 color: $gray8;
             }
         }
@@ -333,14 +730,52 @@
 
 /*---What you receive Start---*/
 .what_you_receive{
+    .receive_img_area{
+        @include sm{
+            width: 100%;
+            height: 265px;
+        }
+    }
+    .header_area{
+        @include md{
+            margin-top: 30px;
+        }
+        @include sm{
+            margin-top: 20px;
+        }
+    }
     .receive_image{
         border-radius: 20px;
         max-width: 600px;
         width: 100%;
         height: 512px;
+        & > img{
+            width:  100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @include nesthubmax{
+            border-radius: 10px;
+            max-width: 440px;
+        height: 375px;
+
+        }
+        @include nesthub{
+            border-radius: 10px;
+                    max-width: 405px;
+        height: 337px;
+
+        }
+        @include sm{
+            border-radius: 10px;
+            max-width: 311px;
+            height: 265px;
+
+        }
         position: relative;
     }
     .graduatesplaced{
+        // display: none;
             max-width: 300px;
             @include border-radius(10px);
             padding: 20px 20px 20px 30px;
@@ -349,9 +784,14 @@
             position: absolute;
             bottom: 43px;
             @include sm{
-                padding: 10px 15px;
-                margin-top: -6px;
-                top: -23px;
+                border-radius: 5px;
+                width: 143px;
+                // max-height: 60px;
+            }
+            @include sm{
+                padding: 10px 13px;
+                        top: 153px;
+        right: -40px;
             }
             
             right: -60px;
@@ -377,7 +817,7 @@
                 font-size: 18px;
                 color: $gray8;
                 @include sm{
-                    font-size: 9px;
+                    font-size: 8px;
                 }
                 span{
                     font-weight: 700;
@@ -437,9 +877,16 @@
             font-size: 14px;
             color: $gray8;
             margin-bottom: 17px;
+            @include sm{
+                margin-bottom: 10px;
+                font-size: 8px;
+            }
             span{
                 color: $primary;
                 margin-right: 10px;
+                @include sm{
+                    margin-right: 6px;
+                }
             }
         }
 }
@@ -447,14 +894,26 @@
 
 /*---Submit Your Business Start---*/
 .submit_your_business{
-    background: linear-gradient(to bottom, $white 58%, $gray9 42%);
+    background: linear-gradient(to bottom, $white 70%, $gray9 30%);
     .submit_business{
         background-color: $gray1;
         @include border-radius(20px);
         padding: 150px 120px;
+        @include md{
+            padding: 40px 20px;
+        }
+        @include sm{
+            padding: 40px 20px;
+        }
         
     }
     .form-group{
+        @include sm{
+            &.mt-30{
+                margin-top: 10px !important;
+
+            }
+        }
         input{
             border: 1px solid rgba(193, 193, 193, 0.2);
             border-radius: 5px;
@@ -464,6 +923,10 @@
             background-color: $white;
             font-weight: 400;
             font-size: 18px;
+            @include sm{
+                padding-left: 20px;
+                font-size: 10px;
+            }
             color: $gray9;
             outline: none;
             &::placeholder{
@@ -479,6 +942,11 @@
             height: 208px;
             border: 1px solid rgba(193, 193, 193, 0.2);
             font-weight: 400;
+            @include sm{
+                font-size: 10px;
+                height: 101px;
+                padding: 15px 20px;
+            }
             font-size: 18px;
             color: $gray9;
             outline: none;
@@ -499,6 +967,10 @@
         width: 100%;
         margin-top: 30px;
         @include transition(0.4s);
+        @include sm{
+            font-size: 12px;
+            margin-top: 15px;
+        }
         span{
             margin-left: 5px;
         }
@@ -508,10 +980,19 @@
     }
     .form-row{
         @include flex(row, center, center);
+        @include sm{
+            margin-top: 10px !important;
+        }
         gap: 40px;
+        @include sm{
+            gap: 10px;
+        }
         flex-wrap: wrap;
         .form-group{
             width: calc(50% - 20px);
+            @include sm{
+                width: 100%;
+            }
             input{
                 width: 100%;
             }
@@ -522,10 +1003,529 @@
 
 /*---Partner Testimonials Start---*/
 .partner_testimonials{
+    .partner_testimonial_slider{
+        @include sm{
+            margin-top: 70px;
+        }
+        @include md{
+            margin-top: 80px;
+        }
+        @include nesthub{
+            margin-top: 110px;
+        }
+    }
+    .row{
+        &.style_1{
+            position: relative;
+            @include nesthub{
+                flex-direction: column;
+                .col-lg-4{
+                    width: 100% !important;
+                }
+                .col-lg-8{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
     background-color: $gray9;
-    
+        .left-arrow{
+        border-radius: 100px;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        box-shadow: 0 4px 20px 0 rgba(20, 20, 23, 0.2);
+        background: $white;
+        @include border-radius(50%);
+        display: inline-block;
+        position: absolute;
+            top: 91%;
+    left: -51%;
+        z-index: 10;
+        @include transformY(-50%);
+        cursor: pointer;
+        @include transition(0.4s);
+     
+        @include nesthub{
+            left: 10px;
+            top: -55px;
+            font-size: 14px;
+        }
+        @include md{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            left: 10px;
+            top: -40px;
+            font-size: 14px;
+        }
+        @include sm{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            left: 10px;
+            top: -40px;
+            font-size: 14px;
+        }
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    .right-arrow{
+        border-radius: 100px;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        box-shadow: 0 4px 20px 0 rgba(20, 20, 23, 0.2);
+        background: $white;
+        @include border-radius(50%);
+        display: inline-block;
+        position: absolute;
+            top: 91%;
+        left: -44%;
+        @include transformY(-50%);
+        cursor: pointer;
+        @include transition(0.4s);
+       
+        @include nesthub{
+            left: 70px;
+            top: -55px;
+            font-size: 14px;
+        }
+        @include md{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            left: 50px;
+            top: -60px;
+            font-size: 14px;
+        }
+        @include sm{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            left: 50px;
+            top: -40px;
+            font-size: 14px;
+        }
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    .slick-slide{
+        margin: 0px 10px;
+        position: static !important;
+    }
+    .partner_wrapper{
+        height: 323px;
+        // position: relative;
+    }
+    .partner_testimonial_card{
+        margin-top: 40px;
+        border: 2px solid #263e6b;
+        border-radius: 20px;
+        padding: 40px;
+        position: relative;
+        min-height: 281px;
+        @include flex(column, space-between, flex-start);
+        @include sm{
+            min-height: 218px;
+        }
+    }
+    .user_meta{
+        margin-top: 40px;
+        h5{
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.02em;
+            @include sm{
+                font-size: 18px;
+            }
+            color: $white;
+        }
+        p{
+            font-weight: 400;
+            font-size: 14px;
+            @include sm{
+                font-size: 10px;
+            }
+            color: $white;
+        }
+    }
+    .profile_img{
+        position: absolute;
+        top: -40px;
+        left: 40px;
+        width: 80px;
+        height: 80px;
+        @include border-radius(50%);
+        @include md{
+            width: 71px;
+            height: 71px;
+            top: -30px;
+        }
+        @include sm{
+            width: 61px;
+            height: 61px;
+            top: -30px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .description{
+        margin-top: 27px;
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            @include md{
+                font-size: 15px;
+            }
+            @include sm{
+                font-size: 10px;
+            }
+            color: $white;
+        }
+    }
+    .quote{
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+
+        span{
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            display: inline-block;
+            @include border-radius(50%);
+            color: $primary;
+            font-size:40px;
+            background-color:rgba(255, 255, 255, 0.059) ;
+            @include md{
+                width: 64px;
+                height: 64px;
+                line-height: 64px;
+                font-size: 32px;
+            }
+            @include sm{
+                width: 54px;
+                height: 54px;
+                line-height: 54px;
+                font-size: 26px;
+            }
+        }
+    }
 }
 /*---Partner Testimonials End---*/
+
+/*---Curriculum Overview Start---*/
+.curriculum_overview{
+    .header_area{
+        @media (min-width: 1280px){
+            padding-left: 245px;
+        }
+    }
+    .curriculum_img{
+        @include flex(row, flex-start, flex-start);
+        gap: 40px;
+        @include sm{
+            gap: 14px;
+        }
+    }
+    .curriculum_imge_one{
+        border-radius: 20px;
+        width: 250px;
+        height: 223px;
+        @include md{
+            height: 161px;
+        }
+        @include sm{
+            border-radius: 5px;
+            width: 88px;
+            height: 79px;
+        }
+        img{
+            width: 100%;
+            border-radius: 20px;
+            height: 100%;
+            object-fit: cover;
+            @include sm{
+                border-radius: 5px;
+
+            }
+        }
+    }
+    .curriculum_two{
+        border-radius: 20px;
+        max-width: 680px;
+        height: 421px;
+        width: 100%;
+        @include md{
+            height: 332px;
+        }
+        @include sm{
+           border-radius: 5px;
+           max-width: 240px;
+           width: 100%;
+           height: 148px;
+        }
+        img{
+            width: 100%;
+            border-radius: 20px;
+            @include sm{
+                border-radius: 5px;
+            }
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+    .list_area{
+        padding-left: 30px;
+        @include nesthub{
+            padding-left: 10px;
+        }
+        @include md{
+            margin-top: 30px;
+            padding-left: 0px;
+        }
+        @include sm{
+            margin-top: 20px;
+            padding-left: 0px;
+        }
+        ul{
+            @include flex(column, flex-start, flex-start);
+            gap: 20px;
+            li{
+                font-weight: 400;
+                font-size: 14px;
+                color: $gray8;
+                @include nesthub{
+                    font-size: 13px;
+                }
+                span{
+                    color: $primary;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+/*---Curriculum Overview End---*/
+
+/*---What Master Start---*/
+.what_master{
+    .master_card{
+        border: 1px solid rgba(20, 20, 23, 0.1);
+        border-radius: 10px;
+        padding: 30px 40px 20px 40px;
+        position: relative;
+        background-color: $white;
+        max-width: 440px;
+        margin-bottom: 32px;
+        @include nesthubmax{
+            padding: 25px 30px 20px 30px;
+            margin-bottom: 22px;
+        }
+        @include nesthub{
+            padding: 25px 30px 15px 30px;
+            margin-bottom: 22px;
+        }
+        @include sm{
+            margin-bottom: 20px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
+            opacity: 0; 
+            transition: opacity 0.4s; 
+            z-index: 0; 
+            border-radius: 10px;
+        }
+        * {
+            position: relative;
+            z-index: 1;
+        }
+        @include sm{
+            padding: 30px 20px 20px 20px;
+        }
+        span{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            img{
+                opacity: 1;
+            }
+        }
+        .number{
+            font-family: $font3;
+            font-weight: 700;
+            font-size: 24px;
+            @include transition(0.4s);
+            opacity: 0.2;
+            @include sm{
+                font-size: 14px;
+            }
+            color: #141417;
+        }
+        h5{
+            margin-top: 30px;
+            font-weight: 500;
+            @include transition(0.4s);
+            font-size: 22px;
+            color: #141417;
+            @include nesthub{
+                font-size: 18px;
+            }
+            @include sm{
+                font-size: 18px;
+            }
+        }
+        &:hover{
+            .number{
+                color: $white;
+                opacity: 0.5;
+            }
+            h5{
+                color: $white;
+            }
+            &::before{
+                opacity: 1; 
+            }
+        }
+    }
+}
+/*---What Master End---*/
+
+/*---Hands On Experience Start---*/
+.hands_experience{
+    .col-lg-6{
+        &.style_1{
+            @include flex(row, flex-end, center);
+        }
+    }
+    overflow: hidden;
+    .image_area{
+        max-width: 656px;
+        width: 100%;
+        background-color: $white;
+        border-left: 10px solid $primary;
+        border-bottom: 10px solid $primary;
+        height: 601px;
+        @include border-radius(10px);
+        position: relative;
+        
+        @include nesthubmax{
+            width: 440px;
+            height: 355px;
+        }
+        @include nesthub{
+            width: 440px;
+            height: 355px;
+        }
+        @include sm{
+            border-left: 5px solid $primary;
+            border-bottom: 5px solid $primary;
+            border-radius: 5px;
+            width: 318px;
+            height: 283px;
+        }
+        .hands_image{
+            max-width: 600px;
+            position: absolute;
+            bottom: 56px;
+            left: 56px;
+            height: 545px;
+            width: 100%;
+            @include border-radius(10px);
+            @include nesthubmax{ 
+                left: 29px;
+                bottom: 29px;
+                width: 440px;
+                height: 355px;
+            }
+            @include nesthub{ 
+                left: 29px;
+                bottom: 29px;
+                width: 440px;
+                height: 355px;
+            }
+            @include sm{
+                left: 29px;
+                bottom: 29px;
+                border-radius: 5px;
+                width: 312px;
+                height: 284px;
+            }
+            img{
+                @include border-radius(10px);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &.style_1{
+            border-right: 10px solid $primary;
+            @include sm{
+                border-right: 5px solid $primary;
+            }
+            border-left: none;
+            .hands_image{
+                left: -10px;
+                @include sm{
+                    left: -29px;
+                }
+
+            }
+        }
+    }
+      .list_area{
+        ul{
+            @include flex(column, flex-start, flex-start);
+            gap: 20px;
+            li{
+                font-weight: 400;
+                font-size: 14px;
+                color: $gray8;
+                @include nesthub{
+                    font-size: 13px;
+                }
+                span{
+                    color: $primary;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    .header_area{
+        @include md{
+            margin-top: 40px;
+        }
+        @include sm{
+            margin-top: 30px;
+        }
+        @media (min-width: 1280px){
+            margin-bottom: 70px;
+        }
+    }
+}
+/*---Hands On Experience End---*/
+
+
+
+
 
 
 

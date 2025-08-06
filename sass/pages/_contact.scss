@@ -1,0 +1,188 @@
+.contact_form_area{
+    padding-top: 430px;
+    overflow: hidden;
+    position: relative;
+    @include md{
+        padding-top: 1207px;
+        iframe{
+            height: 600px !important;
+        }
+    }
+    @include sm{
+        padding-top: 690px;
+        iframe{
+            height: 302px !important;
+        }
+    }
+    .message_form{
+        position: absolute;
+        top: -222px;
+        width: 100%;
+    }
+    .contact_form{
+        padding: 80px;
+        .contact_card_wrapper{
+            padding: 23px;
+            background-color: $gray1;
+            @include border-radius(10px);
+        }
+        @include sm{
+            padding: 0px 42px 0px 12px;
+        }
+        position: absolute;
+        top: 222px;
+        width: 100%;
+        @include border-radius(20px);
+        background-color: $gray1;
+        @include sm{
+            background-color: transparent;
+        }
+        .contact_card{
+            border: 1px solid rgba(193, 193, 193, 0.2);
+            border-radius: 5px;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+            background: $white;
+            @include flex(row, flex-start, center);
+            gap: 30px;
+            padding: 40px 30px;
+            @include sm{
+                gap: 10px;
+                padding: 23px 17px 18px 17px;
+            }
+            .icon{
+                span{
+                    border-radius: 5px;
+                    width: 58px;
+                    height: 57px;
+                    display: inline-block;
+                    background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
+                    text-align: center;
+                    line-height: 57px;
+                    font-family: $second-family;
+                    font-weight: 900;
+                    font-size: 20px;
+                    color: $white;
+                    @include sm{
+                        width: 33px;
+                        height: 33px;
+                        line-height: 33px;
+                        font-size: 14px;
+                        
+                    }
+                }
+            }
+            h5{
+                font-weight: 600;
+                font-size: 24px;
+                color: $gray9;
+                margin-bottom: 6px;
+                @include sm{
+                    font-size: 14px;
+                    margin-bottom: -4px;
+                }
+            }
+            a{
+                font-weight: 400;
+                font-size: 18px;
+                color: $gray9;
+                @include sm{
+                    font-size: 10px
+                }
+                @include transition(0.4s);
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .send_message{
+        
+        @include sm{
+            margin-top: 30px;
+            background-color: $gray1;
+            padding: 23px;
+            @include border-radius(10px);
+        }
+        h2{
+            font-weight: 600;
+            font-size: 40px;
+            color: #010003;
+            line-height: 28px;
+            margin-bottom: 40px;
+            @include sm{
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+        input{
+            border: 1px solid rgba(193, 193, 193, 0.2);
+            border-radius: 5px;
+            max-width: 620px;
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            margin-bottom: 27px;
+            background-color: $white;
+            font-weight: 400;
+            color: $gray9;
+            &::placeholder{
+                color: $gray8;
+            }
+            @include sm{
+                margin-bottom: 10px;
+                padding: 7px 10px;
+                font-size: 10px
+            }
+        }
+        .dubble_input{
+            @include flex(row, space-between, center);
+            input{
+                width: calc(50% - 15px);
+                @include sm{
+                    width: calc(50% - 5px);
+                }
+            }
+        }
+        textarea{
+
+            border: 1px solid rgba(193, 193, 193, 0.2);
+            border-radius: 5px;
+            max-width: 620px;
+            min-height: 169px;
+            width: 100%;
+            background-color: $white;
+            padding: 20px;
+            margin-bottom: 27px;
+            font-size: 18px;
+            @include sm{
+                margin-bottom: 10px;
+                padding: 10px;
+                font-size: 10px;
+                min-height: 82px;
+            }
+
+        }
+        button{
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 620px;
+            width: 100%;
+            padding: 14px;
+            font-weight: 500;
+            border: none;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: $white;
+            @include sm{
+                padding: 7px;
+                font-size: 7px;
+            }
+            background: linear-gradient(90deg, #2981fa 0%, #18a7f7 100%);
+            &:hover{
+               background: linear-gradient(90deg, #0866eb 0%, #18a7f7 100%);
+            }
+        }
+    }
+}

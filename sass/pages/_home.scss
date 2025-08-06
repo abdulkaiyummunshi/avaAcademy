@@ -416,6 +416,22 @@
             li{
                 @include flex(row, flex-start, flex-start);
                 gap: 10px;
+                font-weight: 600;
+                font-size: 18px;
+                color:  $gray9;
+
+                @include sm{
+                    font-size: 14px;
+                    img{
+                        width: 20px;
+                        height: 15px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
                 p{
                     font-weight: 600;
                     font-size: 18px;
@@ -457,6 +473,11 @@
             .who_main_image{
                 height: 539px !important;
                 width: 516px !important;
+                @include sm{
+                    border-radius: 11px;
+                    width: 277px !important;
+                    height: 289px !important;
+                }
             }
             .objects{
                 border: 1px solid rgba(193, 193, 193, 0.2);
@@ -464,9 +485,19 @@
                 padding: 30px;
                 background: #f9faff;
                 position: absolute;
-                top: 50%;
-                @include transformY(-50%);
+                // top: 50%;
+                // @include transformY(-50%);
+                bottom: 53px;
                 right: 0px;
+                @include sm{
+                    padding: 15px;
+                    bottom: 28px;
+                    img{
+                        width: 117px;
+                        height: 134px;
+                        object-fit: contain;
+                    }
+                }
             }
         }
         position: relative;
@@ -1640,19 +1671,46 @@
     &:last-child {
         border-bottom: none;
     }
+    @include transition(0.5s);
+    &:hover{
+        background-color: $primary;
+        .accordion-header{
+            color: $white;
+            
+        }
+        .number{
+            color: $white;
+        }
+        p{
+            color: $white;
+        }
+    }
     &.active {
+        background-color: $primary;
         .number {
         color: $white;
     }
+    .arrow-icon{
+        i{
+            transform: rotate(180deg);
+                 -webkit-transform: rotate(180deg);
+                 -moz-transform: rotate(180deg);
+                 -ms-transform: rotate(180deg);
+                 -o-transform: rotate(180deg);
+        }
+
+    }
         .accordion-header {
-            background: linear-gradient(to right, #007bff, #00c6ff);
+            // background: linear-gradient(to right, #007bff, #00c6ff);
+            // background-color: $primary;
             color: #fff;
               transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
         }
         .accordion-content {
             max-height: 500px;
             p{
-                background: linear-gradient(to right, #007bff, #00c6ff);
+                // background: linear-gradient(to right, #007bff, #00c6ff);
+                // background-color: $primary;
             color: #fff;
             }
         }
@@ -1661,28 +1719,28 @@
 .accordion-header {
         display: flex;
         align-items: center;
-        background: transparent;
         padding: 24px 40px 8px 40px;
         font-weight: 500;
         font-size: 24px;
-        transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
-        -webkit-transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
-        -moz-transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
-        -ms-transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
-        -o-transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
+        @include transition(0.5s);
+        // transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
+        // -webkit-transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
+        // -moz-transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
+        // -ms-transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
+        // -o-transition: background-color 0.8s ease, color 0.3s ease, padding 0.3s ease;
         @include sm
-{
-        font-size: 14px;
-        padding: 15px 20px 8px 20px;
-    }
-    text-transform: capitalize;
-    color: $gray9;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
-    .number {
-        margin-right: 15px;
-        transition: color 0.3s ease;
-        font-weight: 600;
+        {
+            font-size: 14px;
+            padding: 15px 20px 8px 20px;
+        }
+        text-transform: capitalize;
+        color: $gray9;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+        .number {
+            margin-right: 15px;
+            transition: color 0.3s ease;
+            font-weight: 600;
         font-size: 44px;
         @include sm{
             font-size: 22px;
@@ -1701,6 +1759,14 @@
         height: 40px;
         display: inline-block;
         line-height: 40px;
+        i{
+             @include transition(0.4s);
+             transform: rotate(0deg);
+             -webkit-transform: rotate(0deg);
+             -moz-transform: rotate(0deg);
+             -ms-transform: rotate(0deg);
+             -o-transform: rotate(0deg);
+}
         @include sm{
             width: 20px;
             height: 20px;
@@ -1727,14 +1793,14 @@
     -ms-transition: max-height 0.5s ease-out, padding 0.5s ease-out, background-color 0.5s ease-out;
     -o-transition: max-height 0.5s ease-out, padding 0.5s ease-out, background-color 0.5s ease-out;
     p
-{
+    {
         padding: 0 58px 38px 44px;
         font-weight: 400;
-        transition:background-color 1.5s ease-out ;
-        -webkit-transition:background-color 1.5s ease-out ;
-        -moz-transition:background-color 1.5s ease-out ;
-        -ms-transition:background-color 1.5s ease-out ;
-        -o-transition:background-color 1.5s ease-out ;
+        transition:background-color 0.5s ease-out ;
+        -webkit-transition:background-color 0.5s ease-out ;
+        -moz-transition:background-color 0.5s ease-out ;
+        -ms-transition:background-color 0.5s ease-out ;
+        -o-transition:background-color 0.5s ease-out ;
         font-size: 16px;
         color: $gray9;
         letter-spacing: 0.01em;
@@ -1858,6 +1924,7 @@
             justify-content: center;
         }
         @include md{
+            height: 516px;
             justify-content: center;
         }
         @include sm{
@@ -2035,6 +2102,9 @@
     }
 .faq-section {
     width: 100%;
+    @include sm{
+        margin-top:26px;
+    }
     @include nesthubmax{
         padding-left: 34px;
     }
@@ -2096,7 +2166,7 @@
             @include sm{
                 width: 14px;
                 height: 14px;
-                line-height: 14px;
+                line-height: 13px;
                 font-size: 8px;
             }
             text-align: center;

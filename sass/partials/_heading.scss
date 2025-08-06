@@ -12,6 +12,22 @@
             padding: 7px 13px 7px 16px;
             display: inline-block;
             background-color: $gray9;
+            @include nesthub{
+                img{
+                    width: 25px !important;
+                    height: 25px !important;
+                    object-fit: contain;
+                }
+
+            }
+            @include md{
+                img{
+                    width: 25px !important;
+                    height: 25px !important;
+                    object-fit: contain;
+                }
+
+            }
             @include sm{
                 font-size: 8px;
                 padding: 5px 8px;
@@ -88,13 +104,24 @@
             font-weight: 600;
             font-size: 38px;
             color: $gray9;
-            
+            @include nesthubmax{
+                font-size: 34px;
+            }
+            @include nesthub{
+                font-size: 30px;
+            }
+            @include md{
+                font-size: 26px;
+            }
+            @include sm{
+                font-size: 22px;
+            }
         }
         &.style_1{
             h2{
                 font-size: 40px;
                 @include nesthubmax{
-                font-size: 36px;
+                font-size: 34px;
             }
             @include nesthub{
                 font-size: 30px;
@@ -106,13 +133,20 @@
                 font-size: 22px;
             }
             }
+            h3{
+                font-size: 32px;
+                @include sm{
+                    font-size: 18px;
+                }
+                color: $gray9;
+            }
         }
         &.style_2{
             h2{
                 font-size: 40px;
                 color: $white;
                 @include nesthubmax{
-                font-size: 36px;
+                font-size: 34px;
             }
             @include nesthub{
                 font-size: 30px;
@@ -130,7 +164,7 @@
                 font-size: 48px;
                 color: $gray9;
                 @include nesthubmax{
-                font-size: 36px;
+                font-size: 34px;
             }
             @include nesthub{
                 font-size: 30px;
@@ -145,7 +179,7 @@
         }
         h2{
             @include nesthubmax{
-                font-size: 36px;
+                font-size: 34px;
             }
             @include nesthub{
                 font-size: 30px;
@@ -160,6 +194,9 @@
         h3{
             font-weight: 700;
             font-size: 24px;
+            @include sm{
+                font-size: 22px;
+            }
             color: $white;
         }
     }
@@ -195,7 +232,7 @@
     }
     @include sm{
        p{
-         font-size: 10px;
+         font-size: 10px !important;
        }
     }
 }
@@ -206,7 +243,7 @@
     }
 }
 @include nesthubmax{
-  .nest_br_none{
+  .nestmax_br_none{
         display: none;
     }
 }
@@ -248,14 +285,24 @@
     width: 100%;
     padding: 30px;
     border-left: 2px solid $primary;
+    @include sm{
+        padding: 10px 20px 15px 15px;
+        margin-top: 20px !important;
+    }
     strong{
         font-weight: 400;
         font-size: 18px;
+        @include sm{
+            font-size: 10px;
+        }
         color: $gray8;
     }
     p{
         font-weight: 400;
         font-size: 14px;
+        @include sm{
+            font-size: 10px;
+        }
         color: $gray8;
         margin-top: 5px;
     }

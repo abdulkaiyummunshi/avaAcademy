@@ -83,30 +83,43 @@
         thePlan();
        
         // Verified Talent
-        function verifiedTalent(){
-                $('.accordion-header').on('click', function () {
-                    var $parentItem = $(this).closest('.accordion-item');
-                    var $arrow = $(this).find('.arrow-icon');
-                    var isCurrentlyActive = $parentItem.hasClass('active');
+        // function verifiedTalent(){
+        //         $('.accordion-header').on('click', function () {
+        //             var $parentItem = $(this).closest('.accordion-item');
+        //             var $arrow = $(this).find('.arrow-icon');
+        //             var isCurrentlyActive = $parentItem.hasClass('active');
 
-                    $('.accordion-item').not($parentItem).each(function () {
-                        $(this).removeClass('active');
-                        $(this).find('.accordion-header .arrow-icon').html('<i class="fa-solid fa-angle-down"></i>'); 
-                    });
+        //             $('.accordion-item').not($parentItem).each(function () {
+        //                 $(this).removeClass('active');
+        //                 $(this).find('.accordion-header .arrow-icon').html('<i class="fa-solid fa-angle-down"></i>'); 
+        //             });
 
-                    // Toggle the clicked item
-                    if (isCurrentlyActive) {
-                        // If it was active, remove 'active' and set arrow down
-                        $parentItem.removeClass('active');
-                        $arrow.html('<i class="fa-solid fa-angle-down"></i>');
-                    } else {
-                        // If it was not active, add 'active' and set arrow up
-                        $parentItem.addClass('active');
-                        $arrow.html('<i class="fa-solid fa-angle-up"></i>');
-                    }
-                });
+        //             // Toggle the clicked item
+        //             if (isCurrentlyActive) {
+        //                 // If it was active, remove 'active' and set arrow down
+        //                 $parentItem.removeClass('active');
+        //                 $arrow.html('<i class="fa-solid fa-angle-down"></i>');
+        //             } else {
+        //                 // If it was not active, add 'active' and set arrow up
+        //                 $parentItem.addClass('active');
+        //                 $arrow.html('<i class="fa-solid fa-angle-up"></i>');
+        //             }
+        //         });
+        // }
+        // verifiedTalent()
+        function verifiedTalent() {
+            $('.accordion-header').on('click', function () {
+                var $parentItem = $(this).closest('.accordion-item');
+                var isCurrentlyActive = $parentItem.hasClass('active');
+
+                // Remove 'active' from all other accordion items
+                $('.accordion-item').not($parentItem).removeClass('active');
+
+                // Toggle the 'active' class on the clicked item
+                $parentItem.toggleClass('active');
+            });
         }
-        verifiedTalent()
+        verifiedTalent();
 
         // Text Slider
         function textSlider(){
@@ -143,6 +156,27 @@
             infinite: true,
             prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
             nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
+        });
+        $('.partner_testimonial_slider').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            speed: 3000,
+            dots: false,
+            infinite: true,
+            prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
+            nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
+            responsive: [
+                {
+                    breakpoint: 768, 
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]
         });
         
       

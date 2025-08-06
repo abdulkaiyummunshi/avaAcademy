@@ -1,19 +1,17 @@
 @import "mixin";
 @import "variables";
-// @import "./partials/animation";
 @import "./partials/header";
 @import "./partials/footer";
 @import "./pages/home.scss";
 @import "./pages/course-details.scss";
 @import "./pages/about_us.scss";
 @import "./pages/employment.scss";
+@import "./pages/contact";
 @import "./pages/students";
 @import "./partials/heading";
 @import "./partials/button";
 @import "./partials/mobile-menu";
 @import "./partials/offcanvas";
-// @import "./element/list";
-// @import "./element/search";
 
 * {
     margin: 0;
