@@ -199,7 +199,6 @@
 	width: 100%;
 	z-index: 999;
 	height: 90px;
-	animation: slideDown 2s ease forwards;
 	
 	@include nesthub{
 		height: 80px;
@@ -235,7 +234,11 @@
 			@include flexbox();
 			align-items: center;
 			gap: 20px;
-			
+			@media (max-width: 580px){
+				.btn_wrapper{
+					display: none;
+				}
+			}
 			.offcanvas-bar{
 				background-color: transparent;
 				border: none;
@@ -280,7 +283,7 @@
             position: fixed;
             top: 0px;
             margin: auto;
-            // animation: slideDown 2s ease forwards;
+            animation: slideDown 2s ease forwards;
             background-color: #fffdfd;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             // animation: slideDown 2s ease forwards;

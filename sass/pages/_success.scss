@@ -23,7 +23,8 @@
             max-width: 293px;
         }
         @include breakpoint (max-xxxsmall){
-            max-width: 246px;
+            max-width: 298px;
+            height: 340px;
         }
     }
     .graduatesplaced{
@@ -33,6 +34,8 @@
         box-shadow: 0 20px 40px 0 rgba(23, 22, 28, 0.2);
         background: $white;
         position: absolute;
+            animation: up-down 2s ease-in-out infinite alternate;
+    -webkit-animation: up-down 2s ease-in-out infinite alternate;
         top: 80px;
         right: -86px;
         @include breakpoint (max-md){
@@ -130,7 +133,13 @@
         background: var(--Gray-100, #F9FBFE);
         padding: 21px 56px;
         margin-left: 48px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
+        &:hover{
+            transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: $primary;
+        }
 
         @include breakpoint (max-xxl){
             padding: 21px 45px;

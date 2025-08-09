@@ -357,6 +357,8 @@
                 z-index: -1;
                 right: -22px;
                 img{
+                    animation: vectorani 2s ease-in-out infinite alternate;
+        -webkit-animation: vectorani 2s ease-in-out infinite alternate;
                     @include border-radius(0px);
                 }
                 @include nesthubmax{
@@ -427,6 +429,7 @@
     }
     background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
     .student_card{
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         @include md{
             margin-bottom: 20px;
             margin-top: 0px !important;
@@ -439,6 +442,10 @@
         border-radius: 10px;
         max-width: 373px;
         padding: 30px 30px 40px 30px;
+        &:hover{
+            transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
         @include sm{
             padding: 30px;
         }
@@ -682,8 +689,8 @@
         }
         @include sm{
             width: 342px;
-            margin-top: 8px !important;
-            height: 473px;
+            margin-top: 27px !important;
+            height: 437px;
         }
         img{
             width: 100%;
@@ -700,11 +707,15 @@
             background: $white;
             border-radius: 5px;
             max-width: 645px;
+            border: 1px solid transparent;
             padding: 30px 30px 30px 30px;
+            @include transition(0.4s);
+            
             @include sm{
                 padding: 15px 17px;
             }
             h5{
+                @include transition(0.4s);
                 font-weight: 500;
                 font-size: 18px;
                 color: $gray9;
@@ -718,6 +729,7 @@
                 }
             }
             p{
+                @include transition(0.4s);
                 font-weight: 400;
                 margin-top: 14px;
                 font-size: 14px;
@@ -726,6 +738,11 @@
                     margin-top: 10px;
                 }
                 color: $gray8;
+            }
+            &:hover{
+                border: 1px solid #3561ff40;
+                transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
             }
         }
     }
@@ -779,13 +796,14 @@
         position: relative;
     }
     .graduatesplaced{
-        // display: none;
             max-width: 300px;
             @include border-radius(10px);
             padding: 20px 20px 20px 30px;
             box-shadow: 0 20px 40px 0 rgba(23, 22, 28, 0.2);
             background: $white;
             position: absolute;
+            animation: up-down 2s ease-in-out infinite alternate;
+    -webkit-animation: up-down 2s ease-in-out infinite alternate;
             bottom: 43px;
             @include sm{
                 border-radius: 5px;
@@ -899,6 +917,9 @@
 /*---Submit Your Business Start---*/
 .submit_your_business{
     background: linear-gradient(to bottom, $white 70%, $gray9 30%);
+    @include sm{
+            padding-bottom: 0px !important;
+    }
     .submit_business{
         background-color: $gray1;
         @include border-radius(20px);
@@ -1007,6 +1028,9 @@
 
 /*---Partner Testimonials Start---*/
 .partner_testimonials{
+    @include sm{
+        padding-bottom: 0px !important;
+    }
     .partner_testimonial_slider{
         @include sm{
             margin-top: 70px;

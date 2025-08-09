@@ -3,17 +3,22 @@
     position: relative;
     &-card {
         position: relative;
-        &-thumb {
+        &-thumb
+{
             position: relative;
             border-radius: 20px 20px 0 0;
             overflow: hidden;
             img {
-               transition: all 0.3s ease;
-                width: 100%;
-                &:hover {
-                    scale: 1.2;
-                    transition: all 0.3s ease;
-                }
+               transition: all 0.5s ease;
+               width: 100%;
+               &:hover
+{
+                    transform: scale(1.05);
+                    -webkit-transform: scale(1.05);
+                    -moz-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    -o-transform: scale(1.05);
+}
             }
         }
         &-content {
@@ -73,17 +78,23 @@
                 padding: 30px 24px 30px;
             }
             &__title {
-                color: #1D2027;
+                a{
+                    color: #1D2027;
                 font-family: Poppins;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 34px; 
-                padding-bottom: 22px;
+                @include transition(0.4s);
                 @include breakpoint (max-xxsmall) {
                     font-size: 18px;
                     line-height: 26px; 
                 }
+                &:hover{
+                    color: $primary;
+                }
+            }
+            padding-bottom: 22px;
             }
             &-meta {
                 color: var(--Gray-800, #757575);
@@ -352,6 +363,7 @@
     
                     &:hover {
                         color: $white;
+                        border: 1px transparent;
                         background: var(--P1, linear-gradient(270deg, #9708CC -54.69%, #43CBFF 99.85%));
                         i {
                             color: $white;

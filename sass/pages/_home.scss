@@ -288,6 +288,8 @@
             box-shadow: 0 20px 40px 0 rgba(23, 22, 28, 0.2);
             background: $white;
             position: absolute;
+            animation: up-down 2s ease-in-out infinite alternate;
+    -webkit-animation: up-down 2s ease-in-out infinite alternate;
             top: -57px;
             @include sm{
                 padding: 10px 15px;
@@ -485,8 +487,8 @@
                 padding: 30px;
                 background: #f9faff;
                 position: absolute;
-                // top: 50%;
-                // @include transformY(-50%);
+               animation: up-down1 2s ease-in-out infinite alternate;
+    -webkit-animation: up-down1 2s ease-in-out infinite alternate;
                 bottom: 53px;
                 right: 0px;
                 @include sm{
@@ -524,7 +526,7 @@
     }
 }
 /*---Who We Are End---*/
-
+ 
 /*---The Plan Start---*/
 .the_plan{
     @include sm{
@@ -760,7 +762,7 @@
         border-radius: 5px;
         box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
         background:  $white;
-        padding: 55px 100px;
+        padding: 55px 46px 55px 100px;
         margin-left: 41px;
         position: relative;
         @include nesthubmax{
@@ -1001,8 +1003,13 @@
             color: $white;
             @include border-radius(5px);
             background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
+            @include transition(0.4s);
             span{
                 margin-left: 10px;
+            }
+            &:hover{
+                color: $white;
+                background: linear-gradient(90deg, #000000 0%, #000000 100%);
             }
         }
     }
@@ -1782,7 +1789,7 @@
         @include sm{
             width: 20px;
             height: 20px;
-            line-height: 20px;
+            line-height: 18px;
         }
         
         text-align: center;
@@ -1836,7 +1843,8 @@
 .text_slider{
     background-color: $gray9;
     @include sm{
-        margin-top: 40px !important;
+        margin-top: 0px !important;
+        padding-bottom: 40px !important;
     }
 
 .scroll-container {
@@ -2042,6 +2050,8 @@
             position: absolute;
             top: 40px;
             left: -9px;
+             animation: rotateCircle 35s ease-in-out infinite alternate;
+    -webkit-animation: rotateCircle 35s ease-in-out infinite alternate;
             @include sm{
                 top: 16px;
                 left: -3px;
@@ -2061,6 +2071,8 @@
             background-color: $primary;
             position: absolute;
             left: -63px;
+             animation: pulse 2s ease-in-out infinite alternate;
+    -webkit-animation: pulse 2s ease-in-out infinite alternate;
             top: 170px;
             @include sm{
                 width: 13px;
@@ -2072,6 +2084,8 @@
         .box2{
             width: 15px;
             height: 15px;
+             animation: pulse 2s ease-in-out infinite alternate;
+    -webkit-animation: pulse 2s ease-in-out infinite alternate;
             @include border-radius(50%);
             background-color: $primary;
             position: absolute;
@@ -2087,6 +2101,8 @@
         .box3{
             width: 4px;
             height: 4px;
+             animation: pulse 2s ease-in-out infinite alternate;
+    -webkit-animation: pulse 2s ease-in-out infinite alternate;
             @include border-radius(50%);
             background-color: $primary;
             position: absolute;
@@ -2107,6 +2123,8 @@
             position: absolute;
             top: 97px;
             right: -13px;
+             animation: pulse 2s ease-in-out infinite alternate;
+    -webkit-animation: pulse 2s ease-in-out infinite alternate;
             @include sm{
                 width: 10px;
                 height: 10px;

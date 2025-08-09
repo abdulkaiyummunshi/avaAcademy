@@ -83,30 +83,6 @@
         thePlan();
        
         // Verified Talent
-        // function verifiedTalent(){
-        //         $('.accordion-header').on('click', function () {
-        //             var $parentItem = $(this).closest('.accordion-item');
-        //             var $arrow = $(this).find('.arrow-icon');
-        //             var isCurrentlyActive = $parentItem.hasClass('active');
-
-        //             $('.accordion-item').not($parentItem).each(function () {
-        //                 $(this).removeClass('active');
-        //                 $(this).find('.accordion-header .arrow-icon').html('<i class="fa-solid fa-angle-down"></i>'); 
-        //             });
-
-        //             // Toggle the clicked item
-        //             if (isCurrentlyActive) {
-        //                 // If it was active, remove 'active' and set arrow down
-        //                 $parentItem.removeClass('active');
-        //                 $arrow.html('<i class="fa-solid fa-angle-down"></i>');
-        //             } else {
-        //                 // If it was not active, add 'active' and set arrow up
-        //                 $parentItem.addClass('active');
-        //                 $arrow.html('<i class="fa-solid fa-angle-up"></i>');
-        //             }
-        //         });
-        // }
-        // verifiedTalent()
         function verifiedTalent() {
             $('.accordion-header').on('click', function () {
                 var $parentItem = $(this).closest('.accordion-item');
@@ -136,8 +112,9 @@
         $('.clients_review_slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            // autoplay: true,
-            autoplaySpeed: 4000,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 3000,
             arrows: true,
             dots: true,
             dotsClass: "review_dots",
@@ -148,9 +125,9 @@
         $('.vision_content').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: true,
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 3000,
+            arrows: true,
             speed: 3000,
             dots: false,
             infinite: true,
@@ -178,6 +155,71 @@
                 },
             ]
         });
+        function animateBlogNewsContains() {
+            const blogNewsContains = document.querySelectorAll(".business_card");
+            if (blogNewsContains.length > 0) {
+                gsap.from(blogNewsContains, {
+                    scrollTrigger: {
+                        trigger: ".business_card_wrapper",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1,
+                    stagger: 0.3,
+                });
+            }
+        }
+        animateBlogNewsContains()
+        function talentProfiles() {
+            const blogNewsContains = document.querySelectorAll(".blog1-card");
+            if (blogNewsContains.length > 0) {
+                gsap.from(blogNewsContains, {
+                    scrollTrigger: {
+                        trigger: ".blog1-card",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1,
+                    stagger: 0.3,
+                });
+            }
+        }
+        talentProfiles()
+        function certificate() {
+            const blogNewsContains = document.querySelectorAll(".certificate_one");
+            if (blogNewsContains.length > 0) {
+                gsap.from(blogNewsContains, {
+                    scrollTrigger: {
+                        trigger: ".certificate_image",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 1,
+                    x: 120,
+                    duration: 1.5,
+                    stagger: 0.3,
+                });
+            }
+            const certificatetwo = document.querySelectorAll(".certificate_two");
+            if (certificatetwo.length > 0) {
+                gsap.from(certificatetwo, {
+                    scrollTrigger: {
+                        trigger: ".certificate_image",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 1,
+                    x: -100,
+                    duration: 1.5,
+                    stagger: 0.3,
+                });
+            }
+        }
+        certificate()
         
       
 
@@ -266,73 +308,4 @@
         }, 600);
     });
 })(jQuery);
-
-
-// function pricingContains (){
-    
-//     const channelCards = document.querySelectorAll(".channel_card");
-//     const channelContents = document.querySelectorAll(".price_channel");
-
-//     channelCards.forEach((card, index) => {
-//         const button = card.querySelector("button");
-
-//         button.addEventListener("click", function () {
-//             document.querySelectorAll(".channel_card button").forEach(btn => btn.classList.remove("btn_active"));
-//             channelContents.forEach(content => content.classList.remove("active"));
-//             this.classList.add("btn_active");
-//             channelContents[index].classList.add("active");
-//         });
-//     });
-    
-
-
-// }
-// pricingContains()
-
-// function internetSpeed(){
-//     const timerCards = document.querySelectorAll(".timer_card");
-//     const contentAreas = document.querySelectorAll(".content_area");
-
-//     timerCards.forEach((card, index) => {
-//         card.addEventListener("click", function () {
-//             timerCards.forEach(c => c.classList.remove("btn_active"));
-//             contentAreas.forEach(content => content.classList.remove("active"));
-//             this.classList.add("btn_active");
-//             contentAreas[index].classList.add("active");
-//         });
-//     });
-    
-// }
-// internetSpeed()
-// function priceContent(){
-//     const timerCards = document.querySelectorAll(".price_card");
-//     const contentAreas = document.querySelectorAll(".price_content");
-
-//     timerCards.forEach((card, index) => {
-//         card.addEventListener("click", function () {
-//             timerCards.forEach(c => c.classList.remove("btn_active"));
-//             contentAreas.forEach(content => content.classList.remove("active"));
-//             this.classList.add("btn_active");
-//             contentAreas[index].classList.add("active");
-//         });
-//     });
-    
-// }
-// priceContent()
-
-// function internetService(){
-//     const timerCards = document.querySelectorAll(".my_card");
-//     const contentAreas = document.querySelectorAll(".package_pricign");
-
-//     timerCards.forEach((card, index) => {
-//         card.addEventListener("click", function () {
-//             timerCards.forEach(c => c.classList.remove("btn_active"));
-//             contentAreas.forEach(content => content.classList.remove("active"));
-//             this.classList.add("btn_active");
-//             contentAreas[index].classList.add("active");
-//         });
-//     });
-    
-// }
-// internetService()
 

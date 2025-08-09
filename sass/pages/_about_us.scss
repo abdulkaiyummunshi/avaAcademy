@@ -339,6 +339,7 @@
                 z-index: -1;
                 top: -44px;
                 right: -44px;
+                @include transition(0.4s);
                 @include sm{
                     top: -25px;
                     right: -25px;
@@ -353,6 +354,7 @@
                 position: absolute;
                 bottom: -44px;
                 left: -44px;
+                @include transition(0.4s);
                  @include sm{
                     bottom: -25px;
                     left: -25px;
@@ -362,6 +364,16 @@
                 height: 100%;
                 background-color: $primary;
                 @include border-radius(20px);
+            }
+            &:hover{
+                &::before{
+                    bottom: -37px;
+                    left: -37px;
+                }
+                &::after{
+                    top: -37px;
+                    right: -37px;
+                }
             }
             .image{
                 width: 100%;

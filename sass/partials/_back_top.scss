@@ -13,12 +13,12 @@
         text-align: center;
         @include border-radius(50%);
         cursor: pointer;
-        background-color: $--primary;
+        background-color: $primary;
         border: 1px solid transparent;
-        color: $--white;
+        color: $white;
         &:hover{
-            border: 1px solid $--border;
-            color: $--text_clr;
+            border: 1px solid $gray2;
+            color: $gray9;
             @include transition(0.4s);
             background-color: #ddd;
         }

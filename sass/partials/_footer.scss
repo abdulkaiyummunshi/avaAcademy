@@ -157,6 +157,8 @@
             right: 24%;
             @include transformX(-40%);
             pointer-events: none;
+             animation: moveText 4s ease-in-out infinite alternate;
+    -webkit-animation: moveText 4s ease-in-out infinite alternate;
             @include nesthubmax{
                 width: 250px;
                 height: 200px;
