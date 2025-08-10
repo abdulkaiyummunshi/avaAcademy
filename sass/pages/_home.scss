@@ -438,10 +438,12 @@
                     font-weight: 600;
                     font-size: 18px;
                     color:  $gray9;
+
               
 
                 @include sm{
                     font-size: 14px;
+                    font-weight: 500;
                 }
                 @include md{
                     font-size: 14px;
@@ -513,10 +515,21 @@
                 object-fit: cover;
                 @include border-radius(20px);
             }
+            @include sm{
+                width: 202px;
+                height: 202px;
+
+            }
         }
         .child_image{
             @include sm{
-                display: none;
+               width: 173px;
+               height: 173px;
+               img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+               }
             }
             position: absolute;
             bottom: 0px;
@@ -764,6 +777,11 @@
 .business_owners{
     @include sm{
         margin-top: 36px !important;
+        .heading{
+            h2{
+                font-weight: 700 !important;
+            }
+        }
     }
     overflow: hidden;
     .business_card{
@@ -863,6 +881,7 @@
             }
             @include sm{
                 font-size: 14px;
+                font-weight: 500;
             }
             color: #141417;
         }
@@ -1471,6 +1490,7 @@
            @include sm{
              h2{
                 padding-right: 30px;
+                font-weight: 700;
             }
            }
         }
@@ -1637,6 +1657,11 @@
 .verified_talent{
     @include sm{
         margin-top: 43px !important;
+        .heading{
+            h2{
+                font-weight: 700 !important;
+            }
+        }
     }
     .row{
         &.style_1{
@@ -1648,7 +1673,7 @@
     .talent_image{
         max-width: 675px;
         width: 100%;
-        height: 579px;
+        height: 601px;
         @include border-radius(20px);
         img{
             width: 100%;
@@ -1705,7 +1730,8 @@
     }
 
     &.active {
-        background-color: $primary;
+        // background-color: $primary;
+        background: linear-gradient(180deg, #0ebef6 0%, #3171fb 72.17%);
         border-color: $primary;
         padding-bottom: 20px;
         .talent_header {
@@ -1777,6 +1803,10 @@
         .arrow-icon {
             width: 20px;
             height: 20px;
+            @include sm{
+                font-size: 10px;
+                line-height: 19px;
+            }
             line-height: 18px;
         }
     }
@@ -1811,7 +1841,6 @@
     }
 
 .scroll-container {
-
     width: 100%;
     overflow: hidden; 
     background: linear-gradient(90deg, #262262 0%, #4e45c8 100%);
@@ -1819,14 +1848,18 @@
     padding: 30px 20px;
 }
 
-.scroll-content {
-    display: inline-block; 
-    animation: scroll-left 20s linear infinite; 
-}
+// .scroll-content {
+//     display: inline-block; 
+//     // animation: scroll-left 20s linear infinite; 
+// }
 
 .nav-item {
-    display: inline-block;
-    margin: 0px 20px;
+    white-space: nowrap;
+    text-align: center;
+    @include flex(row, center, center);
+img{
+    display: inline;
+}
     &.style_1{
         font-weight: 700;
         font-size: 45px;
@@ -1849,9 +1882,6 @@
     }
     transition: background-color 0.3s ease;
 
-    // &:hover {
-    //     background-color: rgba(255, 255, 255, 0.2);
-    // }
 
     .icon {
         margin-right: 8px;
@@ -1866,6 +1896,7 @@
             }
         }
     }
+    
 }
 
 /* Keyframes for the scrolling animation */
@@ -1887,6 +1918,14 @@
     }
     @include sm{
         margin-top: 30px !important;
+        .header_area{
+            .heading{
+                h2{
+                    font-size: 18px !important;
+                }
+            }
+
+        }
     }
     .row{
         &.style_1{
@@ -2111,6 +2150,9 @@
         border: 1px solid rgba(20, 20, 23, 0.1);
         border-radius: 6px;
         margin-bottom: 12px;
+        @include sm{
+            margin-bottom: 8px;
+        }
         overflow: hidden; 
         &.active {
             .accordion-header {

@@ -160,11 +160,32 @@
 
         // Text Slider
         function textSlider(){
+            // $(document).ready(function () {
+            //     $('.scroll-container').hover(function () {
+            //         $('.scroll-content').css('animation-play-state', 'paused');
+            //     }, function () {
+            //         $('.scroll-content').css('animation-play-state', 'running');
+            //     });
+            // });
             $(document).ready(function () {
-                $('.scroll-container').hover(function () {
-                    $('.scroll-content').css('animation-play-state', 'paused');
-                }, function () {
-                    $('.scroll-content').css('animation-play-state', 'running');
+                $('.scroll-content').slick({
+                    dots: false,         
+                    arrows: false,     
+                    infinite: true,   
+                    speed: 3000,         
+                    slidesToShow: 4,    
+                    slidesToScroll: 1,   
+                    autoplay: true,      
+                    autoplaySpeed: 0,   
+                    cssEase: 'linear',   
+                    responsive: [
+                        {
+                            breakpoint: 768, 
+                            settings: {
+                                slidesToShow: 1 
+                            }
+                        }
+                    ]
                 });
             });
         }

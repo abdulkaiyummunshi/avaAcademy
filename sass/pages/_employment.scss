@@ -204,6 +204,9 @@
                     @include breakpoint (max-xl) {
                         margin-right: 20px;
                     }
+                    @include sm{
+                        margin-right: 15px;
+                    }
 
 
                     .form-group {
@@ -308,11 +311,18 @@
 //Pagination
 .pagination__page {
     .page-nav-wrap {
+        @include flex(row, center, center);
+        @include sm{
+            justify-content: flex-start;
+        }
         ul {
             display: flex;
             align-items: center;
             gap: 20px;
-
+            @include sm{
+                gap: 10px;
+                justify-content: flex-start;
+            }
             li {
                 .page-numbers {
                     display: flex;
@@ -321,9 +331,9 @@
                     justify-content: center;
                     align-items: center;
                     border-radius: 999px;
-                    border: 1px solid var(--200, #C1C1C1);
+                    border: 1px solid #c1c1c1;
                     background-color: $white;
-                    color: var(--900, #000);
+                    color: #000;
                     font-family: Lato;
                     font-size: 18px;
                     font-style: normal;

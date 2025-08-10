@@ -146,6 +146,29 @@
         -o-transform: translateX(-150px);
 }
 }
+@keyframes moveTextsm {
+    0% {
+        transform: translateX(-80px);
+        -webkit-transform: translateX(-80px);
+        -moz-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
+        -o-transform: translateX(-80px);
+}
+    50% {
+        transform: translateX(-50px);
+        -webkit-transform: translateX(-50px);
+        -moz-transform: translateX(-50px);
+        -ms-transform: translateX(-50px);
+        -o-transform: translateX(-50px);
+}
+    100% {
+        transform: translateX(-80px);
+        -webkit-transform: translateX(-80px);
+        -moz-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
+        -o-transform: translateX(-80px);
+}
+}
 
 
 /* Pulsing Animation */

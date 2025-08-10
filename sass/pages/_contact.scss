@@ -162,10 +162,13 @@
             width: 100%;
             padding: 14px;
             font-size: 18px;
-            outline: 1px solid ;
+            outline: none;
             margin-bottom: 27px;
             background-color: $white;
             font-weight: 400;
+            &:focus{
+                outline: 1px solid $primary;
+            }
             color: $gray9;
             &::placeholder{
                 color: $gray8;
@@ -189,13 +192,16 @@
 
             border: 1px solid rgba(193, 193, 193, 0.2);
             border-radius: 5px;
-            // max-width: 620px;
             min-height: 169px;
             width: 100%;
+            
             background-color: $white;
             padding: 20px;
             margin-bottom: 27px;
             font-size: 18px;
+            &:focus{
+                outline: 1px solid $primary;
+            }
             @include sm{
                 margin-bottom: 10px;
                 padding: 10px;

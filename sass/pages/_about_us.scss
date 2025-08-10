@@ -12,12 +12,10 @@
     .vector{
         position: absolute;
         bottom: 0px;
-        // left: 50%;
         @include transformX(-30%);
         pointer-events: none;
         width: 100%;
         left: 30%;
-        // bottom: 60px;
         height: 320px;
         img{
             width: 100%;
@@ -30,48 +28,25 @@
             left: 30%;
             bottom: 60px;
             height: 220px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-
-            }
         }
         @include nesthub{
             width: 100%;
             left: 30%;
             bottom: 60px;
             height: 220px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-
-            }
         }
         @include md{
             width: 100%;
             left: 30%;
             bottom: 60px;
             height: 220px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-
-            }
         }
         @include sm{
             width: 100%;
             left: 30%;
             bottom: 30px;
             height: 92px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-
-            }
+            
         }
     }
     .hero_menu_item{
@@ -254,7 +229,7 @@
             &.style_1{
                 border-right: 1px solid $gray9;
             }
-            h4{
+            span{
                 font-weight: 600;
                 font-size: 40px;
                 @include sm{

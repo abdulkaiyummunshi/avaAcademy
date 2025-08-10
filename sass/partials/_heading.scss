@@ -115,6 +115,7 @@
             }
             @include sm{
                 font-size: 22px !important;
+                font-weight: 700;
             }
         }
         &.style_1{
@@ -131,6 +132,7 @@
             }
             @include sm{
                 font-size: 22px;
+                
             }
             }
             h3{
@@ -261,9 +263,6 @@
     }
 }
 @include sm{
-    // .sm_br{
-    //     display: none;
-    // }
     .sm_br_none{
         display: none !important;
     }
