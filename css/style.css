@@ -26412,6 +26412,9 @@
         border-top: 0px;
         border-top: 2px solid var(--theme-color); }
 
+header {
+  height: 90px; }
+
 .header-1 {
   width: 100%;
   z-index: 999;
@@ -27853,9 +27856,6 @@
         @media only screen and (min-width: 0px) and (max-width: 767px) {
           .the_plan .certification-process .process-step .step-header .step-title {
             font-size: 16px; } }
-      .the_plan .certification-process .process-step .step-header .arrow-icon {
-        font-size: 1em;
-        color: #3561ff; }
     .the_plan .certification-process .process-step .step-content {
       padding: 42px 42px 42px 84px;
       border-bottom: 1px solid #e8e8e8; }
@@ -27953,6 +27953,23 @@
             @media only screen and (min-width: 0px) and (max-width: 767px) {
               .the_plan .certification-process .process-step .step-content .content-box .text-content p {
                 font-size: 10px; } }
+  .the_plan .certification-process .icon_arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e8e8e8;
+    background-color: #f3f9ff;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: inline-block;
+    color: #141417;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%; }
+    .the_plan .certification-process .icon_arrow i {
+      transition: all 0.4s ease; }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .the_plan .btn_wrapper {
     margin-top: 23px; } }
@@ -28888,129 +28905,90 @@
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden; }
-.verified_talent .accordion-item {
-  border-radius: 14px;
+.verified_talent .accordion-container {
   width: 100%;
+  background-color: #f3f9ff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden; }
+.verified_talent .accordion-item {
   border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  margin-bottom: 8px;
   overflow: hidden;
   transition: all 0.5s ease; }
-  .verified_talent .accordion-item.style_1 {
-    border-bottom: 1px solid #e8e8e8; }
-    .verified_talent .accordion-item.style_1 .accordion-header {
-      padding: 24px 40px 24px 40px; }
-      @media only screen and (min-width: 0px) and (max-width: 767px) {
-        .verified_talent .accordion-item.style_1 .accordion-header {
-          padding: 15px 20px 15px 20px; } }
   .verified_talent .accordion-item:last-child {
-    border-bottom: none; }
-  .verified_talent .accordion-item:hover {
-    background-color: #3561ff; }
-    .verified_talent .accordion-item:hover .accordion-header {
-      color: #fff; }
-    .verified_talent .accordion-item:hover .number {
-      color: #fff; }
-    .verified_talent .accordion-item:hover p {
-      color: #fff; }
+    margin-bottom: 0; }
   .verified_talent .accordion-item.active {
-    background-color: #3561ff; }
-    .verified_talent .accordion-item.active .number {
+    background-color: #3561ff;
+    border-color: #3561ff;
+    padding-bottom: 20px; }
+    .verified_talent .accordion-item.active .talent_header {
       color: #fff; }
-    .verified_talent .accordion-item.active .arrow-icon i {
-      transform: rotate(180deg);
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg); }
-    .verified_talent .accordion-item.active .accordion-header {
-      color: #fff;
-      transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease; }
-    .verified_talent .accordion-item.active .accordion-content {
-      max-height: 500px; }
-      .verified_talent .accordion-item.active .accordion-content p {
+      .verified_talent .accordion-item.active .talent_header .number {
         color: #fff; }
-.verified_talent .accordion-header {
+    .verified_talent .accordion-item.active .arrow-icon i {
+      transform: rotate(180deg); }
+    .verified_talent .accordion-item.active .talent_contains {
+      height: auto; }
+      .verified_talent .accordion-item.active .talent_contains p {
+        color: #fff; }
+.verified_talent .talent_header {
   display: flex;
   align-items: center;
-  padding: 24px 40px 8px 40px;
+  padding: 24px 40px;
   font-weight: 500;
   font-size: 24px;
-  transition: all 0.5s ease;
   text-transform: capitalize;
-  color: #242145;
+  color: #434345;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease; }
-  @media only screen and (min-width: 0px) and (max-width: 767px) {
-    .verified_talent .accordion-header {
-      font-size: 14px;
-      padding: 15px 20px 8px 20px; } }
-  .verified_talent .accordion-header .number {
+  user-select: none;
+  transition: all 0.5s ease; }
+  .verified_talent .talent_header .number {
     margin-right: 15px;
-    transition: color 0.3s ease;
     font-weight: 600;
     font-size: 44px;
-    text-transform: capitalize;
-    color: #a9bdd0; }
-    @media only screen and (min-width: 0px) and (max-width: 767px) {
-      .verified_talent .accordion-header .number {
-        font-size: 22px; } }
-  .verified_talent .accordion-header .arrow-icon {
+    color: #2e3137;
+    transition: all 0.5s ease; }
+  .verified_talent .talent_header .arrow-icon {
+    margin-left: auto;
+    color: #242145;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
     border-radius: 100%;
     background-color: #fff;
     border: 1px solid #e8e8e8;
-    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-    margin-left: auto;
-    color: #141417;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    line-height: 40px;
-    text-align: center;
-    font-size: 0.8em;
-    transition: transform 0.3s ease; }
-    .verified_talent .accordion-header .arrow-icon i {
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05); }
+    .verified_talent .talent_header .arrow-icon i {
       transition: all 0.4s ease;
-      transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg); }
-    @media only screen and (min-width: 0px) and (max-width: 767px) {
-      .verified_talent .accordion-header .arrow-icon {
+      transform: rotate(0deg); }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .verified_talent .talent_header {
+      font-size: 14px;
+      padding: 15px 20px; }
+      .verified_talent .talent_header .number {
+        font-size: 22px; }
+      .verified_talent .talent_header .arrow-icon {
         width: 20px;
         height: 20px;
         line-height: 18px; } }
-  .accordion-item.active .verified_talent .accordion-header .number {
-    color: #fff; }
-.verified_talent .accordion-content {
-  max-height: 0;
+.verified_talent .talent_contains {
+  height: 0;
   overflow: hidden;
-  background: transparent;
-  transition: max-height 0.5s ease-out, padding 0.5s ease-out, background-color 0.5s ease-out;
-  -webkit-transition: max-height 0.5s ease-out, padding 0.5s ease-out, background-color 0.5s ease-out;
-  -moz-transition: max-height 0.5s ease-out, padding 0.5s ease-out, background-color 0.5s ease-out;
-  -ms-transition: max-height 0.5s ease-out, padding 0.5s ease-out, background-color 0.5s ease-out;
-  -o-transition: max-height 0.5s ease-out, padding 0.5s ease-out, background-color 0.5s ease-out; }
-  .verified_talent .accordion-content p {
-    padding: 0 58px 38px 44px;
+  padding: 0px 40px;
+  transition: height 0.5s ease-out, padding 0.5s ease-out;
+  -webkit-transition: height 0.5s ease-out, padding 0.5s ease-out;
+  -moz-transition: height 0.5s ease-out, padding 0.5s ease-out;
+  -ms-transition: height 0.5s ease-out, padding 0.5s ease-out;
+  -o-transition: height 0.5s ease-out, padding 0.5s ease-out; }
+  .verified_talent .talent_contains p {
+    margin: 0;
     font-weight: 400;
-    transition: background-color 0.5s ease-out;
-    -webkit-transition: background-color 0.5s ease-out;
-    -moz-transition: background-color 0.5s ease-out;
-    -ms-transition: background-color 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out;
     font-size: 16px;
-    color: #242145;
-    letter-spacing: 0.01em; }
-    @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-      .verified_talent .accordion-content p {
-        padding: 30px 30px 35px 30px; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .verified_talent .accordion-content p {
-        padding: 20px 20px 25px 20px; } }
-    @media only screen and (min-width: 0px) and (max-width: 767px) {
-      .verified_talent .accordion-content p {
-        font-size: 8px;
-        padding: 0px 20px 25px 20px; } }
+    color: #434345; }
 
 /*---verified_talent End---*/
 /*---Text Slider Start---*/
@@ -29309,17 +29287,15 @@
         transform: rotate(180deg);
         background-color: #fff; }
     .faq_area .accordion .accordion-item.active .accordion-content {
-      max-height: 200px;
-      opacity: 1;
-      visibility: visible;
-      transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.3s ease-out; }
+      height: auto; }
   .faq_area .accordion .accordion-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: background 0.3s ease; }
     @media only screen and (min-width: 0px) and (max-width: 767px) {
       .faq_area .accordion .accordion-header {
         padding: 4px 15px; } }
@@ -29353,11 +29329,9 @@
           line-height: 13px;
           font-size: 8px; } }
   .faq_area .accordion .accordion-content {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-    transition: max-height 0.3s ease-in, padding 0.3s ease-in, opacity 0.3s ease-in; }
+    transition: height 0.5s ease-out, padding 0.5s ease-out; }
     .faq_area .accordion .accordion-content p {
       padding: 21px 30px 20px 30px;
       margin: 0;
@@ -30701,6 +30675,7 @@
     width: 100%;
     padding: 14px;
     font-size: 18px;
+    outline: 1px solid;
     margin-bottom: 27px;
     background-color: #fff;
     font-weight: 400;

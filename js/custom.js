@@ -84,18 +84,79 @@
        
         // Verified Talent
         function verifiedTalent() {
-            $('.accordion-header').on('click', function () {
-                var $parentItem = $(this).closest('.accordion-item');
-                var isCurrentlyActive = $parentItem.hasClass('active');
+                $('.accordion-item .talent_header').on('click', function () {
+                    const clickedItem = $(this).closest('.accordion-item');
+                    const content = clickedItem.find('.talent_contains');
 
-                // Remove 'active' from all other accordion items
-                $('.accordion-item').not($parentItem).removeClass('active');
+                    if (clickedItem.hasClass('active')) {
+                        content.css('height', content.prop('scrollHeight') + 'px');
+                        setTimeout(() => {
+                            content.css('height', '0px');
+                        }, 10);
+                        clickedItem.removeClass('active');
+                    } else {
+                        $('.accordion-item.active').not(clickedItem).each(function () {
+                            const activeContent = $(this).find('.talent_contains');
+                            activeContent.css('height', activeContent.prop('scrollHeight') + 'px');
+                            setTimeout(() => {
+                                activeContent.css('height', '0px');
+                            }, 10);
+                            $(this).removeClass('active');
+                        });
 
-                // Toggle the 'active' class on the clicked item
-                $parentItem.toggleClass('active');
-            });
+                        clickedItem.addClass('active');
+                        const scrollHeight = content.prop('scrollHeight');
+                        content.css('height', '0px'); 
+                        setTimeout(() => {
+                            content.css('height', scrollHeight + 'px');
+                        }, 10);
+
+                        content.one('transitionend', function () {
+                            $(this).css('height', '');
+                        });
+                    }
+                });
+            
         }
         verifiedTalent();
+
+        // FAQ
+        function Faq() {
+                $('.accordion-item .accordion-header').on('click', function () {
+                    const clickedItem = $(this).closest('.accordion-item');
+                    const content = clickedItem.find('.accordion-content'); 
+
+                    $('.accordion-item.active').not(clickedItem).each(function () {
+                        const activeContent = $(this).find('.accordion-content'); 
+                        activeContent.css('height', activeContent.prop('scrollHeight') + 'px');
+                        setTimeout(() => {
+                            activeContent.css('height', '0px');
+                            $(this).removeClass('active');
+                        }, 10);
+                    });
+
+                    if (clickedItem.hasClass('active')) {
+                        content.css('height', content.prop('scrollHeight') + 'px');
+                        setTimeout(() => {
+                            content.css('height', '0px');
+                            clickedItem.removeClass('active');
+                        }, 10);
+                    } else {
+                        clickedItem.addClass('active');
+                        const scrollHeight = content.prop('scrollHeight');
+                        content.css('height', '0px');
+                        setTimeout(() => {
+                            content.css('height', scrollHeight + 'px');
+                        }, 10);
+
+                          content.one('transitionend', function () {
+                            $(this).css('height', '');
+                        });
+                    }
+                });
+            
+        }
+        Faq();
 
         // Text Slider
         function textSlider(){
