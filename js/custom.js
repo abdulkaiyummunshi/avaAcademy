@@ -287,20 +287,25 @@
                     stagger: 0.3,
                 });
             }
-            gsap.from(".talent_image img", {
-                scrollTrigger: {
-                    trigger: ".talent_image",
-                    start: "top 80%",
-                    toggleActions: "play none none reverse",
-                },
-                height: "0%",
-                duration: 2.5,
-                ease: "power2.out",
-                stagger: {
-                    amount: 0.5,
-                    from: "start"
-                }
-            });
+
+            const talentImage = document.querySelectorAll(".talent_image img")
+            if(talentImage.length > 0){
+                gsap.from(talentImage, {
+                    scrollTrigger: {
+                        trigger: ".talent_image",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    height: "0%",
+                    duration: 2.5,
+                    ease: "power2.out",
+                    stagger: {
+                        amount: 0.5,
+                        from: "start"
+                    }
+                });
+
+            }
         }
         talentProfiles()
         function certificate() {
@@ -334,12 +339,32 @@
             }
         }
         certificate()
+        function partnerImg() {
+            const certificatetwo = document.querySelectorAll(".who_this_image img");
+            if (certificatetwo.length > 0) {
+                gsap.from(certificatetwo, {
+                    scrollTrigger: {
+                        trigger: ".who_this_image",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    width: "0%",
+                    duration: 2,
+                    ease: "power2.out",
+                    stagger: {
+                        amount: 0.5,
+                        from: "start"
+                    }
+                });
+            }
+        }
+        partnerImg()
         function textAnimation() {
             const blogNewsContains = document.querySelectorAll(".heading h1");
             if (blogNewsContains.length > 0) {
                 gsap.from(blogNewsContains, {
                     scrollTrigger: {
-                        trigger: ".heading_area",
+                        trigger: ".header_area",
                         start: "top 80%",
                         toggleActions: "play none none reverse",
                     },
@@ -351,22 +376,6 @@
             }
         }
         textAnimation()
-        // function buttonAnimation() {
-        //     const allButtons = document.querySelectorAll(".btn_wrapper");
-        //     allButtons.forEach((button) => {
-        //         gsap.from(button, {
-        //             scrollTrigger: {
-        //                 trigger: button,
-        //                 start: "top 80%",
-        //                 toggleActions: "play none none reverse",
-        //             },
-        //             opacity: 1,
-        //             x: 100,
-        //             duration: 1.2,
-        //         });
-        //     });
-        // }
-        // buttonAnimation();
       
         gsap.registerPlugin(ScrollSmoother, ScrollTrigger, SplitText);
 
@@ -377,75 +386,102 @@
             effects: true,
             smoothTouch: 0.1,
         });
+        function instructorImage(){
+            const blogNewsContains = document.querySelectorAll(".instructor_img .image img");
+            if (blogNewsContains.length > 0) {
+                gsap.from(blogNewsContains, {
+                    scrollTrigger: {
+                        trigger: ".instructor_img",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    scale: 0.7,
+                    duration: 1.5,
+                    stagger: 0.3,
+                });
+            }
+        }
+        instructorImage()
+        function studentCard(){
+            const blogNewsContains = document.querySelectorAll(".student_card");
+            if (blogNewsContains.length > 0) {
+                gsap.from(blogNewsContains, {
+                    scrollTrigger: {
+                        trigger: ".student_journey",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    y: 100,
+                    duration: 1,
+                });
+            }
+        }
+        studentCard()
         function imgAni(){
-            gsap.set(".who_we_images .child_image, .who_we_images .who_main_image", { overflow: "hidden" });
+            const whoWeImage = document.querySelectorAll(".who_we_images .child_image img, .who_we_images .who_main_image img")
+            if(whoWeImage.length > 0){
+                gsap.from(whoWeImage, {
+                    scrollTrigger: {
+                        trigger: ".who_we_images",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    width: "0%",
+                    duration: 2,
+                    ease: "power2.out",
+                    stagger: {
+                        amount: 0.5,
+                        from: "start"
+                    }
+                });
 
-            gsap.from(".who_we_images .child_image img, .who_we_images .who_main_image img", {
-                scrollTrigger: {
-                    trigger: ".who_we_images",
-                    start: "top 80%",
-                    toggleActions: "play none none reverse",
-                },
-                width: "0%",
-                duration: 2,
-                ease: "power2.out",
-                stagger: {
-                    amount: 0.5,
-                    from: "start"
-                }
-            });
-
-            
+            }
             
         }
         imgAni()
+       
         function businessImg(){
+            const businessImage = document.querySelectorAll(".business_image .business_main_img img")
+            if(businessImage.length > 0){
+                gsap.from(businessImage, {
+                    scrollTrigger: {
+                        trigger: ".business_image",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    width: "0%",
+                    duration: 2.5,
+                    ease: "power2.out",
+                    stagger: {
+                        amount: 0.5,
+                        from: "start"
+                    }
+                });
 
-            gsap.from(".business_image .business_main_img img", {
-                scrollTrigger: {
-                    trigger: ".business_image",
-                    start: "top 80%",
-                    toggleActions: "play none none reverse",
-                },
-                width: "0%",
-                duration: 2.5,
-                ease: "power2.out",
-                stagger: {
-                    amount: 0.5,
-                    from: "start"
-                }
-            });
-
-            gsap.from(".business_main_img .btn_area", {
-                scrollTrigger: {
-                    trigger: ".btn_area",
-                    start: "top 80%",
-                    toggleActions: "play none none reverse",
-                },
-                y: 100,
-                opacity: 0,
-                duration: 1,
-                delay: 0.5, 
-                ease: "power2.out",
-            });
+            }
         }
         businessImg()
     
         function listAnimation(){
-            gsap.from(".about_list ul li", {
-                scrollTrigger: {
-                    trigger: ".about_list",
-                    start: "top 80%",
-                    toggleActions: "play none none reverse",
-                },
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.2, 
-                ease: "power2.out",
-                
-            });
+            const listAni = document.querySelectorAll(".about_list ul li")
+            if(listAni.length > 0){
+                gsap.from(".about_list ul li", {
+                    scrollTrigger: {
+                        trigger: ".about_list",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.2, 
+                    ease: "power2.out",
+                    
+                });
+
+            }
         }
+        
         listAnimation()
         // Scroll-triggered Counter Animation
         $(".about_count").each(function () {

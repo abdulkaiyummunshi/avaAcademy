@@ -146,8 +146,15 @@
                 font-weight: 500;
                 line-height: 26px; 
                 letter-spacing: 0.16px;
+                img{
+                    @include transition(0.4s);
+
+                }
                 &:hover {
                     color: $primary;
+                    img{
+                        margin-left: 8px;
+                    }
                 }
                 @include breakpoint (max-xxsmall){
                     font-size: 12px;

@@ -30404,8 +30404,12 @@ header {
         font-weight: 500;
         line-height: 26px;
         letter-spacing: 0.16px; }
+        .blog1-card-content__link img {
+          transition: all 0.4s ease; }
         .blog1-card-content__link:hover {
           color: #3561ff; }
+          .blog1-card-content__link:hover img {
+            margin-left: 8px; }
         @media (max-width: 450px) {
           .blog1-card-content__link {
             font-size: 12px;
@@ -31671,6 +31675,11 @@ header {
               height: 16px;
               line-height: 16px;
               font-size: 8px; } }
+    .what_learn .list_area.style_1 {
+      border-top: none;
+      padding-top: 30px; }
+      .what_learn .list_area.style_1 ul li {
+        width: 100% !important; }
 
 /*---The Student Journey End*/
 /*---Student Success Stories Start*/
