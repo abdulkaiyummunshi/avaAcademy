@@ -7,7 +7,7 @@
         height: 700px !important;
         margin-top: 300px !important;
         padding: 0px 0px !important;
-        overflow-x: hidden !important;
+        // overflow-x: hidden !important;
         // overflow: hidden;
         .container-xl{
             padding: 0px !important;
@@ -396,6 +396,7 @@
                         ul{
                             li{
                                 a{
+                                    color: $gray9;
                                     &:hover{
                                         color: $white !important;
                                     }

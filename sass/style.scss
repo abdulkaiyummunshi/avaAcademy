@@ -23,6 +23,8 @@
     box-sizing: border-box;
     font-family: $font-family;
 }
+html {
+  scroll-behavior: smooth; }
 a {
     text-decoration: none;
 }

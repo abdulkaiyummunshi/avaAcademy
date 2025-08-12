@@ -159,30 +159,48 @@
         Faq();
 
         // Text Slider
-        function textSlider(){
-            // $(document).ready(function () {
-            //     $('.scroll-container').hover(function () {
-            //         $('.scroll-content').css('animation-play-state', 'paused');
-            //     }, function () {
-            //         $('.scroll-content').css('animation-play-state', 'running');
-            //     });
-            // });
+        function textSlider() {
             $(document).ready(function () {
                 $('.scroll-content').slick({
-                    dots: false,         
-                    arrows: false,     
-                    infinite: true,   
-                    speed: 3000,         
-                    slidesToShow: 4,    
-                    slidesToScroll: 1,   
-                    autoplay: true,      
-                    autoplaySpeed: 0,   
-                    cssEase: 'linear',   
+                    dots: false,
+                    arrows: false,
+                    infinite: true,
+                    speed: 3000,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 0,
+                    cssEase: 'linear',
                     responsive: [
                         {
-                            breakpoint: 768, 
+                            breakpoint: 768,
                             settings: {
-                                slidesToShow: 1 
+                                slidesToShow: 2,
+                                speed: 4000
+                            }
+                        },
+                        {
+                            breakpoint: 998,
+                            settings: {
+                                slidesToShow: 2,
+                                speed: 4000,
+
+                            }
+                        },
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 3,
+                                speed: 4000,
+
+                            }
+                        },
+                        {
+                            breakpoint: 1300,
+                            settings: {
+                                slidesToShow: 3,
+                                speed: 4000,
+
                             }
                         }
                     ]
@@ -269,6 +287,20 @@
                     stagger: 0.3,
                 });
             }
+            gsap.from(".talent_image img", {
+                scrollTrigger: {
+                    trigger: ".talent_image",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                },
+                height: "0%",
+                duration: 2.5,
+                ease: "power2.out",
+                stagger: {
+                    amount: 0.5,
+                    from: "start"
+                }
+            });
         }
         talentProfiles()
         function certificate() {
@@ -302,10 +334,119 @@
             }
         }
         certificate()
-        
+        function textAnimation() {
+            const blogNewsContains = document.querySelectorAll(".heading h1");
+            if (blogNewsContains.length > 0) {
+                gsap.from(blogNewsContains, {
+                    scrollTrigger: {
+                        trigger: ".heading_area",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1.5,
+                    stagger: 0.3,
+                });
+            }
+        }
+        textAnimation()
+        // function buttonAnimation() {
+        //     const allButtons = document.querySelectorAll(".btn_wrapper");
+        //     allButtons.forEach((button) => {
+        //         gsap.from(button, {
+        //             scrollTrigger: {
+        //                 trigger: button,
+        //                 start: "top 80%",
+        //                 toggleActions: "play none none reverse",
+        //             },
+        //             opacity: 1,
+        //             x: 100,
+        //             duration: 1.2,
+        //         });
+        //     });
+        // }
+        // buttonAnimation();
       
+        gsap.registerPlugin(ScrollSmoother, ScrollTrigger, SplitText);
 
-       
+        ScrollSmoother.create({
+            wrapper: "#smooth-wrapper",
+            content: "#smooth-content",
+            smooth: 1.3,
+            effects: true,
+            smoothTouch: 0.1,
+        });
+        function imgAni(){
+            gsap.set(".who_we_images .child_image, .who_we_images .who_main_image", { overflow: "hidden" });
+
+            gsap.from(".who_we_images .child_image img, .who_we_images .who_main_image img", {
+                scrollTrigger: {
+                    trigger: ".who_we_images",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                },
+                width: "0%",
+                duration: 2,
+                ease: "power2.out",
+                stagger: {
+                    amount: 0.5,
+                    from: "start"
+                }
+            });
+
+            
+            
+        }
+        imgAni()
+        function businessImg(){
+
+            gsap.from(".business_image .business_main_img img", {
+                scrollTrigger: {
+                    trigger: ".business_image",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                },
+                width: "0%",
+                duration: 2.5,
+                ease: "power2.out",
+                stagger: {
+                    amount: 0.5,
+                    from: "start"
+                }
+            });
+
+            gsap.from(".business_main_img .btn_area", {
+                scrollTrigger: {
+                    trigger: ".btn_area",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                },
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                delay: 0.5, 
+                ease: "power2.out",
+            });
+        }
+        businessImg()
+    
+        function listAnimation(){
+            gsap.from(".about_list ul li", {
+                scrollTrigger: {
+                    trigger: ".about_list",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2, 
+                ease: "power2.out",
+                
+            });
+        }
+        listAnimation()
         // Scroll-triggered Counter Animation
         $(".about_count").each(function () {
             let counter = $(this);

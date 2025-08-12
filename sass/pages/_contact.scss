@@ -2,6 +2,9 @@
     padding-top: 430px;
     overflow: hidden;
     position: relative;
+    iframe{
+        width: 100%;
+    }
     @include md{
         padding-top: 1207px;
         iframe{

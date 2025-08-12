@@ -3,8 +3,10 @@
     overflow: hidden;
     width: 100%;
     height: 370px;
+    margin-top: 90px;
     @include sm{
         height: 143px;
+        // margin-top: 50px
     }
     @include flex(row, center, flex-end);
     background-color: $gray1;
@@ -370,7 +372,7 @@
                     height: 297px;
                 }
                 @include sm{
-                    width: 198px;
+                    width: 100%;
                     height: 297px;
                 }
                 object-fit: contain;
