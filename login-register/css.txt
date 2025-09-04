@@ -1,0 +1,257 @@
+
+.ac-login-register-wrapper {
+  background: linear-gradient(90deg, rgba(41, 129, 250, 0.1) 0%, rgba(24, 167, 247, 0.1) 100%);
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ac-login-register-wrapper {
+    gap: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ac-login-register-wrapper {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .ac-login-register-wrapper {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  .ac-login-register-wrapper {
+    padding: 30px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .ac-login-register-wrapper {
+    padding: 25px;
+  }
+}
+.ac-login-register-wrapper .ac-login-regi-img {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  flex-shrink: 0;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .ac-login-register-wrapper .ac-login-regi-img {
+    flex-shrink: unset;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ac-login-register-wrapper .ac-login-regi-img {
+    flex-shrink: unset;
+    max-width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ac-login-register-wrapper .ac-login-regi-img {
+    flex-shrink: unset;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .ac-login-register-wrapper .ac-login-regi-img {
+    flex-shrink: unset;
+  }
+}
+.ac-login-register-wrapper .ac-login-regi-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .ac-login-register-wrapper .ac-login-regi-img img {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ac-login-register-wrapper .ac-login-regi-img img {
+    height: 100%;
+  }
+}
+.ac-login-register-wrapper .ac-login-regi-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  height: 100%;
+  flex: 1;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .ac-login-register-wrapper .ac-login-regi-form {
+    flex: auto;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ac-login-register-wrapper .ac-login-regi-form {
+    flex: auto;
+    padding: 30px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .ac-login-register-wrapper .ac-login-regi-form {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  .ac-login-register-wrapper .ac-login-regi-form {
+    padding: 20px;
+  }
+}
+.ac-login-register-wrapper .ac-login-regi-form .login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #0EBEF6 0%, #3171FB 100%);
+  color: white;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+}
+.ac-login-register-wrapper .ac-login-regi-form .login-btn span {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 14px;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.ac-login-register-wrapper .ac-login-regi-form p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #222222;
+  margin-top: 20px;
+  text-align: center;
+}
+.ac-login-register-wrapper .ac-login-regi-form p a {
+  color: #3171FB;
+  transition: all 0.3s;
+}
+.ac-login-register-wrapper .ac-login-regi-form p a:hover {
+  color: #3171FB;
+}
+.ac-login-register-wrapper .ac-field-wrapper {
+  margin-bottom: 20px;
+}
+.ac-login-register-wrapper .ac-field-wrapper label {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #242145;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  .ac-login-register-wrapper .ac-field-wrapper label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+.ac-login-register-wrapper .ac-field-wrapper input, .ac-login-register-wrapper .ac-field-wrapper textarea {
+  width: 100%;
+  border-radius: 99px;
+  padding: 0 20px;
+  background-color: #E9F5FE;
+  font-size: 15px;
+  color: black;
+  height: 50px;
+  border: 1px solid transparent;
+  outline: none;
+}
+.ac-login-register-wrapper .ac-field-wrapper input::placeholder, .ac-login-register-wrapper .ac-field-wrapper textarea::placeholder {
+  color: #434345;
+  font-size: 14px;
+}
+.ac-login-register-wrapper .ac-field-wrapper input:focus, .ac-login-register-wrapper .ac-field-wrapper textarea:focus {
+  border: 1px solid #3561FF;
+  outline: #3561FF;
+}
+.ac-login-register-wrapper .ac-field-wrapper.column-2 {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ac-login-register-wrapper .ac-field-wrapper.column-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .ac-login-register-wrapper .ac-field-wrapper.column-2 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 22px;
+  }
+}
+.ac-login-register-wrapper .ac-field-wrapper textarea {
+  padding: 20px;
+  height: 105px;
+  border-radius: 20px;
+}
+.ac-login-register-wrapper .ac-form-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #242145;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ac-login-register-wrapper .ac-form-title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ac-login-register-wrapper .ac-form-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .ac-login-register-wrapper .ac-form-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.ac-login-register-wrapper .ac-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.ac-login-register-wrapper .ac-checkbox-wrapper .ac-checkbox label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #434345;
+  margin-left: 6px;
+}
+.ac-login-register-wrapper .ac-checkbox-wrapper a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #434345;
+  margin-right: 120px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ac-login-register-wrapper .ac-checkbox-wrapper a {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .ac-login-register-wrapper .ac-checkbox-wrapper a {
+    margin-right: 0;
+  }
+}
+.ac-login-register-wrapper .ac-checkbox-wrapper a:hover {
+  color: red;
+}

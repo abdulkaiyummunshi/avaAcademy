@@ -1,0 +1,243 @@
+
+.ac-login-register-wrapper{
+    
+    background: linear-gradient(90deg, rgba(41, 129, 250, 0.1) 0%, rgba(24, 167, 247, 0.1) 100%);
+    padding: 40px;
+    border-radius: 20px;
+
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    @include lg{
+        gap: 30px;
+    }
+
+    @include md{
+        flex-direction: column;
+    }
+    @include sm{
+        flex-direction: column;
+    }
+    @include xs{
+        padding: 30px;
+    }
+    @include xxs{
+        padding: 25px;
+    }
+
+    .ac-login-regi-img{
+        border-radius: 20px;
+        overflow: hidden;
+        height: 100%;
+        flex-shrink: 0;
+
+        @include xl{
+            flex-shrink: unset;
+        }
+        @include lg{
+            flex-shrink: unset;
+            max-width: 50%;
+        }
+        @include md{
+            flex-shrink: unset;
+        }
+        @include sm{
+            flex-shrink: unset;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 20px;
+
+            @include xl{
+                height: 100%;
+            }
+            @include lg{
+                height: 100%;
+            }
+        }
+    }
+
+    .ac-login-regi-form{
+        background-color: white;
+        padding: 40px;
+        border-radius: 20px;
+        height: 100%;
+        flex: 1;
+
+        @include xl{
+            flex: auto;
+            
+        }
+        @include lg{
+            flex: auto;  
+            padding: 30px;          
+        }
+        @include sm{
+            width: 100%;
+        }
+        @include xs{
+            padding: 20px;
+        }
+
+        .login-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, #0EBEF6 0%, #3171FB 100%);
+            color: white;
+            height: 48px;
+            border-radius: 999px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+
+            span{
+                height: 24px;
+                width: 24px;
+                border-radius: 50%;
+                background-color: white;
+                font-size: 14px;
+                color: black;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+            }
+            
+        }
+
+        p{
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #222222;
+            margin-top: 20px;
+            text-align: center;
+
+            a{
+                color: #3171FB;
+                transition: all 0.3s;
+                &:hover{
+                    color: #3171FB;
+                }
+            }
+        }
+    }
+
+    .ac-field-wrapper{
+        margin-bottom: 20px;
+
+        label{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            color: #242145;
+            margin-bottom: 15px;
+
+            @include xs{
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+        }
+        input, textarea{
+            width: 100%;
+            border-radius: 99px;
+            padding: 0 20px;
+            background-color: #E9F5FE;
+            font-size: 15px;
+            color: black;
+            height: 50px;
+            border: 1px solid transparent; 
+            outline: none;
+
+            &::placeholder{
+                color: #434345;
+                font-size: 14px;
+            }
+
+            &:focus{
+                border: 1px solid #3561FF;
+                outline: #3561FF;
+            }
+        }
+
+        &.column-2{
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            @include lg{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            @include sm{
+                grid-template-columns: repeat(1, 1fr);
+                gap: 22px;
+            }
+        }
+        textarea{
+            padding: 20px;
+            height: 105px;
+            border-radius: 20px;
+        }
+    }
+
+    .ac-form-title{
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: capitalize;
+        color: #242145;
+        margin-bottom: 30px;
+
+        @include lg{
+            font-size: 26px;
+            line-height: 32px;
+        }
+        @include md{
+            font-size: 28px;
+            line-height: 32px;
+        }
+        @include sm{
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    .ac-checkbox-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .ac-checkbox{
+            label{
+                font-size: 14px;
+                font-weight: 400;
+                color: #434345;
+                margin-left: 6px;
+            }
+        }
+        a{
+            font-size: 14px;
+            font-weight: 400;
+            color: #434345;
+            margin-right: 120px;
+
+            @include lg{
+                margin-right: 0;
+            }
+            @include sm{
+                margin-right: 0;
+            }
+
+            &:hover{
+                color: red;
+            }
+        }
+    }
+
+}
