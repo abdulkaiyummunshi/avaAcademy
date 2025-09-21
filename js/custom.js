@@ -209,6 +209,65 @@
         }
         textSlider()
 
+        // Brand Slider
+        function brandSlider() {
+            $(document).ready(function () {
+                $('.rb_scroll_content').slick({
+                    dots: false,
+                    arrows: false,
+                    infinite: true,
+                    speed: 3000,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 0,
+                    cssEase: 'linear',
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                speed: 4000
+                            }
+                        },
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 3,
+                                speed: 4000,
+
+                            }
+                        },
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 4,
+                                speed: 4000,
+
+                            }
+                        },
+                        {
+                            breakpoint: 1400,
+                            settings: {
+                                slidesToShow: 4,
+                                speed: 4000,
+
+                            }
+                        },
+                        {
+                            breakpoint: 1600,
+                            settings: {
+                                slidesToShow: 5,
+                                speed: 4000,
+
+                            }
+                        }
+                    ]
+                });
+            });
+        }
+        brandSlider()
+
         $('.clients_review_slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
