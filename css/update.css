@@ -32015,6 +32015,7 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .header_area_2 .sub_heading.style_2 h4 span {
+  color: #000;
   background: #FFC857;
 }
 .header_area_2 .sub_heading.style_3 h4 {
@@ -32198,12 +32199,69 @@ header {
 }
 
 .rb_step_card {
-  padding: 132px 0;
+  position: relative;
   background: #0B2545;
 }
-@media only screen and (max-width: 991px) {
-  .rb_step_card {
-    padding: 90px 0;
+.rb_step_card .rb_shape1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_step_card .rb_shape1 img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_step_card .rb_shape1 img {
+    display: none;
+  }
+}
+.rb_step_card .rb_shape2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: end;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_step_card .rb_shape2 img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_step_card .rb_shape2 img {
+    display: none;
+  }
+}
+.rb_step_card .rb_shape3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_step_card .rb_shape3 img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_step_card .rb_shape3 img {
+    display: none;
+  }
+}
+.rb_step_card .rb_shape4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: end;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_step_card .rb_shape4 img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_step_card .rb_shape4 img {
+    display: none;
   }
 }
 .rb_step_card .rb_card {

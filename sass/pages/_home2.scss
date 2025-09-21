@@ -53,6 +53,7 @@
                 background: inherit;
                 border: 1px solid rgba(255, 255, 255, 0.10);
                 span {
+                    color: $black;
                     background: #FFC857;
                 }
             }
@@ -243,10 +244,61 @@
 
 // Step Card Start
 .rb_step_card {
-    padding: 132px 0;
+    position: relative;
     background: #0B2545;
-    @include md {
-        padding: 90px 0;
+    .rb_shape1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            @include xxxl {
+                width: 70%;
+            }
+            @include xxl {
+                display: none;
+            }
+        }
+    }
+    .rb_shape2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: end;
+        img {
+            @include xxxl {
+                width: 70%;
+            }
+            @include xxl {
+                display: none;
+            }            
+        }        
+    }
+    .rb_shape3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        img {
+            @include xxxl {
+                width: 70%;
+            }
+            @include xxl {
+                display: none;
+            }            
+        }        
+    }
+    .rb_shape4 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: end;
+        img {
+            @include xxxl {
+                width: 70%;
+            }
+            @include xxl {
+                display: none;
+            }            
+        }        
     }
     .rb_card {
         display: flex;
