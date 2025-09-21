@@ -31977,7 +31977,7 @@ header {
   background: #FFF;
   backdrop-filter: blur(10px);
   color: #414D70;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -31996,7 +31996,7 @@ header {
   background: #FF0101;
   color: var(--Primary-Basic-COlor-White, #FFF);
   text-align: center;
-  font-family: Geist;
+  font-family: "Geist", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -32027,7 +32027,7 @@ header {
 }
 .header_area_2 .heading h2 {
   color: #0B2545;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
@@ -32037,6 +32037,7 @@ header {
 }
 .header_area_2 .heading h2 span {
   color: #FF0101;
+  font-family: "Playfair Display", serif;
 }
 @media only screen and (max-width: 1399px) {
   .header_area_2 .heading h2 {
@@ -32065,10 +32066,17 @@ header {
 }
 .header_area_2 .heading.style_1 h2 span {
   color: #FFC857;
+  font-family: "Playfair Display", serif;
+}
+.header_area_2 .heading.style_2 h2 span {
+  color: #0B2545;
+  font-style: italic;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
 }
 .header_area_2 .rb_desc {
   color: #3F444B;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -32131,7 +32139,7 @@ header {
   align-items: center;
   gap: 12px;
   color: #3F444B;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -32161,7 +32169,7 @@ header {
   border-radius: 8px;
   background: #FFC857;
   color: #0B2545;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -32212,7 +32220,7 @@ header {
   align-items: center;
   gap: 10px;
   color: #F7F7F7;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -32232,7 +32240,7 @@ header {
 }
 .rb_step_card .rb_card h3 {
   color: #F7F7F7;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -32270,7 +32278,7 @@ header {
   border-radius: 8px;
   background: #FFC857;
   color: #0B2545;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -32313,7 +32321,7 @@ header {
 }
 .rb_testimonial .rb_card .rb_content .rb_desc {
   color: #4A4D56;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -32328,7 +32336,7 @@ header {
 }
 .rb_testimonial .rb_card .rb_content .rb_profile .rb_info h3 {
   color: #000106;
-  font-family: Archivo;
+  font-family: "Archivo", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -32337,7 +32345,7 @@ header {
 }
 .rb_testimonial .rb_card .rb_content .rb_profile .rb_info p {
   color: #4A4D56;
-  font-family: Archivo;
+  font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -32345,7 +32353,14 @@ header {
   letter-spacing: -0.16px;
 }
 .rb_testimonial .rb_card .rb_thumb {
+  position: relative;
   border-radius: 16px;
+}
+.rb_testimonial .rb_card .rb_thumb .rb_play_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 1399px) {
   .rb_testimonial .rb_card .rb_thumb {

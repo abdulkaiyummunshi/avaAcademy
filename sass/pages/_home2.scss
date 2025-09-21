@@ -13,7 +13,7 @@
             background: #FFF;
             backdrop-filter: blur(10px);
             color: #414D70;
-            font-family: Inter;
+            font-family: $font7;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -31,7 +31,7 @@
                 background: #FF0101;
                 color: var(--Primary-Basic-COlor-White, #FFF);
                 text-align: center;
-                font-family: Geist;
+                font-family: $font9;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
@@ -71,7 +71,7 @@
     .heading {
         h2 {
             color: #0B2545;
-            font-family: "Playfair Display";
+            font-family:  $font10;
             font-size: 48px;
             font-style: normal;
             font-weight: 500;
@@ -80,6 +80,7 @@
             margin-top: 15px;
             span {
                 color: #FF0101;
+                font-family:  $font10;
             }
             @include xl {
                 font-size: 40px;
@@ -103,13 +104,24 @@
                 letter-spacing: -1.44px;
                 span {
                     color: #FFC857;
+                    font-family:  $font10;
+                }
+            }
+        }
+        &.style_2 {
+            h2 {
+                span {
+                    color: #0B2545;
+                    font-style: italic;
+                    font-weight: 700;
+                    font-family:  $font10;
                 }
             }
         }
     }
     .rb_desc {
         color: #3F444B;
-        font-family: Inter;
+        font-family: $font7;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -174,7 +186,7 @@
                     align-items: center;
                     gap: 12px;
                     color: #3F444B;
-                    font-family: Inter;
+                    font-family: $font7;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
@@ -202,7 +214,7 @@
             border-radius: 8px;
             background: #FFC857;
             color: #0B2545;
-            font-family: Inter;
+            font-family: $font7;
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -249,7 +261,7 @@
             align-items: center;
             gap: 10px;
             color: #F7F7F7;
-            font-family: Inter;
+            font-family: $font7;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -269,7 +281,7 @@
         }
         h3 {
             color: #F7F7F7;
-            font-family: "Playfair Display";
+            font-family:  $font10;
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
@@ -304,7 +316,7 @@
         border-radius: 8px;
         background: #FFC857;
         color: #0B2545;
-        font-family: Inter;
+        font-family: $font7;
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -345,7 +357,7 @@
             }
             .rb_desc {
                 color: #4A4D56;
-                font-family: Inter;
+                font-family: $font7;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -360,7 +372,7 @@
                 .rb_info {
                     h3 {
                         color: #000106;
-                        font-family: Archivo;
+                        font-family: $font8;
                         font-size: 24px;
                         font-style: normal;
                         font-weight: 500;
@@ -369,7 +381,7 @@
                     }
                     p {
                         color: #4A4D56;
-                        font-family: Archivo;
+                        font-family: $font8;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 400;
@@ -380,7 +392,14 @@
             }
         }
         .rb_thumb {
+            position: relative;
             border-radius: 16px;
+            .rb_play_icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
             @include xl {
                 width: 100%;
             }
