@@ -70,6 +70,43 @@
         }
     }
     .heading {
+        h1 {
+            color: #F7F7F7;
+            font-family: $font10;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 115%; /* 73.6px */
+            letter-spacing: -2.5px;
+            transform: translate(0px, 0px) !important;
+            opacity: 1 !important;
+            span {
+                color: #FFC857;
+                font-style: italic;
+                font-family: $font10;
+                font-weight: 700;
+                letter-spacing: -2.5px;
+            }
+            @include xxl {
+                br {
+                    display: none;
+                }
+            }
+            @include xl {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            @include md {
+                font-size: 38px;
+                line-height: 56px;
+            }
+            @include xs {
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 115%; 
+                letter-spacing: -2.5px;
+            }
+        }
         h2 {
             color: #0B2545;
             font-family:  $font10;
@@ -184,201 +221,117 @@
     }
     @include xs {
         padding: 12px 32px;
+        font-size: 14px;
     }
 }
 // Button style Start
 
 /*---Hero Two Section Start---*/
 .rb_hero_two{
+    position: relative;
     overflow: hidden;
-    background-color: $gray9;
+    background: #0B2545;
     min-height: 100vh;
-    @include nesthub{
-        padding: 0px 10px 20px 10px;
-    }
-    @include md{
-        min-height: 1003px !important;
-        padding: 0px 10px;
-    }
-    @include flex(row, center, center);
-    
-    @include sm{
-        padding: 10px 10px 10px 10px;
-        height: 112vh !important;
-    }
-    @include nesthubmax{
-        .describtion{
-            p{
-                padding-right: 109px;
-            }
-        }
-        .header_area{
-            h1{
-                padding-right: 100px;
-            }
-        }
-    }
-    @include nesthub{
-        .describtion{
-            padding-right: 80px;
+    .rb_shape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(17%, -50%);
+        width: 1324px;
+        height: 1324px;
+        flex-shrink: 0;
+        border-radius: 1324px;
+        opacity: 0.06;
+        background: #FFF;
+        @include xl {
+            display: none;
         }
     }
     .hero_wrapper{
-        @include nesthub{
-        margin-top: 108px !important;
-    }
-        height: 640px;
+        margin-top: 200px;
+        height: 800px;
         position: relative;
-        background: #2e2b4f;
-        padding: 102px 0px 110px 97px;
-        @include border-radius(10px);
-        @include nesthubmax{
-            border-radius: 0 0 10px 0;
-            width: 100%;
-            margin-top: -8px;
-            padding: 70px 15px 60px 15px;
+        @include xl {
+            margin-top: 180px;
+            height: 750px;
         }
-        @include nesthub{
-            border-radius: 0 0 10px 0;
-            width: 100%;
-            height: 500px;
-            margin-top: 30px;
-            padding: 80px 15px 30px 15px;
+        @include lg {
+            height: auto;
+            margin-top: 160px;
+            margin-bottom: 90px;
         }
-        @include md{
-            border-radius: 0 0 10px 0;
-            width: 100%;
-            height: 870px;
-            padding: 30px;
-            margin-top: 92px !important;
-        }
-        @include sm{
-            border-radius: 0 0 10px 0;
-            width: 100%;
-            height: 616px;
-            padding: 15px;
-            margin-top: 90px !important;
-        }
-    }
-    .btn_area{
-        @include flex(row, flex-start, center);
-        gap: 20px;
-        @include md{
-            margin-top: 40px !important;
-        }
-
-    }
-    .hero_image_area{
-        width: 727px;
-        position: absolute;
-        height: 579px;
-        bottom: 0px;
-        right: 0px;
-        @include nesthub{
-            width: 500px;
-            height: fit-content;
-            bottom: 0px;
-            img{
-                max-width: 100%;
-                width: 100%;
-                height: fit-content;
-                object-fit: cover !important;
+        .rb_content {
+            margin-top: 20px;
+            display: flex;
+            padding: 20px 24px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            align-self: stretch;
+            border-radius: 12px;
+            background: #17304E;
+            @include sm {
+                padding: 16px;
+                height: auto;
             }
-        }
-        @include md{
-            width: 100%;
-            height: 600px;
-            bottom: 0px;
-            img{
-                max-width: 100%;
-                width: 100%;
-                object-fit: cover !important;
-            }
-        }
-        @include sm{
-            width: 329px;
-        height: 342px;
-            img{
-                max-width: 100%;
-                width: 100%;
-                height: fit-content;
-                object-fit: cover !important;
-            }
-            bottom: 0px;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            @include border-radius(0px 0px 20px 0px);
-        }
-    }
-    .bg_gradient{
-        // display: none;
-        background:linear-gradient(134deg, #12b4f6 0%, #3074fb 100%);;
-        filter: blur(133px);
-        width: 259px;
-        height: 373px;
-        margin-top: 50px;
-        @include md{
-            margin-left: 330px;
-        }
-        @include sm{
-            margin-left: 100px;
-            width: 163px;
-            height: 133px;
-            background: linear-gradient(134deg, #12b4f6 0%, #3074fb 100%);
-            filter: blur(59.547706604003906px);
-        }
-    }
-    .social_area{
-        border-radius: 5px;
-        background-color: $gray9;
-        padding: 20px;
-        animation: up-down 2s ease-in-out infinite alternate;
-    -webkit-animation: up-down 2s ease-in-out infinite alternate;
-        position: absolute;
-        top: 33%;
-        @include transformY(-50%);
-        right: 8%;
-        max-width: 170px;
-        @include flex(row, center, center);
-        flex-wrap: wrap;
-        gap: 14px;
-        @include nesthub{
-            top: 33%;
-            right: 3%;
-        }
-        @include md{
-           top: 49%;
-        right: 14%;
-        }
-        @include sm{
-            max-width: 90px;
-            padding: 10px;
-            gap: 7px;
-            top: 60%;
-            right: 11%;
-        }
-        span{
-            width: 34px;
-            display: block;
-            height: 34px;
-            line-height: 34px;
-            @include sm{
-                width: 18px;
-                height: 18px;
-                line-height: 18px;
-                img{
-                    width: 10px;
-                    height: 10px;
-
+            .rb_listing {
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        color: #F7F7F7;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px; /* 175% */
+                        letter-spacing: -0.16px;
+                        @include xs {
+                            font-size: 14px;
+                        }                    
+                        &:not(:last-child) {
+                            padding-bottom: 20px;
+                            @include xs {
+                                padding-bottom: 13px;
+                            }
+                        }
+                        .br {
+                            width: 520px;
+                            height: 1px;
+                            background: rgba(255, 255, 255, 0.05);
+                        }
+                    }
                 }
             }
-            text-align: center;
-            @include border-radius(5px);
-            background-color: $white;
-            
+        }
+        .rb_desc {
+            max-width: 485px;
+        }
+    }
+    .hero_thumb{
+        img {
+            width: 712px;
+            height: 504px;
+            flex-shrink: 0;
+            aspect-ratio: 89/63;
+            @include xl {
+                width: 100%;
+            }
+            @include xl {
+                height: auto;
+            }
+        }
+    }
+    .rb_btn_wrapper {
+        .rb_btn {
+            @include xl {
+                padding: 16px 21px;
+                font-size: 14px;
+            }
+            @include xs {
+                padding: 12px 32px;
+            }
         }
     }
 }
