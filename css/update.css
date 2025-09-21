@@ -32017,6 +32017,14 @@ header {
 .header_area_2 .sub_heading.style_2 h4 span {
   background: #FFC857;
 }
+.header_area_2 .sub_heading.style_3 h4 {
+  color: #3F444B;
+  border: 1px solid #E7E8E9;
+}
+.header_area_2 .sub_heading.style_3 h4 span {
+  color: #0B2545;
+  background: #FFC857;
+}
 .header_area_2 .heading h2 {
   color: #0B2545;
   font-family: "Playfair Display";
@@ -32287,6 +32295,16 @@ header {
   border: 1px solid #EFF0F0;
   background: #FFF;
 }
+@media only screen and (max-width: 1399px) {
+  .rb_testimonial .rb_card {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_testimonial .rb_card {
+    padding: 20px;
+  }
+}
 .rb_testimonial .rb_card .rb_content .rb_listing ul {
   display: flex;
   align-items: center;
@@ -32325,6 +32343,24 @@ header {
   font-weight: 400;
   line-height: 28px; /* 175% */
   letter-spacing: -0.16px;
+}
+.rb_testimonial .rb_card .rb_thumb {
+  border-radius: 16px;
+}
+@media only screen and (max-width: 1399px) {
+  .rb_testimonial .rb_card .rb_thumb {
+    width: 100%;
+  }
+}
+.rb_testimonial .rb_card .rb_thumb img {
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}
+@media only screen and (max-width: 1399px) {
+  .rb_testimonial .rb_card .rb_thumb img {
+    width: 100%;
+  }
 }
 
 .btn_wrapper a {

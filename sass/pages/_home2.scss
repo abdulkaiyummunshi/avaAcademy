@@ -57,6 +57,16 @@
                 }
             }
         }
+        &.style_3 {
+            h4 {
+                color: #3F444B;
+                border: 1px solid #E7E8E9;
+                span {
+                    color: #0B2545;
+                    background: #FFC857;
+                }
+            }
+        }
     }
     .heading {
         h2 {
@@ -318,6 +328,12 @@
         border-radius: 20px;
         border: 1px solid #EFF0F0;
         background: #FFF;
+        @include xl {
+            flex-direction: column;
+        }
+        @include xxs {
+            padding: 20px;
+        }
         .rb_content {
             .rb_listing {
                 ul {
@@ -363,6 +379,20 @@
                 }
             }
         }
+        .rb_thumb {
+            border-radius: 16px;
+            @include xl {
+                width: 100%;
+            }
+            img {
+                display: block;
+                object-fit: cover;
+                border-radius: 16px;
+                @include xl {
+                    width: 100%;
+                }
+            }
+        } 
     }
 }
 // Testimonial End
