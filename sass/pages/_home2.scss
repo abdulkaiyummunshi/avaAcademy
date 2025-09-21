@@ -136,6 +136,29 @@
     }
 }
 
+// Button style Start
+.rb_btn {
+    display: flex;
+    padding: 16px 36px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: #FFC857;
+    color: #0B2545;
+    font-family: $font7;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; 
+    @include xs {
+        padding: 12px 32px;
+    }
+}
+// Button style Start
+
 
 // Problem Section Start
 .rb_problem {
@@ -357,26 +380,6 @@
             }
         }        
     }
-    .rb_btn {
-        display: flex;
-        padding: 16px 36px;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        gap: 8px;
-        align-self: stretch;
-        border-radius: 8px;
-        background: #FFC857;
-        color: #0B2545;
-        font-family: $font7;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 28px; 
-        @include xs {
-            padding: 12px 32px;
-        }
-    }
 }
 // Step Card End
 
@@ -467,3 +470,61 @@
     }
 }
 // Testimonial End
+
+// Problem Section Start
+.rb_scholarship {
+    position: relative;
+    .header_area_2 {
+        .rb_desc {
+            max-width: 416px;
+        }
+    }
+    .rb_shape1 {
+        position: absolute;
+        top: -32%;
+        left: 32%;
+        width: 455px;
+        height: 455px;
+        transform: rotate(-90deg);
+        flex-shrink: 0;
+        border-radius: 455px;
+        border: 4px dashed #FFC857;
+        background: rgba(255, 200, 87, 0.06);
+        @include xxxl {
+            display: none;
+        }
+    }
+    .rb_shape2 {
+        position: absolute;
+        bottom: -40%;
+        right: 1%;
+        width: 455px;
+        height: 455px;
+        transform: rotate(-90deg);
+        flex-shrink: 0;
+        border-radius: 455px;
+        border: 4px dashed #FFC857;
+        background: rgba(255, 200, 87, 0.06);
+        @include xxxl {
+            display: none;
+        }
+    }
+    .rb_thumb {
+        position: relative;
+        z-index: 5;
+        border-radius: 16px;
+        overflow: hidden;
+        img {
+            display: block;
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+            border-radius: 16px;
+            @include sm {
+                height: auto;
+            }
+        }
+    }
+
+}
+// Problem Section End

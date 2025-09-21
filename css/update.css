@@ -32092,6 +32092,29 @@ header {
   }
 }
 
+.rb_btn {
+  display: flex;
+  padding: 16px 36px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: #FFC857;
+  color: #0B2545;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_btn {
+    padding: 12px 32px;
+  }
+}
+
 .rb_problem .rb_thumb {
   border-radius: 16px;
   overflow: hidden;
@@ -32325,28 +32348,6 @@ header {
     height: auto;
   }
 }
-.rb_step_card .rb_btn {
-  display: flex;
-  padding: 16px 36px;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  gap: 8px;
-  align-self: stretch;
-  border-radius: 8px;
-  background: #FFC857;
-  color: #0B2545;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px;
-}
-@media only screen and (min-width: 0px) and (max-width: 575px) {
-  .rb_step_card .rb_btn {
-    padding: 12px 32px;
-  }
-}
 
 .rb_testimonial {
   background: #F7F7F7;
@@ -32433,6 +32434,65 @@ header {
 @media only screen and (max-width: 1399px) {
   .rb_testimonial .rb_card .rb_thumb img {
     width: 100%;
+  }
+}
+
+.rb_scholarship {
+  position: relative;
+}
+.rb_scholarship .header_area_2 .rb_desc {
+  max-width: 416px;
+}
+.rb_scholarship .rb_shape1 {
+  position: absolute;
+  top: -32%;
+  left: 32%;
+  width: 455px;
+  height: 455px;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+  border-radius: 455px;
+  border: 4px dashed #FFC857;
+  background: rgba(255, 200, 87, 0.06);
+}
+@media only screen and (max-width: 1699px) {
+  .rb_scholarship .rb_shape1 {
+    display: none;
+  }
+}
+.rb_scholarship .rb_shape2 {
+  position: absolute;
+  bottom: -40%;
+  right: 1%;
+  width: 455px;
+  height: 455px;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+  border-radius: 455px;
+  border: 4px dashed #FFC857;
+  background: rgba(255, 200, 87, 0.06);
+}
+@media only screen and (max-width: 1699px) {
+  .rb_scholarship .rb_shape2 {
+    display: none;
+  }
+}
+.rb_scholarship .rb_thumb {
+  position: relative;
+  z-index: 5;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.rb_scholarship .rb_thumb img {
+  display: block;
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_scholarship .rb_thumb img {
+    height: auto;
   }
 }
 
