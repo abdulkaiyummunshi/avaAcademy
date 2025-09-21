@@ -188,6 +188,201 @@
 }
 // Button style Start
 
+/*---Hero Two Section Start---*/
+.rb_hero_two{
+    overflow: hidden;
+    background-color: $gray9;
+    min-height: 100vh;
+    @include nesthub{
+        padding: 0px 10px 20px 10px;
+    }
+    @include md{
+        min-height: 1003px !important;
+        padding: 0px 10px;
+    }
+    @include flex(row, center, center);
+    
+    @include sm{
+        padding: 10px 10px 10px 10px;
+        height: 112vh !important;
+    }
+    @include nesthubmax{
+        .describtion{
+            p{
+                padding-right: 109px;
+            }
+        }
+        .header_area{
+            h1{
+                padding-right: 100px;
+            }
+        }
+    }
+    @include nesthub{
+        .describtion{
+            padding-right: 80px;
+        }
+    }
+    .hero_wrapper{
+        @include nesthub{
+        margin-top: 108px !important;
+    }
+        height: 640px;
+        position: relative;
+        background: #2e2b4f;
+        padding: 102px 0px 110px 97px;
+        @include border-radius(10px);
+        @include nesthubmax{
+            border-radius: 0 0 10px 0;
+            width: 100%;
+            margin-top: -8px;
+            padding: 70px 15px 60px 15px;
+        }
+        @include nesthub{
+            border-radius: 0 0 10px 0;
+            width: 100%;
+            height: 500px;
+            margin-top: 30px;
+            padding: 80px 15px 30px 15px;
+        }
+        @include md{
+            border-radius: 0 0 10px 0;
+            width: 100%;
+            height: 870px;
+            padding: 30px;
+            margin-top: 92px !important;
+        }
+        @include sm{
+            border-radius: 0 0 10px 0;
+            width: 100%;
+            height: 616px;
+            padding: 15px;
+            margin-top: 90px !important;
+        }
+    }
+    .btn_area{
+        @include flex(row, flex-start, center);
+        gap: 20px;
+        @include md{
+            margin-top: 40px !important;
+        }
+
+    }
+    .hero_image_area{
+        width: 727px;
+        position: absolute;
+        height: 579px;
+        bottom: 0px;
+        right: 0px;
+        @include nesthub{
+            width: 500px;
+            height: fit-content;
+            bottom: 0px;
+            img{
+                max-width: 100%;
+                width: 100%;
+                height: fit-content;
+                object-fit: cover !important;
+            }
+        }
+        @include md{
+            width: 100%;
+            height: 600px;
+            bottom: 0px;
+            img{
+                max-width: 100%;
+                width: 100%;
+                object-fit: cover !important;
+            }
+        }
+        @include sm{
+            width: 329px;
+        height: 342px;
+            img{
+                max-width: 100%;
+                width: 100%;
+                height: fit-content;
+                object-fit: cover !important;
+            }
+            bottom: 0px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include border-radius(0px 0px 20px 0px);
+        }
+    }
+    .bg_gradient{
+        // display: none;
+        background:linear-gradient(134deg, #12b4f6 0%, #3074fb 100%);;
+        filter: blur(133px);
+        width: 259px;
+        height: 373px;
+        margin-top: 50px;
+        @include md{
+            margin-left: 330px;
+        }
+        @include sm{
+            margin-left: 100px;
+            width: 163px;
+            height: 133px;
+            background: linear-gradient(134deg, #12b4f6 0%, #3074fb 100%);
+            filter: blur(59.547706604003906px);
+        }
+    }
+    .social_area{
+        border-radius: 5px;
+        background-color: $gray9;
+        padding: 20px;
+        animation: up-down 2s ease-in-out infinite alternate;
+    -webkit-animation: up-down 2s ease-in-out infinite alternate;
+        position: absolute;
+        top: 33%;
+        @include transformY(-50%);
+        right: 8%;
+        max-width: 170px;
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        gap: 14px;
+        @include nesthub{
+            top: 33%;
+            right: 3%;
+        }
+        @include md{
+           top: 49%;
+        right: 14%;
+        }
+        @include sm{
+            max-width: 90px;
+            padding: 10px;
+            gap: 7px;
+            top: 60%;
+            right: 11%;
+        }
+        span{
+            width: 34px;
+            display: block;
+            height: 34px;
+            line-height: 34px;
+            @include sm{
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                img{
+                    width: 10px;
+                    height: 10px;
+
+                }
+            }
+            text-align: center;
+            @include border-radius(5px);
+            background-color: $white;
+            
+        }
+    }
+}
+/*---Hero Two Section End---*/
 
 // Problem Section Start
 .rb_problem {
