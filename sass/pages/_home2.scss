@@ -1008,6 +1008,15 @@
     background: #F7F7F7;
     height: 678px;
     @include flex(column, end, center);
+    @include lg {
+        height: 580px;
+    }
+    @include md {
+        height: 545px;
+    }
+    @include xxs {
+        height: 730px;
+    }
     .footer_shape {
         position: absolute;
         width: 972px;
@@ -1017,6 +1026,19 @@
         border-radius: 972px;
         border: 2px dashed #FFC857;
         background: rgba(255, 200, 87, 0.06);
+        @include lg {
+            width: 892px;
+            height: 892px;
+        }
+        @include md {
+            width: 792px;
+            height: 792px;
+        }
+        @include xxs {
+            width: 660px;
+            height: 660px;
+            top: -41%;
+        }
     }
     .footer_area_widget{
         position: relative;
@@ -1051,6 +1073,9 @@
                 object-fit: contain;
                 z-index: 100;
                 cursor: pointer;
+                    @include xxs {
+                        width: 42%;
+                    }
                 }
             }
         }
@@ -1066,8 +1091,13 @@
                 line-height: 28px; /* 175% */
                 letter-spacing: -0.16px;
                 @include sm {
-                    font-size: 14px;
+                    font-size: 14px !important;
                     line-height: 22px;
+                }
+                @include xxs {
+                    br {
+                        display: none;
+                    }
                 }
             }
         }
@@ -1086,6 +1116,21 @@
                     border-radius: 12px;
                     padding: 8px 24px;
                     background: #FFF;
+                    @include lg {
+                        padding: 18px 24px;
+                    }
+                    @include md {
+                        padding: 12px 17px;
+                    }
+                    @include xs {
+                        padding: 12px 11px;
+                    }
+                    ul {
+                        @include xxs {
+                            flex-direction: column;
+                            display: flex;
+                        }
+                    }
                 }
             }
         ul{
@@ -1256,6 +1301,17 @@
         @include flex(row, space-between, center);
         flex-wrap: nowrap;
         width: 100%;
+        @include md {
+            margin-bottom: 23px;
+            padding: 20px 15px 24px 15px;
+        }
+        @include xs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding: 20px 12px 12px 12px;
+        }
         
         p{
             color: #4A4D56;

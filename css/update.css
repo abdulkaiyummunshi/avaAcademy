@@ -31121,6 +31121,41 @@ header {
 .sticky_top.header-1 .header-wrap .main-menu ul ul li > a {
   padding: 10px 20px;
 }
+.sticky_top.header-1.style_2 .header-wrap {
+  margin-top: 0;
+}
+@media (max-width: 1199px) {
+  .sticky_top.header-1.style_2 .header-wrap {
+    padding: 14px 0;
+  }
+}
+@media (max-width: 991px) {
+  .sticky_top.header-1.style_2 .header-wrap {
+    padding: 9px 0;
+  }
+}
+@media (max-width: 575px) {
+  .sticky_top.header-1.style_2 .header-wrap {
+    padding: 12px 0;
+  }
+}
+.sticky_top.header-1.style_2 .header-wrap .logo .primary-logo {
+  display: none;
+}
+.sticky_top.header-1.style_2 .header-wrap .logo .sticky-logo {
+  display: block;
+}
+.sticky_top.header-1.style_2 .header-wrap .main-menu ul li a {
+  padding: 26px 24px;
+}
+@media only screen and (max-width: 1399px) {
+  .sticky_top.header-1.style_2 .header-wrap .main-menu ul li a {
+    padding: 30px 22px;
+  }
+}
+.sticky_top.header-1.style_2 .header-wrap .main-menu ul ul li > a {
+  padding: 10px 20px;
+}
 @media (max-width: 1199px) {
   .sticky_top.header-style-2 .header-wrap {
     padding-left: 40px;
@@ -33245,6 +33280,21 @@ header {
   justify-content: end;
   align-items: center;
 }
+@media only screen and (max-width: 1199px) {
+  .footer_two {
+    height: 580px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footer_two {
+    height: 545px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .footer_two {
+    height: 730px;
+  }
+}
 .footer_two .footer_shape {
   position: absolute;
   width: 972px;
@@ -33254,6 +33304,25 @@ header {
   border-radius: 972px;
   border: 2px dashed #FFC857;
   background: rgba(255, 200, 87, 0.06);
+}
+@media only screen and (max-width: 1199px) {
+  .footer_two .footer_shape {
+    width: 892px;
+    height: 892px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footer_two .footer_shape {
+    width: 792px;
+    height: 792px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .footer_two .footer_shape {
+    width: 660px;
+    height: 660px;
+    top: -41%;
+  }
 }
 .footer_two .footer_area_widget {
   position: relative;
@@ -33300,6 +33369,11 @@ header {
   z-index: 100;
   cursor: pointer;
 }
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .footer_two .footer_area_quick_menu .footer_logo a img {
+    width: 42%;
+  }
+}
 .footer_two .footer_area_quick_menu .describtion {
   margin-bottom: 15px;
 }
@@ -33315,8 +33389,13 @@ header {
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .footer_two .footer_area_quick_menu .describtion p {
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 22px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .footer_two .footer_area_quick_menu .describtion p br {
+    display: none;
   }
 }
 .footer_two .footer_area_quick_menu .quicklink {
@@ -33342,6 +33421,27 @@ header {
   border-radius: 12px;
   padding: 8px 24px;
   background: #FFF;
+}
+@media only screen and (max-width: 1199px) {
+  .footer_two .footer_area_quick_menu .quicklink .header-wrap .main-menu {
+    padding: 18px 24px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footer_two .footer_area_quick_menu .quicklink .header-wrap .main-menu {
+    padding: 12px 17px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .footer_two .footer_area_quick_menu .quicklink .header-wrap .main-menu {
+    padding: 12px 11px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .footer_two .footer_area_quick_menu .quicklink .header-wrap .main-menu ul {
+    flex-direction: column;
+    display: flex;
+  }
 }
 .footer_two .footer_area_quick_menu .quicklink ul {
   margin: 0px;
@@ -33514,6 +33614,21 @@ header {
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .footer_two .footer_last {
+    margin-bottom: 23px;
+    padding: 20px 15px 24px 15px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .footer_two .footer_last {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 20px 12px 12px 12px;
+  }
 }
 .footer_two .footer_last p {
   color: #4A4D56;

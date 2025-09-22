@@ -31121,6 +31121,41 @@ header {
 .sticky_top.header-1 .header-wrap .main-menu ul ul li > a {
   padding: 10px 20px;
 }
+.sticky_top.header-1.style_2 .header-wrap {
+  margin-top: 0;
+}
+@media (max-width: 1199px) {
+  .sticky_top.header-1.style_2 .header-wrap {
+    padding: 14px 0;
+  }
+}
+@media (max-width: 991px) {
+  .sticky_top.header-1.style_2 .header-wrap {
+    padding: 9px 0;
+  }
+}
+@media (max-width: 575px) {
+  .sticky_top.header-1.style_2 .header-wrap {
+    padding: 12px 0;
+  }
+}
+.sticky_top.header-1.style_2 .header-wrap .logo .primary-logo {
+  display: none;
+}
+.sticky_top.header-1.style_2 .header-wrap .logo .sticky-logo {
+  display: block;
+}
+.sticky_top.header-1.style_2 .header-wrap .main-menu ul li a {
+  padding: 26px 24px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .sticky_top.header-1.style_2 .header-wrap .main-menu ul li a {
+    padding: 30px 22px;
+  }
+}
+.sticky_top.header-1.style_2 .header-wrap .main-menu ul ul li > a {
+  padding: 10px 20px;
+}
 @media (max-width: 1199px) {
   .sticky_top.header-style-2 .header-wrap {
     padding-left: 40px;
