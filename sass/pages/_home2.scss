@@ -650,10 +650,11 @@
         gap: 5px;
         z-index: 110;
         position: absolute;
-        background: #3c3865;
-        border-radius: 40px;
-        width: 194px;
-        height: 50px;
+        border-radius: 100px;
+        border: 1px solid rgba(11, 37, 69, 0.10);
+        background: #FFF;
+        width: 256px;
+        height: 72px;
         bottom: -103px;
         left: 50%;
         @include transformX(-50%);
@@ -668,9 +669,14 @@
             
         }
         button{
-            width: 6px;
-            height: 6px;
-            color: transparent;
+            color: rgba(74, 77, 86, 0.70);
+            font-family: "Inter Tight";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; 
+            letter-spacing: -0.32px;
+            text-transform: capitalize;
             border: none;
             background-color: $white;
             @include transition(0.5s);
@@ -679,17 +685,7 @@
         .slick-active{
             button{
                 position: relative;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    @include transform(-50%, -50%);
-                    width: 26px;
-                    height: 26px;
-                    @include border-radius(50%);
-                    border: 1px solid $gray2;
-                }
+                color: #0B2545;
             }
         }       
 

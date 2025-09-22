@@ -289,7 +289,7 @@
                 arrows: false,
                 dots: true,
                 dotsClass: "testi_dots",
-                autoplay: true,
+                autoplay: false,
                 speed: 3000,
                 autoplaySpeed: 3000,
                 prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
