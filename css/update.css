@@ -32826,8 +32826,7 @@ header {
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .rb_testimonial .testi_dots {
-    visibility: hidden;
-    opacity: 0;
+    bottom: -82px;
   }
 }
 .rb_testimonial .testi_dots li {
@@ -32886,40 +32885,34 @@ header {
   cursor: pointer;
   transition: all 0.4s ease;
 }
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (max-width: 1399px) {
   .rb_testimonial .left-arrow {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    left: 57px;
-    font-size: 14px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1024px) {
-  .rb_testimonial .left-arrow {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    left: 57px;
-    font-size: 14px;
+    bottom: -14.5%;
+    left: 39.4%;
   }
 }
 @media only screen and (max-width: 991px) {
   .rb_testimonial .left-arrow {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    left: 50px;
-    font-size: 14px;
+    bottom: -11.7%;
+    left: 34.4%;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .rb_testimonial .left-arrow {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    left: 10px;
-    font-size: 14px;
+    bottom: -11.7%;
+    left: 29.4%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_testimonial .left-arrow {
+    bottom: -12.7%;
+    left: 24.4%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_testimonial .left-arrow {
+    bottom: -14.4%;
+    left: 18.4%;
   }
 }
 .rb_testimonial .left-arrow:hover {
@@ -32951,40 +32944,34 @@ header {
   cursor: pointer;
   transition: all 0.4s ease;
 }
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (max-width: 1399px) {
   .rb_testimonial .right-arrow {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    right: 57px;
-    font-size: 14px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1024px) {
-  .rb_testimonial .right-arrow {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    right: 57px;
-    font-size: 14px;
+    bottom: -14.5%;
+    right: 39.4%;
   }
 }
 @media only screen and (max-width: 991px) {
   .rb_testimonial .right-arrow {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    right: 50px;
-    font-size: 14px;
+    bottom: -11.7%;
+    right: 34.4%;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .rb_testimonial .right-arrow {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    right: 0px;
-    font-size: 14px;
+    bottom: -11.7%;
+    right: 29.4%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_testimonial .right-arrow {
+    bottom: -12.7%;
+    right: 24.4%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_testimonial .right-arrow {
+    bottom: -14.4%;
+    right: 18.4%;
   }
 }
 .rb_testimonial .right-arrow:hover {
