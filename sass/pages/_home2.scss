@@ -564,7 +564,7 @@
 .rb_testimonial {
     background: #F7F7F7;
     .rb_card {
-        display: flex;
+        display: flex !important;
         padding: 32px;
         align-items: flex-start;
         gap: 32px;
@@ -644,6 +644,55 @@
                 }
             }
         } 
+    }
+    .testi_dots{
+        @include flex(row, center, center);
+        gap: 5px;
+        z-index: 110;
+        position: absolute;
+        background: #3c3865;
+        border-radius: 40px;
+        width: 194px;
+        height: 50px;
+        bottom: -103px;
+        left: 50%;
+        @include transformX(-50%);
+        @include sm{
+            visibility: hidden;
+            opacity: 0;
+        }
+        li{
+            height: 100%;
+            @include flex(row, center, center);
+            margin: 0px 10px;
+            
+        }
+        button{
+            width: 6px;
+            height: 6px;
+            color: transparent;
+            border: none;
+            background-color: $white;
+            @include transition(0.5s);
+            @include border-radius(30px);
+        }
+        .slick-active{
+            button{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    @include transform(-50%, -50%);
+                    width: 26px;
+                    height: 26px;
+                    @include border-radius(50%);
+                    border: 1px solid $gray2;
+                }
+            }
+        }       
+
     }
 }
 // Testimonial End

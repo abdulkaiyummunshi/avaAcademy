@@ -281,6 +281,55 @@
             prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
             nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
         });
+
+        function testiSlider() {
+            $('.rb_testi_slider').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                dotsClass: "testi_dots",
+                autoplay: true,
+                speed: 3000,
+                autoplaySpeed: 3000,
+                prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
+                nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
+                responsive: [
+                {
+                    breakpoint: 1400, // <1400px
+                    settings: {
+                    slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 1200, // <1200px
+                    settings: {
+                    slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 992, // <992px
+                    settings: {
+                    slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 768, // <768px
+                    settings: {
+                    slidesToShow: 1,
+                    }
+                },
+                {
+                    breakpoint: 576, // <576px
+                    settings: {
+                    slidesToShow: 1,
+                    }
+                }
+                ]
+            });
+        }
+        testiSlider();
+
         $('.vision_content').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
