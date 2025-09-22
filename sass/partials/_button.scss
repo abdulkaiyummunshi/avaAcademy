@@ -71,29 +71,48 @@
             }
         }
         &.style_3 {
-            a {
-                color: #FFC857;
-                font-family: Inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 28px; 
-                background-color: inherit;
-                &:hover {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            .sign_up {
+                a {
+                    color: #FFC857;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px; 
+                    background-color: inherit;
+                    &:hover {
+                        color: #0B2545;
+                        border-radius: 24px;
+                        background: #FFC857;
+                        box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.10) inset;
+                    }
+                }
+                @include xl {
+                    display: none;
+                }
+            }
+            .sign_in {
+                a {
+                    color: #FFC857;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px; 
                     color: #0B2545;
-                    border-radius: 24px;
                     background: #FFC857;
                     box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.10) inset;
+                    &:hover {
+                        color: #0B2545;
+                        border-radius: 24px;
+                        background: #FFC857;
+                        box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.10) inset;
+                    }
                 }
             }
-            .active {
-                color: #0B2545;
-                background: #FFC857;
-                box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.10) inset;
-                &:hover {
-                    color: $white;
-                }
 
-            }
         }
     }

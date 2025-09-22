@@ -30993,6 +30993,11 @@ header {
   font-weight: 400;
   line-height: 28px;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .header-1.style_2 .header-wrap .main-menu ul li a {
+    padding: 30px 22px;
+  }
+}
 .header-1.style_2 .header-wrap .main-menu ul li a:before {
   position: absolute;
   content: "\f107";
@@ -39251,7 +39256,12 @@ header {
 .btn_wrapper.style_2 a:hover {
   background: linear-gradient(180deg, #0ebef6 0%, #3171fb 10%);
 }
-.btn_wrapper.style_3 a {
+.btn_wrapper.style_3 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.btn_wrapper.style_3 .sign_up a {
   color: #FFC857;
   font-family: Inter;
   font-size: 16px;
@@ -39260,19 +39270,33 @@ header {
   line-height: 28px;
   background-color: inherit;
 }
-.btn_wrapper.style_3 a:hover {
+.btn_wrapper.style_3 .sign_up a:hover {
   color: #0B2545;
   border-radius: 24px;
   background: #FFC857;
   box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.1) inset;
 }
-.btn_wrapper.style_3 .active {
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .btn_wrapper.style_3 .sign_up {
+    display: none;
+  }
+}
+.btn_wrapper.style_3 .sign_in a {
+  color: #FFC857;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
   color: #0B2545;
   background: #FFC857;
   box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.1) inset;
 }
-.btn_wrapper.style_3 .active:hover {
-  color: #fff;
+.btn_wrapper.style_3 .sign_in a:hover {
+  color: #0B2545;
+  border-radius: 24px;
+  background: #FFC857;
+  box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 /*------------------------------------

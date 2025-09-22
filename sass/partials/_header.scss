@@ -365,6 +365,9 @@ header{
 					font-style: normal;
 					font-weight: 400;
 					line-height: 28px; 
+					@include xl {
+						padding: 30px 22px;
+					}
 			
 			
 					&:before {
