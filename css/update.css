@@ -32810,6 +32810,12 @@ header {
   letter-spacing: -0.2px;
   padding-bottom: 25px;
 }
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_testimonial .rb_card .rb_content .rb_desc {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
 .rb_testimonial .rb_card .rb_content .rb_profile {
   display: flex;
   align-items: center;
@@ -32824,6 +32830,12 @@ header {
   line-height: 36px; /* 150% */
   letter-spacing: -0.24px;
 }
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_testimonial .rb_card .rb_content .rb_profile .rb_info h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 .rb_testimonial .rb_card .rb_content .rb_profile .rb_info p {
   color: #4A4D56;
   font-family: "Archivo", sans-serif;
@@ -32832,6 +32844,12 @@ header {
   font-weight: 400;
   line-height: 28px; /* 175% */
   letter-spacing: -0.16px;
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_testimonial .rb_card .rb_content .rb_profile .rb_info p {
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 .rb_testimonial .rb_card .rb_thumb {
   position: relative;
@@ -32951,7 +32969,7 @@ header {
 }
 @media only screen and (max-width: 991px) {
   .rb_testimonial .left-arrow {
-    bottom: -11.7%;
+    bottom: -12%;
     left: 34.4%;
   }
 }
@@ -32969,8 +32987,8 @@ header {
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
   .rb_testimonial .left-arrow {
-    bottom: -14.4%;
-    left: 18.4%;
+    bottom: -15.4%;
+    left: 18%;
   }
 }
 .rb_testimonial .left-arrow:hover {
@@ -33010,7 +33028,7 @@ header {
 }
 @media only screen and (max-width: 991px) {
   .rb_testimonial .right-arrow {
-    bottom: -11.7%;
+    bottom: -12%;
     right: 34.4%;
   }
 }
@@ -33028,8 +33046,8 @@ header {
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
   .rb_testimonial .right-arrow {
-    bottom: -14.4%;
-    right: 18.4%;
+    bottom: -15.4%;
+    right: 18%;
   }
 }
 .rb_testimonial .right-arrow:hover {
@@ -33146,25 +33164,24 @@ header {
   height: 1px;
   background: rgba(255, 255, 255, 0.05);
 }
-.rb_ava_certified .rb_content .rb_view_btn {
-  display: flex;
-  padding: 16px 36px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  align-self: stretch;
-  border-radius: 8px;
-  background: #FFC857;
-  color: #0B2545;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px;
+@media only screen and (max-width: 1399px) {
+  .rb_ava_certified .rb_btn_wrapper .rb_btn {
+    padding: 16px 10px;
+  }
 }
-@media only screen and (min-width: 0px) and (max-width: 575px) {
-  .rb_ava_certified .rb_content .rb_view_btn {
-    padding: 12px 32px;
+@media only screen and (max-width: 1199px) {
+  .rb_ava_certified .rb_btn_wrapper {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .rb_ava_certified .rb_btn_wrapper {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_ava_certified .rb_btn_wrapper {
+    flex-direction: column;
   }
 }
 .rb_ava_certified .rb_thumb {
@@ -33176,6 +33193,7 @@ header {
 .rb_ava_certified .rb_thumb img {
   display: block;
   width: 100%;
+  height: 547px;
   object-fit: cover;
   border-radius: 16px;
 }

@@ -607,6 +607,10 @@
                 line-height: 36px; 
                 letter-spacing: -0.2px;
                 padding-bottom: 25px;
+                @include xxs {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
             }
             .rb_profile {
                 display: flex;
@@ -621,6 +625,10 @@
                         font-weight: 500;
                         line-height: 36px; /* 150% */
                         letter-spacing: -0.24px;
+                        @include xxs {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
                     }
                     p {
                         color: #4A4D56;
@@ -630,6 +638,10 @@
                         font-weight: 400;
                         line-height: 28px; /* 175% */
                         letter-spacing: -0.16px;
+                        @include xxs {
+                            font-size: 14px;
+                            line-height: 26px;
+                        }
                     }
                 }
             }
@@ -726,7 +738,7 @@
             left: 39.4%;
         }
         @include md {
-            bottom: -11.7%;
+            bottom: -12%;
             left: 34.4%;
         }
         @include sm {
@@ -738,8 +750,8 @@
             left: 24.4%;
         }
         @include xxs {
-            bottom: -14.4%;
-            left: 18.4%;
+            bottom: -15.4%;
+            left: 18%;
         }
         &:hover{
             background: #FFC857;
@@ -759,7 +771,7 @@
             right: 39.4%;
         }
         @include md {
-            bottom: -11.7%;
+            bottom: -12%;
             right: 34.4%;
         }
         @include sm {
@@ -771,8 +783,8 @@
             right: 24.4%;
         }
         @include xxs {
-            bottom: -14.4%;
-            right: 18.4%;
+            bottom: -15.4%;
+            right: 18%;
         }
         display: inline-block;
         position: absolute;
@@ -895,24 +907,41 @@
                 }
             }
         }
-        .rb_view_btn {
-            display: flex;
-            padding: 16px 36px;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            align-self: stretch;
-            border-radius: 8px;
-            background: #FFC857;
-            color: #0B2545;
-            font-family: $font7;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 28px; 
-            @include xs {
-                padding: 12px 32px;
+
+        // .rb_view_btn {
+        //     display: flex;
+        //     padding: 16px 36px;
+        //     justify-content: center;
+        //     align-items: center;
+        //     gap: 8px;
+        //     align-self: stretch;
+        //     border-radius: 8px;
+        //     background: #FFC857;
+        //     color: #0B2545;
+        //     font-family: $font7;
+        //     font-size: 16px;
+        //     font-style: normal;
+        //     font-weight: 600;
+        //     line-height: 28px; 
+        //     @include xs {
+        //         padding: 12px 32px;
+        //     }
+        // }
+    }
+    .rb_btn_wrapper {
+        @include xl {
+            .rb_btn {
+                padding: 16px 10px;                
             }
+        }
+        @include lg {
+            flex-direction: column;
+        }
+        @include md {
+            flex-direction: row;
+        }
+        @include xxs {
+            flex-direction: column;
         }
     }
     .rb_thumb {
@@ -923,6 +952,7 @@
         img {
             display: block;
             width: 100%;
+            height: 547px;
             object-fit: cover;
             border-radius: 16px;
             @include sm {
