@@ -1003,406 +1003,342 @@
 /*---Brand Slider End---*/
 
 .footer_two {
+    position: relative;
+    overflow: hidden;
     background: #F7F7F7;
-    padding: 0px 20px;
-    height: 692px;
+    height: 678px;
     @include flex(column, end, center);
-    @include md{
-        height: 700px !important;
-        margin-top: 300px !important;
-        padding: 0px 0px !important;
-        .container-xl{
-            padding: 0px !important;
-        }
-    }
-    @include sm{
-
-        margin-top: 26px !important;
-        overflow: hidden !important;
-        margin-bottom: 0px !important;
-        height: fit-content !important;
-        padding: 0px 0px !important;
-        &.style_01{
-            margin-top: -7px !important;
-        }
-        .container-xl{
-            padding: 0px;
-        }
-        .footer_area_widget{
-            padding: 40px 24px 30px 24px;
-            @include sm{
-                padding: 20px 12px 0px 12px;
-            }
-        }
-    }
-    &.style_001{
-        @include sm{
-            margin-top: 0px !important;
-        }
+    .footer_shape {
+        position: absolute;
+        width: 972px;
+        height: 971px;
+        transform: rotate(-90deg);
+        flex-shrink: 0;
+        border-radius: 972px;
+        border: 2px dashed #FFC857;
+        background: rgba(255, 200, 87, 0.06);
     }
     .footer_area_widget{
+        position: relative;
+        z-index: 9;
         @include md{
             padding: 20px 12px 0px 12px;
         }
-
-    }
-    position: relative;
-    .container-xl{
-        position: relative;
-
     }
 
-    .category{
-        ul{
-            @include flex(row, flex-start, center);
-            flex-wrap: wrap;
-            gap: 17px;
-            padding: 13px 15px;
-            border: 1px solid rgba(193, 193, 193, 0.6);
-            border-radius: 5px;
-            max-width: 647px;
-            @include md{
-                margin-top: 30px;
-            }
-            @include sm{
-                max-width: 236px;
-                padding: 22px 20px;
-                gap: 3px;
-            }
-            width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            li{
-                a{
-                    font-weight: 600;
-                    font-size: 16px;
-                    @include sm{
-                        font-size: 12px;
-                    }
-                    letter-spacing: 0.01em;
-                    color: $white;
-                    @include transition(0.4s);
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                }
-            }
+    .footer_area_quick_menu{
+        @include flex(row, space-between, flex-start);
+        flex-wrap: wrap;
+        @include sm{
+            gap: 16px;
+            padding-bottom: 14px !important;
         }
-    }
-    @include sm{
-        padding: 0px 10px;
-    }
-        .footer_area_quick_menu{
-            @include flex(row, space-between, flex-start);
-            flex-wrap: wrap;
-            @include sm{
-                gap: 16px;
-                padding-bottom: 14px !important;
-            }
-            @include md{
-                gap: 40px 0px;
-            }
-            @include nesthub{
-                gap: 40px 0px;
-            }
-             .footer_logo {
-                a {
-                    display: flex;
-                    justify-content: center;
-                    cursor: pointer !important;
-                    margin-bottom: 20px;
-                    img{
-                    width: fit-content;
-                    height: 100%;
-                    object-fit: contain;
-                    z-index: 100;
-                    cursor: pointer;
-                    }
-                }
-            }
-            .describtion {
-                margin-bottom: 15px;
-                p{
-                    color: #4A4D56;
-                    text-align: center;
-                    font-family: $font7;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 28px; /* 175% */
-                    letter-spacing: -0.16px;
-                    @include sm {
-                        font-size: 14px;
-                        line-height: 22px;
-                    }
-                }
-            }
-            
-            .quicklink {
+        @include md{
+            gap: 40px 0px;
+        }
+        @include nesthub{
+            gap: 40px 0px;
+        }
+            .footer_logo {
+            a {
+                display: flex;
+                justify-content: center;
+                cursor: pointer !important;
+                margin-bottom: 20px;
+                img{
+                width: fit-content;
                 height: 100%;
-                .header-wrap{
-                    @include flex(row, center, center);
-                    @include md{
-                        justify-content: center;
-                    }
-                    @include sm{
-                        justify-content: center;
-                    }
-                    .main-menu {
-                        border-radius: 12px;
-                        padding: 8px 24px;
-                        background: #FFF;
-                    }
-                }
-            ul{
-                margin: 0px;
-                @include nesthubmax{
-                    @include flex(row, flex-end, center);
-                    flex-wrap: wrap;
-                    gap: 10px !important;
-                }
-                @include nesthub{
-                    @include flex(row, flex-end, center);
-                    flex-wrap: wrap;
-                }
-                padding: 0px;
-                gap: 20px;
-                li{
-                    a{
-                        color: #4A4D56;
-                        font-family: $font7;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 28px; /* 175% */
-                        letter-spacing: -0.16px;
-                        padding: 10px 18px;
-                        @include transition(0.4s);
-
-                        @include nesthubmax{
-                            line-height: 10px;
-                        }
-                        @include nesthub{
-                            line-height: 0px;
-                        }
-                        @include md{
-                            line-height: 10px;
-                        }
-                    }
-                    &:hover a{
-                        color: $primary;
-                    }
-                    &.menu-item-has-children{
-                        &::after{
-                            color: #4A4D56 !important;
-                            @include sm{
-                                font-size: 10px;
-                                right: 6px;
-
-                            }
-                        }
-                        &:hover{
-                            &::after{
-                                color: $primary !important;
-                            }
-
-                        }
-                        a{
-                            padding-right: 22px;
-                        }
-                        ul{
-                            li{
-                                a{
-                                    color: $gray9;
-                                    &:hover{
-                                        color: $white !important;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
+                object-fit: contain;
+                z-index: 100;
+                cursor: pointer;
                 }
             }
-            
-                h3{
-                    
-                    font-weight: 600;
-                    font-size: 20px;
-                    letter-spacing: -0.02em;
-                    color: $white;
-                    text-align: left;
-                    
-                }
-                p{
-                    
-                    font-weight: 500;
-                    font-size: 16px;
-                    @include sm{
-                        font-size: 10px;
-                    }
-                    // line-height: 275%;
-                    margin-top: 21px;
-                    color: $gray9;
-                }
-                form{
-                   border: 1px solid #ffffff24;
-                   margin-top: 25px;
-                    @include flex(row, space-between, center);
-                    width: 100%;
-                    height: 50px;
-                    input{
-                        width: 65%;
-                        padding: 20px;
-                     border: none;
-                     outline: none;
-                     background-color: transparent;
-                     color: $white;
-                     &::placeholder{
-                        color: $white;
-                        font-weight:100;
-                     }
-                     
-                }
-                button{
-                    width: 124px;
-                    height: 40px;
-                    background-color: $primary;
-                    text-align: center;
-                    line-height: 40px;
-                    border: none;
-                    color: $white;
-                    margin-right: 5px;
-                    
-                    font-weight: 500;
-                    font-size: 15px;
-                    &:hover{
-                        background-color: #5d85e1;
-                    }
-                }
-                }
-                .social_media ul{
-               margin: 0px;
-               margin-top: 39px;
-               padding: 0px;
-               @include flex(row, flex-start, center);
-               gap: 10px;
-               li{
-                   a{
-                       width: fit-content;
-                       @include border-radius(50%);
-                       width:40px;
-                       height: 40px;
-                       border: 1px solid #ffffff24;
-                       color: $white;
-                       display: block;
-                       text-align: center;
-                       line-height: 40px;
-                       @include transition(0.4s);
-                       &:hover{
-                           background-color: $primary;
-                           border: 1px solid transparent;
-                           color: $white;
-                       }
-                   }
-                        }
-
-                       
-            }
-            }
-            
-            
         }
-
-        .footer_last{
-            margin-bottom: 32px;
-            padding: 23px 24px 30px 24px;
-            border-radius: 12px;
-            background: #FFF;
-            @include flex(row, space-between, center);
-            flex-wrap: nowrap;
-            width: 100%;
-            
+        .describtion {
+            margin-bottom: 15px;
             p{
                 color: #4A4D56;
+                text-align: center;
                 font-family: $font7;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 28px; /* 175% */
                 letter-spacing: -0.16px;
-                @include sm{
+                @include sm {
                     font-size: 14px;
-                    line-height: 22px
-                }
-            }
-            .footer_last_menu{
-
-                ul{
-                    @include flex(row, flex-end, flex-end);
-                    margin: 0px;
-                    gap: 30px;
-                    @include sm{
-                        gap: 10px;
-                        margin-bottom: 6px;
-                    }
-                    li{
-                        &:nth-child(3){
-                            @include sm{
-                                display: none;
-                            }
-                        }
-                        a{
-                            color: #4A4D56;                            
-                            font-family: $font7;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 28px; /* 175% */
-                            letter-spacing: -0.16px;
-                            @include transition(0.4s);
-                            @include sm{
-                                font-size: 14px;
-                                line-height: 22px
-                            }
-                            &:hover{
-                                color: $primary !important;
-                            }
-                        }
-                    }
+                    line-height: 22px;
                 }
             }
         }
-
-        .social_area {
-            display: flex;
-            justify-content: center;
-            ul{
-                @include flex(row, flex-start, center);
-                gap: 12px;
+        
+        .quicklink {
+            height: 100%;
+            .header-wrap{
+                @include flex(row, center, center);
                 @include md{
-                    margin-top: 30px;
+                    justify-content: center;
                 }
                 @include sm{
-                    margin-top: 20px;
+                    justify-content: center;
+                }
+                .main-menu {
+                    border-radius: 12px;
+                    padding: 8px 24px;
+                    background: #FFF;
+                }
+            }
+        ul{
+            margin: 0px;
+            @include nesthubmax{
+                @include flex(row, flex-end, center);
+                flex-wrap: wrap;
+                gap: 10px !important;
+            }
+            @include nesthub{
+                @include flex(row, flex-end, center);
+                flex-wrap: wrap;
+            }
+            padding: 0px;
+            gap: 20px;
+            li{
+                a{
+                    color: #4A4D56;
+                    font-family: $font7;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px; /* 175% */
+                    letter-spacing: -0.16px;
+                    padding: 10px 18px;
+                    @include transition(0.4s);
+
+                    @include nesthubmax{
+                        line-height: 10px;
+                    }
+                    @include nesthub{
+                        line-height: 0px;
+                    }
+                    @include md{
+                        line-height: 10px;
+                    }
+                }
+                &:hover a{
+                    color: $primary;
+                }
+                &.menu-item-has-children{
+                    &::after{
+                        color: #4A4D56 !important;
+                        @include sm{
+                            font-size: 10px;
+                            right: 6px;
+
+                        }
+                    }
+                    &:hover{
+                        &::after{
+                            color: $primary !important;
+                        }
+
+                    }
+                    a{
+                        padding-right: 22px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: $gray9;
+                                &:hover{
+                                    color: $white !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+            h3{
+                
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: -0.02em;
+                color: $white;
+                text-align: left;
+                
+            }
+            p{
+                
+                font-weight: 500;
+                font-size: 16px;
+                @include sm{
+                    font-size: 10px;
+                }
+                // line-height: 275%;
+                margin-top: 21px;
+                color: $gray9;
+            }
+            form{
+                border: 1px solid #ffffff24;
+                margin-top: 25px;
+                @include flex(row, space-between, center);
+                width: 100%;
+                height: 50px;
+                input{
+                    width: 65%;
+                    padding: 20px;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    color: $white;
+                    &::placeholder{
+                    color: $white;
+                    font-weight:100;
+                    }
+                    
+            }
+            button{
+                width: 124px;
+                height: 40px;
+                background-color: $primary;
+                text-align: center;
+                line-height: 40px;
+                border: none;
+                color: $white;
+                margin-right: 5px;
+                
+                font-weight: 500;
+                font-size: 15px;
+                &:hover{
+                    background-color: #5d85e1;
+                }
+            }
+            }
+            .social_media ul{
+            margin: 0px;
+            margin-top: 39px;
+            padding: 0px;
+            @include flex(row, flex-start, center);
+            gap: 10px;
+            li{
+                a{
+                    width: fit-content;
+                    @include border-radius(50%);
+                    width:40px;
+                    height: 40px;
+                    border: 1px solid #ffffff24;
+                    color: $white;
+                    display: block;
+                    text-align: center;
+                    line-height: 40px;
+                    @include transition(0.4s);
+                    &:hover{
+                        background-color: $primary;
+                        border: 1px solid transparent;
+                        color: $white;
+                    }
+                }
+                    }
+
+                    
+        }
+        }
+        
+        
+    }
+
+    .footer_last{
+        margin-bottom: 32px;
+        padding: 23px 24px 30px 24px;
+        border-radius: 12px;
+        background: #FFF;
+        @include flex(row, space-between, center);
+        flex-wrap: nowrap;
+        width: 100%;
+        
+        p{
+            color: #4A4D56;
+            font-family: $font7;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; /* 175% */
+            letter-spacing: -0.16px;
+            @include sm{
+                font-size: 14px;
+                line-height: 22px
+            }
+        }
+        .footer_last_menu{
+
+            ul{
+                @include flex(row, flex-end, flex-end);
+                margin: 0px;
+                gap: 30px;
+                @include sm{
+                    gap: 10px;
+                    margin-bottom: 6px;
                 }
                 li{
+                    &:nth-child(3){
+                        @include sm{
+                            display: none;
+                        }
+                    }
                     a{
-                        display: inline-block;
-                        width:40px;
-                        height: 40px;
-                        line-height: 40px !important;
-                        padding: 0 !important;
-                        @include border-radius(50%);
-                        text-align: center;
-                        color:  $primary;
+                        color: #4A4D56;                            
+                        font-family: $font7;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px; /* 175% */
+                        letter-spacing: -0.16px;
                         @include transition(0.4s);
-
+                        @include sm{
+                            font-size: 14px;
+                            line-height: 22px
+                        }
                         &:hover{
-                            color: $white !important;
-                            background: #4A4D56;
+                            color: $primary !important;
                         }
                     }
                 }
             }
         }
     }
+
+    .social_area {
+        display: flex;
+        justify-content: center;
+        ul{
+            @include flex(row, flex-start, center);
+            gap: 12px;
+            @include md{
+                margin-top: 30px;
+            }
+            @include sm{
+                margin-top: 20px;
+            }
+            li{
+                a{
+                    display: inline-block;
+                    width:40px;
+                    height: 40px;
+                    line-height: 40px !important;
+                    padding: 0 !important;
+                    @include border-radius(50%);
+                    text-align: center;
+                    color:  $primary;
+                    @include transition(0.4s);
+                    background: #FFF;
+
+                    &:hover{
+                        color: $white !important;
+                        background: #4A4D56;
+                    }
+                }
+            }
+        }
+    }
+}
