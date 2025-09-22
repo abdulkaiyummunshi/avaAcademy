@@ -1,4 +1,4 @@
-.btn_wrapper{
+.btn_wrapper {
     a{
         font-family: $font-family;
         font-weight: 500;
@@ -68,6 +68,32 @@
                 &:hover{
                     background: linear-gradient(180deg, #0ebef6 0%, #3171fb 10%);
                 }
+            }
+        }
+        &.style_3 {
+            a {
+                color: #FFC857;
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px; 
+                background-color: inherit;
+                &:hover {
+                    color: #0B2545;
+                    border-radius: 24px;
+                    background: #FFC857;
+                    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.10) inset;
+                }
+            }
+            .active {
+                color: #0B2545;
+                background: #FFC857;
+                box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.10) inset;
+                &:hover {
+                    color: $white;
+                }
+
             }
         }
     }
