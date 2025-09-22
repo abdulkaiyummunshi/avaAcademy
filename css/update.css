@@ -32860,6 +32860,136 @@ header {
   position: relative;
   color: #0B2545;
 }
+.rb_testimonial .left-arrow {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 100px;
+  border: 1px solid rgba(74, 77, 86, 0.1);
+  background: #FFF;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  bottom: -31%;
+  left: 41.4%;
+  z-index: 999;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .rb_testimonial .left-arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    left: 57px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .rb_testimonial .left-arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    left: 57px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .rb_testimonial .left-arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    left: 50px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_testimonial .left-arrow {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    left: 10px;
+    font-size: 14px;
+  }
+}
+.rb_testimonial .left-arrow:hover {
+  background: #FFC857;
+}
+.rb_testimonial .right-arrow {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 100px;
+  border: 1px solid rgba(74, 77, 86, 0.1);
+  background: #FFF;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  bottom: -31%;
+  right: 41.4%;
+  z-index: 999;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .rb_testimonial .right-arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    right: 57px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .rb_testimonial .right-arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    right: 57px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .rb_testimonial .right-arrow {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    right: 50px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_testimonial .right-arrow {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    right: 0px;
+    font-size: 14px;
+  }
+}
+.rb_testimonial .right-arrow:hover {
+  background: #FFC857;
+}
 
 .rb_scholarship {
   position: relative;

@@ -286,14 +286,14 @@
             $('.rb_testi_slider').slick({
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                arrows: false,
+                arrows: true,
                 dots: true,
                 dotsClass: "testi_dots",
-                autoplay: false,
+                autoplay: true,
                 speed: 3000,
                 autoplaySpeed: 3000,
-                prevArrow: `<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>`,
-                nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
+                prevArrow: `<span class="left-arrow"><i class="fa-solid fa-angle-left"></i></span>`,
+                nextArrow: `<span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>`,
                 responsive: [
                 {
                     breakpoint: 1400, // <1400px

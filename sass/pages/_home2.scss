@@ -690,6 +690,104 @@
         }       
 
     }
+    .left-arrow{
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        border-radius: 100px;
+        border: 1px solid rgba(74, 77, 86, 0.10);
+        background: #FFF;
+        @include border-radius(50%);
+        display: inline-block;
+        position: absolute;
+        bottom: -31%;
+        left: 41.4%;
+        z-index: 999;
+        @include transformY(-50%);
+        cursor: pointer;
+        @include transition(0.4s);
+        @include nesthubmax{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            left: 57px;
+            font-size: 14px;
+        }
+        @include nesthub{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            left: 57px;
+            font-size: 14px;
+        }
+        @include md{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            left: 50px;
+            font-size: 14px;
+        }
+        @include sm{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            left: 10px;
+            font-size: 14px;
+        }
+        &:hover{
+            background: #FFC857;
+        }
+    }
+    .right-arrow{
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        border-radius: 100px;
+        border: 1px solid rgba(74, 77, 86, 0.10);
+        background: #FFF;
+        @include border-radius(50%);
+        @include nesthubmax{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            right: 57px;
+            font-size: 14px;
+        }
+        @include nesthub{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            right: 57px;
+            font-size: 14px;
+        }
+        @include md{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            right: 50px;
+            font-size: 14px;
+        }
+        @include sm{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            right: 0px;
+            font-size: 14px;
+        }
+        display: inline-block;
+        position: absolute;
+        bottom: -31%;
+        right: 41.4%;
+        z-index: 999;
+        @include transformY(-50%);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover{
+            background: #FFC857;
+        }
+    }    
 }
 // Testimonial End
 
