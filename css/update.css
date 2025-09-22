@@ -32700,6 +32700,21 @@ header {
   line-height: 44px; /* 137.5% */
   letter-spacing: -0.96px;
 }
+@media only screen and (max-width: 1399px) {
+  .rb_step_card .rb_card h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .rb_step_card .rb_card h3 br {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_step_card .rb_card h3 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
 .rb_step_card .rb_card .rb_thumb {
   border-radius: 16px;
   overflow: hidden;
