@@ -362,8 +362,12 @@
     position: relative;
     .rb_shape {
         position: absolute;
-        top: -26%;
+        z-index: -1;
+        top: -34%;
         left: 38%;
+        @include lg {
+            display: none;
+        }
     }
     .rb_content {
         display: flex;
@@ -947,19 +951,49 @@
 
 /*---Brand Slider Start---*/
 .berlin_slider {
+    .slick-slide {
+        margin: 4px 2px; 
+    }
     .scroll-container {
         position: relative;
         z-index: 7;
         width: 100%;
         overflow: hidden; 
         white-space: nowrap; 
+        background: #F7F7F7;
     }
     .nav-item {
         white-space: nowrap;
         text-align: center;
         @include flex(row, center, center);
-        img{
-            display: inline;
+        .icon {
+            display: flex;
+            padding: 48px 100px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 32px;
+            background: #FFF;
+            @include xl {
+                padding: 48px 78px;
+            }
+            @include lg {
+                padding: 48px 61px;
+            }
+            @include sm {
+                display: flex;
+                padding: 26px 53px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 32px;
+            }
+            @include xxs {
+                padding: 26px 34px;
+            }
+            img{
+                display: inline;
+            }
         }
         &.style_1 {
             font-weight: 700;
