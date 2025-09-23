@@ -34253,112 +34253,54 @@ header {
 /*---Hero four Section End---*/
 .rb_step_card_two {
   position: relative;
-  background: #0B2545;
+  background: #F7F7F7;
 }
-.rb_step_card_two .rb_shape1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-@media only screen and (max-width: 1699px) {
-  .rb_step_card_two .rb_shape1 img {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 1599px) {
-  .rb_step_card_two .rb_shape1 img {
-    display: none;
-  }
-}
-.rb_step_card_two .rb_shape2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-align: end;
-}
-@media only screen and (max-width: 1699px) {
-  .rb_step_card_two .rb_shape2 img {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 1599px) {
-  .rb_step_card_two .rb_shape2 img {
-    display: none;
-  }
-}
-.rb_step_card_two .rb_shape3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-@media only screen and (max-width: 1699px) {
-  .rb_step_card_two .rb_shape3 img {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 1599px) {
-  .rb_step_card_two .rb_shape3 img {
-    display: none;
-  }
-}
-.rb_step_card_two .rb_shape4 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  text-align: end;
-}
-@media only screen and (max-width: 1699px) {
-  .rb_step_card_two .rb_shape4 img {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 1599px) {
-  .rb_step_card_two .rb_shape4 img {
-    display: none;
-  }
+.rb_step_card_two .rb_section_padding {
+  display: flex;
+  padding: 40px;
+  align-items: flex-start;
+  gap: 36px;
+  align-self: stretch;
+  border-radius: 40px;
+  border: 1px solid #E7E8E9;
+  background: #FFF;
+  backdrop-filter: blur(5px);
 }
 .rb_step_card_two .rb_card {
   display: flex;
-  padding: 36px 32px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
-  border-radius: 16px;
-  background: #17304E;
 }
 .rb_step_card_two .rb_card .rb_step {
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #F7F7F7;
-  font-family: "Inter", sans-serif;
+  color: #3B3B3B;
+  font-family: "Archivo", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 32px; /* 160% */
   letter-spacing: -0.4px;
 }
-.rb_step_card_two .rb_card .rb_step span {
-  display: flex;
-  width: 40px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  aspect-ratio: 1/1;
-  border-radius: 35px;
-  background: #FFC857;
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_step_card_two .rb_card .rb_step {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 .rb_step_card_two .rb_card h3 {
-  color: #F7F7F7;
-  font-family: "Playfair Display", serif;
+  color: #000106;
+  font-family: "Playfair Display";
   font-size: 32px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 44px; /* 137.5% */
+  font-weight: 500;
+  line-height: 44px;
   letter-spacing: -0.96px;
+  margin-bottom: 45px;
 }
-@media only screen and (max-width: 1399px) {
+@media only screen and (max-width: 1199px) {
   .rb_step_card_two .rb_card h3 {
     font-size: 25px;
     line-height: 30px;
@@ -34376,6 +34318,7 @@ header {
 .rb_step_card_two .rb_card .rb_thumb {
   border-radius: 16px;
   overflow: hidden;
+  width: 100%;
 }
 @media only screen and (max-width: 991px) {
   .rb_step_card_two .rb_card .rb_thumb {
