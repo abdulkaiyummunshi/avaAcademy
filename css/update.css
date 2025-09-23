@@ -34337,6 +34337,215 @@ header {
   }
 }
 
+.rb_common_input {
+  position: relative;
+}
+.rb_common_input .form-group label {
+  display: block;
+  color: #3B3B3B;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.16px;
+  margin-bottom: 13px;
+}
+.rb_common_input .form-group input[type=text],
+.rb_common_input .form-group input[type=number],
+.rb_common_input .form-group input[type=tel],
+.rb_common_input .form-group input[type=date],
+.rb_common_input .form-group input[type=time],
+.rb_common_input .form-group input[type=email],
+.rb_common_input .form-group input[type=password],
+.rb_common_input .form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  color: #3B3B3B;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.16px;
+}
+.rb_common_input .form-group input[type=text]::placeholder,
+.rb_common_input .form-group input[type=number]::placeholder,
+.rb_common_input .form-group input[type=tel]::placeholder,
+.rb_common_input .form-group input[type=date]::placeholder,
+.rb_common_input .form-group input[type=time]::placeholder,
+.rb_common_input .form-group input[type=email]::placeholder,
+.rb_common_input .form-group input[type=password]::placeholder,
+.rb_common_input .form-group textarea::placeholder {
+  color: #9A9EAA;
+}
+.rb_common_input .form-group input[type=text]:focus,
+.rb_common_input .form-group input[type=number]:focus,
+.rb_common_input .form-group input[type=tel]:focus,
+.rb_common_input .form-group input[type=date]:focus,
+.rb_common_input .form-group input[type=time]:focus,
+.rb_common_input .form-group input[type=email]:focus,
+.rb_common_input .form-group input[type=password]:focus,
+.rb_common_input .form-group textarea:focus {
+  outline: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_common_input .form-group input[type=text],
+  .rb_common_input .form-group input[type=number],
+  .rb_common_input .form-group input[type=tel],
+  .rb_common_input .form-group input[type=date],
+  .rb_common_input .form-group input[type=time],
+  .rb_common_input .form-group input[type=email],
+  .rb_common_input .form-group input[type=password],
+  .rb_common_input .form-group textarea {
+    height: 46px;
+  }
+}
+.rb_common_input .form-group textarea {
+  height: 166px;
+  resize: vertical;
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_common_input .form-group textarea {
+    height: 134px;
+  }
+}
+.rb_common_input .form-group input[type=date] {
+  cursor: pointer;
+}
+.rb_common_input .form-group input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+  -webkit-appearance: none;
+}
+.rb_common_input .form-group input[type=date]::-webkit-inner-spin-button, .rb_common_input .form-group input[type=date]::-webkit-clear-button {
+  display: none;
+}
+.rb_common_input .form-group input[type=date]:focus {
+  outline: none;
+}
+.rb_common_input .form-group .nice-select,
+.rb_common_input .form-group select {
+  width: 100%;
+  padding: 14px 20px;
+  height: 54px;
+  border-radius: 8px;
+  border: 1px solid rgba(13, 44, 80, 0.1);
+  background: #FFF;
+  color: #17304E;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_common_input .form-group .nice-select,
+  .rb_common_input .form-group select {
+    height: 46px;
+    padding: 9px 20px;
+  }
+}
+.rb_common_input .form-group .nice-select:after {
+  width: 9px;
+  height: 9px;
+  right: 20px;
+}
+.rb_common_input .form-group select:focus {
+  outline: none;
+}
+.rb_common_input .input_icon_wrap {
+  position: relative;
+}
+.rb_common_input .input_icon_wrap .input_icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.rb_common_input .input_icon_wrap .input_textarea_icon {
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  transform: translateY(-10%);
+  pointer-events: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_common_input .input_icon_wrap .input_textarea_icon {
+    top: 12%;
+  }
+}
+.rb_common_input .input_icon_wrap .input_select_icon {
+  position: absolute;
+  left: 20px;
+  transform: translateY(50%);
+  pointer-events: none;
+}
+.rb_common_input .input_icon_wrap input[type=text],
+.rb_common_input .input_icon_wrap input[type=tel],
+.rb_common_input .input_icon_wrap input[type=email],
+.rb_common_input .input_icon_wrap textarea {
+  padding-left: 50px !important;
+}
+.rb_common_input .input_icon_wrap .nice-select,
+.rb_common_input .input_icon_wrap select {
+  padding-left: 50px !important;
+}
+
+.rb_application_form {
+  position: relative;
+  overflow: hidden;
+  background: #0B2545;
+}
+.rb_application_form .rb_shape {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 1116px;
+  height: 1115px;
+  flex-shrink: 0;
+  border-radius: 1116px;
+  border: 2px dashed rgb(35, 58, 86);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_application_form .rb_shape {
+    top: 10%;
+    width: 593px;
+    height: 593px;
+    flex-shrink: 0;
+    border-radius: 593px;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_application_form .header_area_2 .heading h1 br {
+    display: block !important;
+  }
+}
+.rb_application_form .rb_application_card {
+  display: flex;
+  max-width: 712px;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 20px;
+  border: 2px solid #FFF;
+  background: #F7F7F7;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_application_form .rb_application_card {
+    padding: 20px;
+  }
+}
+
 .btn_wrapper a {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
