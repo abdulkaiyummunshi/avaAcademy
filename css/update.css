@@ -34032,6 +34032,11 @@ header {
   letter-spacing: -0.24px;
   padding-bottom: 20px;
 }
+@media only screen and (max-width: 991px) {
+  .rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_card_title {
+    font-size: 22px;
+  }
+}
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   .rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_card_title {
     font-size: 20px;
@@ -34040,6 +34045,9 @@ header {
 }
 .rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_thumb {
   position: relative;
+}
+.rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_thumb img {
+  width: 100%;
 }
 .rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_thumb .rb_play_icon {
   position: absolute;

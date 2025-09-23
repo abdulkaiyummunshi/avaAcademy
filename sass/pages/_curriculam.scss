@@ -175,13 +175,16 @@
                 .rb_single_card {
                     .rb_card_title {
                         color: #4A4D56;
-                        font-family: Archivo;
+                        font-family: $font8;
                         font-size: 24px;
                         font-style: normal;
                         font-weight: 500;
                         line-height: 36px;
                         letter-spacing: -0.24px;
                         padding-bottom: 20px;
+                        @include md {
+                            font-size: 22px;
+                        }                        
                         @include xs {
                             font-size: 20px;
                             line-height: 30px;
@@ -189,6 +192,9 @@
                     }
                     .rb_thumb {
                         position: relative;
+                        img {
+                            width: 100%;
+                        }
                         .rb_play_icon {
                             position: absolute;
                             top: 50%;
