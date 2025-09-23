@@ -34251,6 +34251,149 @@ header {
 }
 
 /*---Hero four Section End---*/
+.rb_step_card_two {
+  position: relative;
+  background: #0B2545;
+}
+.rb_step_card_two .rb_shape1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_step_card_two .rb_shape1 img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_step_card_two .rb_shape1 img {
+    display: none;
+  }
+}
+.rb_step_card_two .rb_shape2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: end;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_step_card_two .rb_shape2 img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_step_card_two .rb_shape2 img {
+    display: none;
+  }
+}
+.rb_step_card_two .rb_shape3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_step_card_two .rb_shape3 img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_step_card_two .rb_shape3 img {
+    display: none;
+  }
+}
+.rb_step_card_two .rb_shape4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: end;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_step_card_two .rb_shape4 img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_step_card_two .rb_shape4 img {
+    display: none;
+  }
+}
+.rb_step_card_two .rb_card {
+  display: flex;
+  padding: 36px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 16px;
+  background: #17304E;
+}
+.rb_step_card_two .rb_card .rb_step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #F7F7F7;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  letter-spacing: -0.4px;
+}
+.rb_step_card_two .rb_card .rb_step span {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  aspect-ratio: 1/1;
+  border-radius: 35px;
+  background: #FFC857;
+}
+.rb_step_card_two .rb_card h3 {
+  color: #F7F7F7;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px; /* 137.5% */
+  letter-spacing: -0.96px;
+}
+@media only screen and (max-width: 1399px) {
+  .rb_step_card_two .rb_card h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .rb_step_card_two .rb_card h3 br {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_step_card_two .rb_card h3 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+.rb_step_card_two .rb_card .rb_thumb {
+  border-radius: 16px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .rb_step_card_two .rb_card .rb_thumb {
+    width: 100%;
+  }
+}
+.rb_step_card_two .rb_card .rb_thumb img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_step_card_two .rb_card .rb_thumb img {
+    height: auto;
+  }
+}
+
 .btn_wrapper a {
   font-family: "Poppins", sans-serif;
   font-weight: 500;

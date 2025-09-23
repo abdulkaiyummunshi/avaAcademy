@@ -335,3 +335,132 @@
     }
 }
 /*---Hero four Section End---*/
+
+// Step Card Two Start
+.rb_step_card_two {
+    position: relative;
+    background: #0B2545;
+    .rb_shape1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            @include xxxl {
+                width: 70%;
+            }
+            @include xxl {
+                display: none;
+            }
+        }
+    }
+    .rb_shape2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: end;
+        img {
+            @include xxxl {
+                width: 70%;
+            }
+            @include xxl {
+                display: none;
+            }            
+        }        
+    }
+    .rb_shape3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        img {
+            @include xxxl {
+                width: 70%;
+            }
+            @include xxl {
+                display: none;
+            }            
+        }        
+    }
+    .rb_shape4 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: end;
+        img {
+            @include xxxl {
+                width: 70%;
+            }
+            @include xxl {
+                display: none;
+            }            
+        }        
+    }
+    .rb_card {
+        display: flex;
+        padding: 36px 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        border-radius: 16px;
+        background: #17304E;
+        .rb_step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #F7F7F7;
+            font-family: $font7;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px; /* 160% */
+            letter-spacing: -0.4px;
+            span {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                aspect-ratio: 1/1;
+                border-radius: 35px;
+                background: #FFC857;
+            }
+        }
+        h3 {
+            color: #F7F7F7;
+            font-family:  $font10;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 44px; /* 137.5% */
+            letter-spacing: -0.96px;
+            @include xl {
+                br {
+                    display: none;
+                }
+                font-size: 25px;
+                line-height: 30px;
+            }
+            @include xs {
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+        .rb_thumb {
+            border-radius: 16px;
+            overflow: hidden;
+            @include md {
+                width: 100%;
+            }
+            img {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+                @include sm {
+                    height: auto;
+                }
+            }
+        }        
+    }
+}
+// Step Card End
