@@ -1028,6 +1028,13 @@
             }
             img{
                 display: inline;
+                transition: all 0.3s;
+            }
+
+            &:hover{
+                img{
+                    filter: invert(1);
+                }
             }
         }
         &.style_1 {
