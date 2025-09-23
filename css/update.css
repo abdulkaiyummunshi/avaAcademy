@@ -32374,6 +32374,42 @@ header {
     letter-spacing: -2.5px;
   }
 }
+.header_area_2 .heading.style_4 h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 115%;
+  letter-spacing: -2.5px;
+}
+@media only screen and (max-width: 1599px) {
+  .header_area_2 .heading.style_4 h1 br {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1399px) {
+  .header_area_2 .heading.style_4 h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .header_area_2 .heading.style_4 h1 {
+    font-size: 38px;
+    line-height: 56px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .header_area_2 .heading.style_4 h1 {
+    font-size: 36px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    line-height: 115%;
+    letter-spacing: -2.5px;
+  }
+}
 .header_area_2 .rb_desc {
   color: #3F444B;
   font-family: "Inter", sans-serif;
@@ -32386,6 +32422,17 @@ header {
 }
 .header_area_2 .rb_desc.style_1 {
   color: #fff;
+}
+.header_area_2 .rb_desc.style_2 {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  max-width: 527px;
 }
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   .header_area_2 .rb_desc {
@@ -33825,7 +33872,7 @@ header {
   background: #4A4D56;
 }
 
-/*---Hero Two Section Start---*/
+/*---Hero Three Section Start---*/
 .rb_hero_three {
   position: relative;
   overflow: hidden;
@@ -33906,7 +33953,7 @@ header {
   background: rgba(255, 255, 255, 0.05);
 }
 
-/*---Hero Two Section End---*/
+/*---Hero Three Section End---*/
 .rb_curriculum_list {
   position: relative;
 }
@@ -34024,7 +34071,7 @@ header {
 }
 .rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_card_title {
   color: #4A4D56;
-  font-family: Archivo;
+  font-family: "Archivo", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -34056,6 +34103,154 @@ header {
   transform: translate(-50%, -50%);
 }
 
+/*---Hero Four Section Start---*/
+.rb_hero_four {
+  position: relative;
+  overflow: hidden;
+  background: #0B2545;
+}
+.rb_hero_four .rb_shape {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 1116px;
+  height: 1115px;
+  flex-shrink: 0;
+  border-radius: 1116px;
+  border: 2px dashed rgb(35, 58, 86);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_four .rb_shape {
+    top: 37%;
+    width: 593px;
+    height: 593px;
+    flex-shrink: 0;
+    border-radius: 593px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_hero_four .rb_shape {
+    top: 25%;
+  }
+}
+.rb_hero_four .rb_thumb {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 991px) {
+  .rb_hero_four .rb_thumb {
+    top: 40%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_hero_four .rb_thumb img {
+    width: 580px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_four .rb_thumb img {
+    width: 472px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_hero_four .rb_thumb {
+    top: 33%;
+  }
+  .rb_hero_four .rb_thumb img {
+    width: 320px;
+  }
+}
+.rb_hero_four .hero_wrapper {
+  margin-top: 200px;
+  height: 700px;
+  position: relative;
+}
+@media only screen and (max-width: 1399px) {
+  .rb_hero_four .hero_wrapper {
+    margin-top: 180px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .rb_hero_four .hero_wrapper {
+    margin-top: 160px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_four .hero_wrapper {
+    height: 557px;
+  }
+}
+.rb_hero_four .hero_wrapper .fix_hero {
+  margin-top: 315px;
+}
+@media only screen and (max-width: 991px) {
+  .rb_hero_four .hero_wrapper .fix_hero {
+    margin-top: 360px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_four .hero_wrapper .fix_hero {
+    margin-top: 300px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .rb_hero_four .hero_wrapper .fix_hero {
+    margin-top: 217px;
+  }
+}
+.rb_hero_four .hero_wrapper .rb_content {
+  margin-top: 20px;
+  display: flex;
+  padding: 20px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #17304E;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_hero_four .hero_wrapper .rb_content {
+    padding: 16px;
+    height: auto;
+  }
+}
+.rb_hero_four .hero_wrapper .rb_content .rb_listing ul li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #F7F7F7;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+  letter-spacing: -0.16px;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_four .hero_wrapper .rb_content .rb_listing ul li {
+    font-size: 14px;
+  }
+}
+.rb_hero_four .hero_wrapper .rb_content .rb_listing ul li:not(:last-child) {
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_four .hero_wrapper .rb_content .rb_listing ul li:not(:last-child) {
+    padding-bottom: 13px;
+  }
+}
+.rb_hero_four .hero_wrapper .rb_content .rb_listing ul li .br {
+  width: 520px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/*---Hero four Section End---*/
 .btn_wrapper a {
   font-family: "Poppins", sans-serif;
   font-weight: 500;

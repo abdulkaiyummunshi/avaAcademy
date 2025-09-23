@@ -1,4 +1,4 @@
-/*---Hero Two Section Start---*/
+/*---Hero Three Section Start---*/
 .rb_hero_three {
     position: relative;
     overflow: hidden;
@@ -72,7 +72,7 @@
         }
     }
 }
-/*---Hero Two Section End---*/
+/*---Hero Three Section End---*/
         
 // Curriculumn Section Start
 .rb_curriculum_list {
@@ -208,3 +208,130 @@
     }
 }
 // Curriculumn Section End
+
+
+/*---Hero Four Section Start---*/
+.rb_hero_four {
+    position: relative;
+    overflow: hidden;
+    background: #0B2545;
+    .rb_shape {
+          position: absolute;
+          top: 9%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-90deg);
+          width: 1116px;
+          height: 1115px;
+          flex-shrink: 0;
+          border-radius: 1116px;
+          border: 2px dashed rgb(35, 58, 86);
+          background: linear-gradient(270deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.00) 100%);
+          @include xs {
+            top: 37%;
+            width: 593px;
+            height: 593px;
+            flex-shrink: 0;
+            border-radius: 593px;
+          }
+          @include xxs {
+            top: 25%;
+          }
+    }
+    .rb_thumb {
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        @include md {
+            top: 40%;
+        }   
+        @include sm {
+            img {
+                width: 580px;
+            }
+        }    
+        @include xs {
+            img {
+                width: 472px;
+            }
+        }    
+        @include xxs {
+            top: 33%;
+            img {
+                width: 320px;
+            }
+        }    
+    }
+    .hero_wrapper {
+        margin-top: 200px;
+        height: 700px;
+        position: relative;
+        @include xl {
+            margin-top: 180px;
+        }
+        @include lg {
+            margin-top: 160px;
+        }
+        @include xs {
+            height: 557px;
+        }
+        .fix_hero {
+            margin-top: 315px;
+            @include md {
+                margin-top: 360px;
+            }
+            @include xs {
+                margin-top: 300px;
+            }
+            @include xxs {
+                margin-top: 217px;
+            }
+        }
+        .rb_content {
+            margin-top: 20px;
+            display: flex;
+            padding: 20px 24px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            align-self: stretch;
+            border-radius: 12px;
+            background: #17304E;
+            @include sm {
+                padding: 16px;
+                height: auto;
+            }
+            .rb_listing {
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        color: #F7F7F7;
+                        font-family: $font7;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px; /* 175% */
+                        letter-spacing: -0.16px;
+                        @include xs {
+                            font-size: 14px;
+                        }                    
+                        &:not(:last-child) {
+                            padding-bottom: 20px;
+                            @include xs {
+                                padding-bottom: 13px;
+                            }
+                        }
+                        .br {
+                            width: 520px;
+                            height: 1px;
+                            background: rgba(255, 255, 255, 0.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*---Hero four Section End---*/
