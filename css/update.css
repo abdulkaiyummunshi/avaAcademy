@@ -33308,6 +33308,10 @@ header {
 }
 .berlin_slider .nav-item .icon img {
   display: inline;
+  transition: all 0.3s;
+}
+.berlin_slider .nav-item .icon:hover img {
+  filter: invert(1);
 }
 .berlin_slider .nav-item.style_1 {
   font-weight: 700;
