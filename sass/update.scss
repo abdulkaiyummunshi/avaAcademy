@@ -6,6 +6,7 @@
 @import "./partials/back_top";
 @import "./partials/footer";
 @import "./pages/home2.scss";
+@import "./pages/curriculam.scss";
 // @import "./pages/home.scss";
 // @import "./pages/course-details.scss";
 // @import "./pages/about_us.scss";
@@ -24,6 +25,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $font-family;
+}
+body {
+    background: #F7F7F7;
 }
 html {
   scroll-behavior: smooth; }

@@ -32340,6 +32340,45 @@ header {
   font-weight: 700;
   font-family: "Playfair Display", serif;
 }
+.header_area_2 .heading.style_3 h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 115%;
+  letter-spacing: -2.5px;
+}
+.header_area_2 .heading.style_3 h1 .highlight {
+  font-style: normal;
+  font-family: "Playfair Display", serif;
+}
+@media only screen and (max-width: 1599px) {
+  .header_area_2 .heading.style_3 h1 br {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1399px) {
+  .header_area_2 .heading.style_3 h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .header_area_2 .heading.style_3 h1 {
+    font-size: 38px;
+    line-height: 56px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .header_area_2 .heading.style_3 h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 115%;
+    letter-spacing: -2.5px;
+  }
+}
 .header_area_2 .rb_desc {
   color: #3F444B;
   font-family: "Inter", sans-serif;
@@ -33787,6 +33826,202 @@ header {
   background: #4A4D56;
 }
 
+/*---Hero Two Section Start---*/
+.rb_hero_three {
+  position: relative;
+  overflow: hidden;
+  background: #0B2545;
+  min-height: 100vh;
+}
+.rb_hero_three .rb_shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1324px;
+  height: 1324px;
+  flex-shrink: 0;
+  border-radius: 1324px;
+  opacity: 0.06;
+  background: #FFF;
+}
+.rb_hero_three .hero_wrapper {
+  margin-top: 200px;
+  height: 800px;
+  position: relative;
+}
+@media only screen and (max-width: 1399px) {
+  .rb_hero_three .hero_wrapper {
+    margin-top: 180px;
+    height: 750px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .rb_hero_three .hero_wrapper {
+    height: auto;
+    margin-top: 160px;
+    margin-bottom: 90px;
+  }
+}
+.rb_hero_three .hero_wrapper .rb_content {
+  margin-top: 20px;
+  display: flex;
+  padding: 20px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #17304E;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_hero_three .hero_wrapper .rb_content {
+    padding: 16px;
+    height: auto;
+  }
+}
+.rb_hero_three .hero_wrapper .rb_content .rb_listing ul li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #F7F7F7;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+  letter-spacing: -0.16px;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_three .hero_wrapper .rb_content .rb_listing ul li {
+    font-size: 14px;
+  }
+}
+.rb_hero_three .hero_wrapper .rb_content .rb_listing ul li:not(:last-child) {
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_three .hero_wrapper .rb_content .rb_listing ul li:not(:last-child) {
+    padding-bottom: 13px;
+  }
+}
+.rb_hero_three .hero_wrapper .rb_content .rb_listing ul li .br {
+  width: 520px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/*---Hero Two Section End---*/
+.rb_curriculum_list {
+  position: relative;
+}
+.rb_curriculum_list .rb_card {
+  display: flex;
+  width: 1200px;
+  padding: 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 20px;
+  border: 1px solid #E7E8E9;
+  background: #FFF;
+}
+.rb_curriculum_list .rb_card h3 {
+  color: #0B2545;
+  font-family: "Playfair Display";
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+  letter-spacing: -2.2px;
+}
+@media only screen and (max-width: 991px) {
+  .rb_curriculum_list .rb_card h3 {
+    font-size: 38px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_curriculum_list .rb_card h3 {
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: -1.4px;
+  }
+}
+.rb_curriculum_list .rb_card .rb_content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid #E7E8E9;
+  background: #F7F7F7;
+}
+.rb_curriculum_list .rb_card .rb_content h4 {
+  color: #0B2545;
+  font-family: "Playfair Display";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: -0.96px;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_curriculum_list .rb_card .rb_content {
+    padding: 16px;
+    height: auto;
+  }
+}
+.rb_curriculum_list .rb_card .rb_content .rb_listing ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #4A4D56;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  letter-spacing: -0.2px;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_curriculum_list .rb_card .rb_content .rb_listing ul li {
+    font-size: 16px;
+  }
+}
+.rb_curriculum_list .rb_card .rb_content .rb_listing ul li:not(:last-child) {
+  padding-bottom: 16px;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_curriculum_list .rb_card .rb_content .rb_listing ul li:not(:last-child) {
+    padding-bottom: 13px;
+  }
+}
+.rb_curriculum_list .rb_card .rb_content.style_1 {
+  padding: 0;
+  border: none;
+  background: inherit;
+}
+.rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_card_title {
+  color: #4A4D56;
+  font-family: Archivo;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -0.24px;
+  padding-bottom: 20px;
+}
+.rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_thumb {
+  position: relative;
+}
+.rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_thumb .rb_play_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn_wrapper a {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -34243,6 +34478,10 @@ header {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #F7F7F7;
 }
 
 html {

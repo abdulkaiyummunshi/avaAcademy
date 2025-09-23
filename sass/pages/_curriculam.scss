@@ -1,0 +1,187 @@
+/*---Hero Two Section Start---*/
+.rb_hero_three {
+    position: relative;
+    overflow: hidden;
+    background: #0B2545;
+    min-height: 100vh;
+    .rb_shape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1324px;
+        height: 1324px;
+        flex-shrink: 0;
+        border-radius: 1324px;
+        opacity: 0.06;
+        background: #FFF;
+    }
+    .hero_wrapper{
+        margin-top: 200px;
+        height: 800px;
+        position: relative;
+        @include xl {
+            margin-top: 180px;
+            height: 750px;
+        }
+        @include lg {
+            height: auto;
+            margin-top: 160px;
+            margin-bottom: 90px;
+        }
+        .rb_content {
+            margin-top: 20px;
+            display: flex;
+            padding: 20px 24px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            align-self: stretch;
+            border-radius: 12px;
+            background: #17304E;
+            @include sm {
+                padding: 16px;
+                height: auto;
+            }
+            .rb_listing {
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        color: #F7F7F7;
+                        font-family: $font7;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px; /* 175% */
+                        letter-spacing: -0.16px;
+                        @include xs {
+                            font-size: 14px;
+                        }                    
+                        &:not(:last-child) {
+                            padding-bottom: 20px;
+                            @include xs {
+                                padding-bottom: 13px;
+                            }
+                        }
+                        .br {
+                            width: 520px;
+                            height: 1px;
+                            background: rgba(255, 255, 255, 0.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*---Hero Two Section End---*/
+        
+// Curriculumn Section Start
+.rb_curriculum_list {
+    position: relative;
+    .rb_card {
+        display: flex;
+        width: 1200px;
+        padding: 48px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        border-radius: 20px;
+        border: 1px solid #E7E8E9;
+        background: #FFF;
+        h3 {
+            color: #0B2545;
+            font-family: "Playfair Display";
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 64px; 
+            letter-spacing: -2.2px;
+            @include md {
+                font-size: 38px;
+            }
+            @include sm {
+                font-size: 28px;
+                line-height: 42px; 
+                letter-spacing: -1.4px;
+            }
+        }
+        .rb_content {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            gap: 20px;
+            align-self: stretch;
+            border-radius: 16px;
+            border: 1px solid #E7E8E9;
+            background: #F7F7F7;
+            h4 {
+                color: #0B2545;
+                font-family: "Playfair Display";
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 44px; 
+                letter-spacing: -0.96px;
+            }
+            @include sm {
+                padding: 16px;
+                height: auto;
+            }
+            .rb_listing {
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        color: #4A4D56;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 32px; /* 160% */
+                        letter-spacing: -0.2px;
+                        @include xs {
+                            font-size: 16px;
+                        }                    
+                        &:not(:last-child) {
+                            padding-bottom: 16px;
+                            @include xs {
+                                padding-bottom: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.style_1 {
+                padding: 0;
+                border: none;
+                background: inherit;
+                .rb_single_card {
+                    .rb_card_title {
+                        color: #4A4D56;
+                        font-family: Archivo;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 36px;
+                        letter-spacing: -0.24px;
+                        padding-bottom: 20px;
+                    }
+                    .rb_thumb {
+                        position: relative;
+                        .rb_play_icon {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Curriculumn Section End
