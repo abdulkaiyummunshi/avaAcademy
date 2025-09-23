@@ -3,31 +3,27 @@
     position: relative;
     overflow: hidden;
     background: #0B2545;
-    min-height: 100vh;
     .rb_shape {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 1324px;
-        height: 1324px;
+        width: 1043px;
+        height: 1043px;
         flex-shrink: 0;
-        border-radius: 1324px;
+        border-radius: 1043px;
         opacity: 0.06;
         background: #FFF;
     }
     .hero_wrapper{
         margin-top: 200px;
-        height: 800px;
+        height: 600px;
         position: relative;
         @include xl {
             margin-top: 180px;
-            height: 750px;
         }
         @include lg {
-            height: auto;
             margin-top: 160px;
-            margin-bottom: 90px;
         }
         .rb_content {
             margin-top: 20px;
@@ -81,6 +77,15 @@
 // Curriculumn Section Start
 .rb_curriculum_list {
     position: relative;
+    .rb_all_section {
+        margin-top: -372px;
+        @include md {
+            margin-top: -415px;
+        }
+        @include xs {
+            margin-top: -440px;
+        }
+    }
     .rb_card {
         display: flex;
         width: 1200px;
@@ -91,6 +96,9 @@
         border-radius: 20px;
         border: 1px solid #E7E8E9;
         background: #FFF;
+        @include sm {
+            padding: 20px;
+        }
         h3 {
             color: #0B2545;
             font-family: "Playfair Display";
@@ -125,6 +133,10 @@
                 font-weight: 400;
                 line-height: 44px; 
                 letter-spacing: -0.96px;
+                @include xs {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
             }
             @include sm {
                 padding: 16px;
@@ -145,6 +157,7 @@
                         letter-spacing: -0.2px;
                         @include xs {
                             font-size: 16px;
+                            line-height: 26px;
                         }                    
                         &:not(:last-child) {
                             padding-bottom: 16px;
@@ -169,6 +182,10 @@
                         line-height: 36px;
                         letter-spacing: -0.24px;
                         padding-bottom: 20px;
+                        @include xs {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }                        
                     }
                     .rb_thumb {
                         position: relative;

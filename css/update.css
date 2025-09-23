@@ -32354,18 +32354,13 @@ header {
   font-style: normal;
   font-family: "Playfair Display", serif;
 }
-@media only screen and (max-width: 1599px) {
-  .header_area_2 .heading.style_3 h1 br {
-    display: none;
-  }
-}
 @media only screen and (max-width: 1399px) {
   .header_area_2 .heading.style_3 h1 {
     font-size: 50px;
     line-height: 60px;
   }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 0px) and (max-width: 767px) {
   .header_area_2 .heading.style_3 h1 {
     font-size: 38px;
     line-height: 56px;
@@ -33835,36 +33830,32 @@ header {
   position: relative;
   overflow: hidden;
   background: #0B2545;
-  min-height: 100vh;
 }
 .rb_hero_three .rb_shape {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1324px;
-  height: 1324px;
+  width: 1043px;
+  height: 1043px;
   flex-shrink: 0;
-  border-radius: 1324px;
+  border-radius: 1043px;
   opacity: 0.06;
   background: #FFF;
 }
 .rb_hero_three .hero_wrapper {
   margin-top: 200px;
-  height: 800px;
+  height: 600px;
   position: relative;
 }
 @media only screen and (max-width: 1399px) {
   .rb_hero_three .hero_wrapper {
     margin-top: 180px;
-    height: 750px;
   }
 }
 @media only screen and (max-width: 1199px) {
   .rb_hero_three .hero_wrapper {
-    height: auto;
     margin-top: 160px;
-    margin-bottom: 90px;
   }
 }
 .rb_hero_three .hero_wrapper .rb_content {
@@ -33919,6 +33910,19 @@ header {
 .rb_curriculum_list {
   position: relative;
 }
+.rb_curriculum_list .rb_all_section {
+  margin-top: -372px;
+}
+@media only screen and (max-width: 991px) {
+  .rb_curriculum_list .rb_all_section {
+    margin-top: -415px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_curriculum_list .rb_all_section {
+    margin-top: -440px;
+  }
+}
 .rb_curriculum_list .rb_card {
   display: flex;
   width: 1200px;
@@ -33929,6 +33933,11 @@ header {
   border-radius: 20px;
   border: 1px solid #E7E8E9;
   background: #FFF;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .rb_curriculum_list .rb_card {
+    padding: 20px;
+  }
 }
 .rb_curriculum_list .rb_card h3 {
   color: #0B2545;
@@ -33970,6 +33979,12 @@ header {
   line-height: 44px;
   letter-spacing: -0.96px;
 }
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_curriculum_list .rb_card .rb_content h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .rb_curriculum_list .rb_card .rb_content {
     padding: 16px;
@@ -33991,6 +34006,7 @@ header {
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   .rb_curriculum_list .rb_card .rb_content .rb_listing ul li {
     font-size: 16px;
+    line-height: 26px;
   }
 }
 .rb_curriculum_list .rb_card .rb_content .rb_listing ul li:not(:last-child) {
@@ -34015,6 +34031,12 @@ header {
   line-height: 36px;
   letter-spacing: -0.24px;
   padding-bottom: 20px;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_card_title {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .rb_curriculum_list .rb_card .rb_content.style_1 .rb_single_card .rb_thumb {
   position: relative;
