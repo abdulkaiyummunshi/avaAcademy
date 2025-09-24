@@ -34342,14 +34342,23 @@ header {
 }
 .rb_common_input .form-group label {
   display: block;
+  color: #4A4D56;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.16px;
+  margin-bottom: 13px;
+}
+.rb_common_input .form-group label span {
   color: #3B3B3B;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
   letter-spacing: -0.16px;
-  margin-bottom: 13px;
 }
 .rb_common_input .form-group input[type=text],
 .rb_common_input .form-group input[type=number],
@@ -34504,7 +34513,7 @@ header {
 }
 .rb_application_form .rb_shape {
   position: absolute;
-  top: 9%;
+  top: 34%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-90deg);
   width: 1116px;
@@ -34521,6 +34530,46 @@ header {
     height: 593px;
     flex-shrink: 0;
     border-radius: 593px;
+  }
+}
+.rb_application_form .rb_shape_1 {
+  position: absolute;
+  top: 32%;
+  left: 16%;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_application_form .rb_shape_1 {
+    left: 11%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_application_form .rb_shape_1 {
+    left: 5%;
+  }
+}
+@media only screen and (max-width: 1399px) {
+  .rb_application_form .rb_shape_1 {
+    display: none;
+  }
+}
+.rb_application_form .rb_shape_2 {
+  position: absolute;
+  top: 13%;
+  right: 17%;
+}
+@media only screen and (max-width: 1699px) {
+  .rb_application_form .rb_shape_2 {
+    right: 12%;
+  }
+}
+@media only screen and (max-width: 1599px) {
+  .rb_application_form .rb_shape_2 {
+    right: 7%;
+  }
+}
+@media only screen and (max-width: 1399px) {
+  .rb_application_form .rb_shape_2 {
+    display: none;
   }
 }
 @media only screen and (max-width: 1599px) {

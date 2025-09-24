@@ -421,14 +421,23 @@
     .form-group {
         label {
             display: block;
-            color: #3B3B3B;
-            font-family: Inter;
+            color: #4A4D56;
+            font-family: $font7;
             font-size: 16px;
             font-style: normal;
-            font-weight: 600;
-            line-height: 26px; 
+            font-weight: 400;
+            line-height: 26px;
             letter-spacing: -0.16px;
             margin-bottom: 13px;
+            span {
+                color: #3B3B3B;
+                font-family: $font7;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 26px; 
+                letter-spacing: -0.16px;                
+            }
         }
 
         input[type="text"],
@@ -565,7 +574,7 @@
     background: #0B2545;
     .rb_shape {
         position: absolute;
-        top: 9%;
+        top: 34%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(-90deg);
         width: 1116px;
@@ -580,6 +589,34 @@
             height: 593px;
             flex-shrink: 0;
             border-radius: 593px;
+        }
+    }
+    .rb_shape_1 {
+        position: absolute;
+        top: 32%;
+        left: 16%;
+        @include xxxl {
+            left: 11%;
+        }
+        @include xxl {
+            left: 5%;
+        }
+        @include xl {
+            display: none;
+        }
+    }
+    .rb_shape_2 {
+        position: absolute;
+        top: 13%;
+        right: 17%;
+        @include xxxl {
+            right: 12%;
+        }
+        @include xxl {
+            right: 7%;
+        }
+        @include xl {
+            display: none;
         }
     }
     .header_area_2 {
