@@ -464,6 +464,7 @@ header{
 		@include breakpoint (xl){
 			border: none;
 			background: inherit;
+			box-shadow: none;
 			margin-top: 28px;
 		}
 		.header-wrap {
@@ -773,6 +774,48 @@ header{
 						padding: 26px 24px;
 						@include xl {
 							padding: 30px 22px;
+						}
+						}
+					}
+					ul {
+						li {
+						> a {
+							padding: 10px 20px;
+						}
+						}
+					}
+					}
+				}
+			}
+		}
+		&.style_3 {
+			.header-wrap{
+				margin-top: 0;
+				@include breakpoint(max-xl){
+					padding: 14px 0;
+				}
+				@include breakpoint(max-lg){
+					padding: 9px 0;
+				}
+				@include breakpoint(max-sm){
+					padding: 12px 0;
+				}
+
+				.logo{
+					.primary-logo{
+						display: none;
+					}
+					.sticky-logo{
+						display: block;
+					}
+				}
+				.main-menu {
+					ul {
+					li {
+						a {
+						padding: 26px 24px;
+						@include xl {
+							padding: 30px 18px;
 						}
 						}
 					}
