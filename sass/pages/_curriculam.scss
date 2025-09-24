@@ -580,6 +580,10 @@
             font-weight: 400;
             line-height: 22px; /* 157.143% */
             letter-spacing: -0.28px;
+            padding-top: 3px;
+            span {
+                color: #0B2545;
+            }
         }
         input[type="checkbox"] {
             width: 24px;
@@ -902,6 +906,9 @@
         margin-top: 200px;
         height: 700px;
         position: relative;
+        &.style_1 {
+            margin-top: 175px;
+        }
         @include xs {
             margin-top: 230px;
         }
