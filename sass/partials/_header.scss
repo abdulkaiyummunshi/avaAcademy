@@ -458,6 +458,219 @@ header{
 			}
 		}
 	}
+	&.style_3 {
+		border-bottom: 1px solid #294464;
+		background: #0B2545;
+		@include breakpoint (xl){
+			border: none;
+			background: inherit;
+			margin-top: 28px;
+		}
+		.header-wrap {
+			@include breakpoint (xl){
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-radius: 40px;
+				border: 1px solid #294464;
+				background: #0B2545;
+				backdrop-filter: blur(5px);
+				display: flex;
+				padding: 10px 16px 10px 20px;
+			}
+			.main-menu {
+				ul {
+					margin: 0;
+					padding: 0;
+					position: relative;
+					li {
+						display: inline-block;
+						padding: 0;
+						position: relative;
+						&.menu-item-has-children{
+							&::after{
+							content: "\f107";
+							font-family: "FontAwesome";
+							position: absolute;
+							top: 50%;
+							color: #FFF;
+							display: inline-block;
+							@include transformY(-50%);
+							right: 0;
+							@include transition(0.4s);
+							
+						}
+						&:hover{
+							&::after{
+								margin-top: -10px;
+							color: $primary;
+							transform: rotate(180deg);
+							-webkit-transform: rotate(180deg);
+							-moz-transform: rotate(180deg);
+							-ms-transform: rotate(180deg);
+							-o-transform: rotate(180deg);
+						}
+					}
+
+					}
+					@include breakpoint(max-xxxl){
+						margin: 0 5px;
+					}
+					@include breakpoint(max-xxl){
+						margin: 0 0;
+					}
+					&:hover{
+						> a{
+							color: $primary;
+						}
+					}
+			
+					&.active,
+					&.current-menu-ancestor {
+					position: relative;
+					> a {
+						color: var(--theme-color);
+					}
+					}
+					&.dropdown {
+					> a {
+						padding-right: 30px !important;
+			
+						&:before {
+						visibility: visible;
+						}
+					}
+					.dropdown {
+						> a {
+						&:before {
+							visibility: visible;
+							right: 15px;
+							transform: rotate(-90deg);
+							margin-top: -4px;
+						}
+						}
+					}
+					}
+			
+					ul {
+					&.submenu {
+						li {
+						&.active {
+							> a {
+							position: relative;
+							z-index: 2;
+							//   color: #fff !important;
+							}
+						}
+						}
+					}
+					}
+					a {
+					display: block;
+					padding: 30px 24px;
+					text-decoration: none;
+					text-transform: capitalize;
+					@include transition(0.3s);
+					position: relative;
+					color: #F7F7F7;
+					font-family: $font7;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 28px; 
+					@include xl {
+						padding: 30px 18px;
+					}
+			
+			
+					&:before {
+						position: absolute;
+						content: "\f107";
+						font-family: "Font Awesome 6 Pro";
+						display: inline-block;
+						padding: 3px;
+						font-size: 14px;
+						top: 50%;
+						right: 6px;
+						line-height: 0;
+						visibility: hidden;
+					}
+					}
+					&:hover {
+					> ul {
+						visibility: visible;
+						transition: all 300ms ease;
+						opacity: 1;
+						transform: scaleY(1);
+					}
+					}
+					ul {
+					li {
+						&:hover {
+						ul {
+							visibility: visible;
+							top: -2px;
+						}
+						}
+					}
+					}
+				}
+				ul {
+					left: 0;
+					opacity: 0;
+					position: absolute;
+					text-align: left;
+					top: 100%;
+					visibility: hidden;
+					z-index: 99999;
+					transition: all 300ms ease;
+					border-top: 2px solid var(--theme-color);
+					box-shadow: 0px 10px 20px 0px rgba(8, 0, 42, 0.08);
+					transform-origin: top;
+					background-color:$white;
+					transform: scaleY(0);
+			
+					li {
+					float: none;
+					min-width: 210px;
+					margin: 0;
+					ul {
+						visibility: hidden;
+					}
+					i {
+						float: right;
+					}
+			
+					> a {
+						line-height: 120%;
+						padding: 10px 20px;
+						color: var(--heading-color);
+						border-bottom: 1px solid #E3E3E3;
+						margin-left: 0;
+						font-size: 16px;
+						font-family:  $font-family;
+						@include transition(0.4s);
+						&:hover {
+						background-color: $primary;
+						color: #fff;
+						}
+					}
+					&:last-child a {
+						border-bottom: 0px;
+					}
+					}
+					ul {
+					left: 100%;
+					transition: all 0.3s ease 0s;
+					opacity: 0;
+					border-top: 0px;
+					border-top: 2px solid var(--theme-color);
+					}
+				}
+				}
+			}
+		}
+	}
 
 }
 .header-style-2{
