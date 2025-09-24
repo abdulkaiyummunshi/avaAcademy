@@ -270,6 +270,12 @@
     @include sm {
         flex-direction: column;
     }
+    &.style_1 {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 7px;
+        flex-direction: row;
+    }
 }
 .rb_btn {
     display: flex;
@@ -291,6 +297,11 @@
         color: #F7F7F7;
         border: 1px solid #F7F7F7;
         background: inherit;
+    }
+    &.style_2 {
+        border-radius: 12px;
+        border: 1px solid rgba(11, 37, 69, 0.15);
+        background: #F7F7F7;
     }
     @include xs {
         padding: 12px 32px;

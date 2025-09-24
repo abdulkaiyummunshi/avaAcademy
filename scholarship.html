@@ -270,7 +270,7 @@
             </div>
             <div class="row mt-40">
               <div class="col-12 d-flex justify-content-center">
-                <a class="rb_btn" href="#">Begin My Application</a>
+                <a class="rb_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Begin My Application</a>
               </div>
             </div>
         </div>
@@ -439,8 +439,32 @@
     </footer>
     <!-- Footer End -->
 </div>
-</div>
-    
+</div>    
+
+  <!-- Modal -->
+  <div class="modal fade rb_modal_one" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rb_fix_padding">
+        <div class="modal-body">
+          <div class="rb_modal_thumb"><img src="images/home_two/icon/cap_icon_md.png" alt="png"></div>
+          <div class="rb_modal_title">Before You Go... Have <br> You Applied for a Full Scholarship?</div>
+          <div class="rb_modal_list">
+            <ul>
+              <li><span><img src="images/home_two/icon/check_icon.png" alt="png"></span> You may be eligible to join the program for free.</li>
+              <li class="rb_hr"></li>
+              <li><span><img src="images/home_two/icon/check_icon.png" alt="png"></span> Answer 3 short questions & submit your application today.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <div class="rb_btn_wrapper style_1">
+            <button type="button" class="rb_btn border-0 w-100">Apply Now</button>
+            <button type="button" class="rb_btn w-100 style_2" data-bs-dismiss="modal">No Thanks</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
 
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/jquery.meanmenu.min.js"></script>
