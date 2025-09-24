@@ -34011,7 +34011,7 @@ header {
   border: 1px solid rgba(13, 44, 80, 0.1);
   background: #FFF;
   color: #17304E;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -34201,7 +34201,7 @@ header {
   border: 1px solid rgba(13, 44, 80, 0.1);
   background: #FFF;
   color: #17304E;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
