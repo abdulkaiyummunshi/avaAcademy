@@ -308,7 +308,7 @@
         font-size: 14px;
     }
 }
-// Button style Start
+// Button style End
 
 /*---Hero Two Section Start---*/
 .rb_hero_two{
@@ -784,7 +784,7 @@
         }
         button{
             color: rgba(74, 77, 86, 0.70);
-            font-family: "Inter Tight";
+            font-family: $font7;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -1138,6 +1138,7 @@
 }
 /*---Brand Slider End---*/
 
+/*--- Footer Two Start---*/
 .footer_two {
     position: relative;
     overflow: hidden;
@@ -1534,3 +1535,4 @@
         }
     }
 }
+/*--- Footer Two End---*/

@@ -101,7 +101,7 @@
         }
         h3 {
             color: #0B2545;
-            font-family: "Playfair Display";
+            font-family: $font10;
             font-size: 44px;
             font-style: normal;
             font-weight: 500;
@@ -127,7 +127,7 @@
             background: #F7F7F7;
             h4 {
                 color: #0B2545;
-                font-family: "Playfair Display";
+                font-family: $font10;
                 font-size: 32px;
                 font-style: normal;
                 font-weight: 400;
@@ -149,7 +149,7 @@
                         align-items: center;
                         gap: 12px;
                         color: #4A4D56;
-                        font-family: Inter;
+                        font-family: $font7;
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 400;
@@ -374,7 +374,7 @@
         }
         h3 {
             color: #000106;
-            font-family: "Playfair Display";
+            font-family: $font10;
             font-size: 32px;
             font-style: normal;
             font-weight: 500;
@@ -505,7 +505,7 @@
             background: #FFF;
 
             color: #17304E;
-            font-family: Inter;
+            font-family: $font7;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -675,7 +675,7 @@
             background: #FFF;
 
             color: #17304E;
-            font-family: Inter;
+            font-family: $font7;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -834,7 +834,7 @@
     .rb_modal_title {
         color: #0B2545;
         text-align: center;
-        font-family: "Playfair Display";
+        font-family: $font10;
         font-size: 44px;
         font-style: normal;
         font-weight: 500;
