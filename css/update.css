@@ -34669,8 +34669,15 @@ header {
 }
 .rb_common_input2 .input_icon_wrap .input_icon {
   position: absolute;
-  top: 50%;
+  top: 72%;
   left: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.rb_common_input2 .input_icon_wrap .input_icon2 {
+  position: absolute;
+  top: 72%;
+  right: 20px;
   transform: translateY(-50%);
   pointer-events: none;
 }
