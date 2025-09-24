@@ -34540,8 +34540,6 @@ header {
   aspect-ratio: 1/1;
   border-radius: 4px;
   border: 1px solid rgba(13, 44, 80, 0.1);
-  background: #FFF;
-  backdrop-filter: blur(5px);
 }
 .rb_common_input2 .form-group label {
   display: block;
@@ -34873,37 +34871,21 @@ header {
 }
 .rb_hero_five .rb_thumb {
   position: absolute;
-  top: 36%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
-@media only screen and (max-width: 991px) {
-  .rb_hero_five .rb_thumb {
-    top: 40%;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 767px) {
+@media only screen and (max-width: 1599px) {
   .rb_hero_five .rb_thumb img {
-    width: 580px;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 575px) {
-  .rb_hero_five .rb_thumb img {
-    width: 472px;
-  }
-}
-@media only screen and (min-width: 0px) and (max-width: 479px) {
-  .rb_hero_five .rb_thumb {
-    top: 33%;
-  }
-  .rb_hero_five .rb_thumb img {
-    width: 320px;
+    width: 100%;
   }
 }
 .rb_hero_five .hero_wrapper {
   margin-top: 200px;
   height: 700px;
   position: relative;
+}
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .rb_hero_five .hero_wrapper {
+    margin-top: 230px;
+  }
 }
 .rb_hero_five .hero_wrapper .rb_signIn_card {
   display: flex;
